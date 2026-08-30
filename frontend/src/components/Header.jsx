@@ -1,48 +1,38 @@
-import { Search, Download } from "lucide-react";
+import { Download } from "lucide-react";
 
-export default function Header({ ask, onAskChange, onAsk, onExport, asking }) {
+const NAV = [
+  { href: "#pipeline", label: "Pipeline" },
+  { href: "#ask-question", label: "Ask" },
+  { href: "#research", label: "Research Qs" },
+  { href: "#themes", label: "Themes" },
+];
+
+export default function Header({ onExport }) {
   return (
-    <header className="border-b border-hairline bg-surface">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3 md:gap-4 md:px-8">
-        <a href="#top" className="wordmark shrink-0 text-2xl md:text-3xl">
+    <header className="border-b border-hairline bg-surface/95 backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center gap-5 px-6 py-3.5">
+        <a href="#top" className="wordmark shrink-0 text-2xl md:text-[1.75rem]">
           NYKAA
         </a>
-        <nav className="hidden items-center gap-6 text-sm font-medium text-ink md:flex">
-          <a href="#pipeline" className="hover:text-pink">
-            Pipeline
-          </a>
-          <a href="#research" className="hover:text-pink">
-            Research Qs
-          </a>
-          <a href="#themes" className="hover:text-pink">
-            Themes
-          </a>
+        <span className="hidden h-5 w-px bg-hairline sm:block" aria-hidden />
+        <span className="hidden font-ui text-sm font-semibold tracking-tight text-muted sm:inline">
+          Wishlist <span className="text-pink">discovery</span>
+        </span>
+        <nav className="ml-auto hidden items-center gap-5 lg:flex">
+          {NAV.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="relative pb-1 text-sm font-medium text-ink transition hover:text-pink"
+            >
+              {item.label}
+            </a>
+          ))}
         </nav>
-        <form
-          className="ml-auto flex min-w-0 flex-1 max-w-md items-center gap-2 rounded-md bg-search px-3 py-2"
-          onSubmit={onAsk}
-        >
-          <Search className="h-4 w-4 shrink-0 text-muted" strokeWidth={1.75} />
-          <input
-            type="search"
-            value={ask}
-            onChange={(e) => onAskChange(e.target.value)}
-            placeholder="Ask why a wishlist stalls"
-            className="w-full bg-transparent text-sm text-ink outline-none placeholder:text-muted"
-            aria-label="Ask a research question"
-          />
-          <button
-            type="submit"
-            className="text-xs font-semibold uppercase tracking-wide text-pink disabled:opacity-50"
-            disabled={asking}
-          >
-            {asking ? "…" : "Go"}
-          </button>
-        </form>
         <button
           type="button"
           onClick={onExport}
-          className="inline-flex shrink-0 items-center gap-2 rounded-full bg-pink px-3 py-2 text-sm font-semibold text-white hover:bg-pink-hover sm:px-4"
+          className="inline-flex shrink-0 items-center gap-2 rounded-full bg-pink px-4 py-2 text-sm font-semibold text-white hover:bg-pink-hover lg:ml-2"
         >
           <Download className="h-4 w-4" strokeWidth={2} />
           Export

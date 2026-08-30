@@ -1,31 +1,31 @@
 import { useEffect, useState } from "react";
-import { askQuestion, exportCatalog, getCatalog, getPipeline, getThemes } from "./api.js";
+import { ArrowRight } from "lucide-react";
+import { exportCatalog, getCatalog, getInsight, getPipeline } from "./api.js";
 import Header from "./components/Header.jsx";
-import Hero from "./components/Hero.jsx";
 import Pipeline from "./components/Pipeline.jsx";
-import Questions from "./components/Questions.jsx";
+import MetricCard from "./components/MetricCard.jsx";
+import AskQuestionBox from "./components/AskQuestionBox.jsx";
+import InsightCard from "./components/InsightCard.jsx";
 import Themes from "./components/Themes.jsx";
+import AnswerDrawer from "./components/AnswerDrawer.jsx";
+import { TAXONOMY } from "./taxonomy.js";
 
 export default function App() {
   const [catalog, setCatalog] = useState(null);
   const [pipeline, setPipeline] = useState(null);
-  const [themes, setThemes] = useState([]);
-  const [openId, setOpenId] = useState(null);
-  const [themeId, setThemeId] = useState(null);
-  const [ask, setAsk] = useState("");
-  const [askResult, setAskResult] = useState(null);
-  const [asking, setAsking] = useState(false);
+  const [themeFilter, setThemeFilter] = useState(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerLoading, setDrawerLoading] = useState(false);
+  const [drawerDetail, setDrawerDetail] = useState(null);
   const [error, setError] = useState("");
 
   useEffect(() => {
     let cancelled = false;
-    Promise.all([getCatalog(), getPipeline(), getThemes()])
-      .then(([cat, pipe, th]) => {
+    Promise.all([getCatalog(), getPipeline()])
+      .then(([cat, pipe]) => {
         if (cancelled) return;
         setCatalog(cat);
         setPipeline(pipe);
-        setThemes(th.themes || []);
-        setThemeId(th.themes?.[0]?.sub_theme_id || null);
       })
       .catch((err) => {
         if (!cancelled) setError(err.message || "Could not load catalog");
@@ -35,76 +35,150 @@ export default function App() {
     };
   }, []);
 
-  useEffect(() => {
-    if (askResult) {
-      document.getElementById("ask-result")?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [askResult]);
+  const questions = catalog?.questions || [];
+  const allowed = themeFilter ? TAXONOMY.find((t) => t.id === themeFilter)?.questions : null;
+  const visible = allowed ? questions.filter((q) => allowed.includes(q.id)) : questions;
 
-  function handleAsk(event) {
-    event.preventDefault();
-    const q = ask.trim();
-    if (q.length < 3) return;
-    setAsking(true);
-    askQuestion(q)
-      .then((res) => {
-        setAskResult(res);
-        if (res.query_id) setOpenId(res.query_id);
-      })
-      .catch((err) => setError(err.message))
-      .finally(() => setAsking(false));
+  function openInsight(queryId) {
+    if (!queryId) return;
+    setDrawerOpen(true);
+    setDrawerLoading(true);
+    setDrawerDetail(null);
+    getInsight(queryId)
+      .then(setDrawerDetail)
+      .catch((err) => setDrawerDetail({ question: queryId, summary: err.message }))
+      .finally(() => setDrawerLoading(false));
   }
 
   function handleExport() {
     exportCatalog("markdown").catch((err) => setError(err.message));
   }
 
+  const corpus = catalog?.corpus || {};
+  const gaps = questions.filter((q) => q.data_gaps).length;
+  const themeCount = questions.reduce((n, q) => n + (q.themes_count || 0), 0);
+
   return (
-    <div id="top" className="min-h-screen bg-canvas">
+    <div id="top" className="relative min-h-screen overflow-x-hidden bg-canvas text-ink">
       <div className="sticky top-0 z-20">
         <div className="promo-bar animate-promo py-2 text-center text-[11px] font-medium uppercase tracking-[0.22em] text-white">
           Nykaa Fashion · wishlist to purchase in 30 days
         </div>
-        <Header
-          ask={ask}
-          onAskChange={setAsk}
-          onAsk={handleAsk}
-          onExport={handleExport}
-          asking={asking}
-        />
+        <Header onExport={handleExport} />
       </div>
-      <Hero />
-      {askResult ? (
-        <div id="ask-result" className="border-b border-hairline bg-surface">
-          <div className="mx-auto max-w-6xl px-4 py-6 md:px-8">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-pink">Ask</p>
-            <p className="mt-2 text-ink">{askResult.answer}</p>
+
+      <main className="relative mx-auto max-w-7xl space-y-12 px-6 pt-10 pb-4">
+        <header className="max-w-3xl">
+          <p className="wordmark text-5xl md:text-6xl">NYKAA</p>
+          <h1 className="mt-3 font-ui text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Fashion wishlist discovery
+          </h1>
+          <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
+            Public Nykaa Fashion language, classified into ten research questions, then ranked by impact on 30-day
+            wishlist-to-purchase — not by making the item cheaper.
+          </p>
+          {error ? <p className="mt-2 text-xs text-pink">{error}</p> : null}
+        </header>
+
+        <Pipeline summary={pipeline} />
+
+        <section aria-label="Pipeline metrics">
+          <h2 className="mb-4 font-ui text-lg font-semibold tracking-tight">Pipeline metrics</h2>
+          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <MetricCard
+              label="Wishlist signal"
+              value={corpus.relevant ?? "—"}
+              meta={`${corpus.noise ?? 0} logistics / other noise`}
+            />
+            <MetricCard label="Coverage" value="10/10" meta={`${gaps} explicit data gaps`} />
+            <MetricCard label="Sub-themes" value={themeCount} meta="Ranked by 30-day impact" />
+            <MetricCard
+              label="Sources"
+              value={Object.keys(corpus.sources || {}).length || "—"}
+              meta={Object.keys(corpus.sources || {}).join(" · ") || "Play + App in this run"}
+            />
           </div>
-        </div>
-      ) : null}
-      {error ? (
-        <p className="mx-auto max-w-6xl px-4 py-4 text-sm text-pink md:px-8">{error}</p>
-      ) : null}
-      <Pipeline summary={pipeline} />
-      <Questions
-        questions={catalog?.questions || []}
-        openId={openId}
-        onToggle={(id) => setOpenId((cur) => (cur === id ? null : id))}
-      />
-      <Themes themes={themes} selectedId={themeId} onSelect={setThemeId} />
-      <footer className="border-t border-hairline bg-surface">
-        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-4 py-10 md:flex-row md:items-center md:px-8">
-          <p className="wordmark text-xl">NYKAA</p>
-          <p className="text-sm text-muted">Growth catalog · no monetary incentives as the mechanism</p>
+        </section>
+
+        <AskQuestionBox onOpenInsight={openInsight} />
+
+        <section id="research">
+          <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 className="font-ui text-lg font-semibold tracking-tight text-ink">
+                Wishlist research questions
+              </h2>
+              <p className="mt-0.5 text-xs text-muted">
+                Canonical catalog · click a card for cited insight + paraphrased reviews
+              </p>
+            </div>
+            {themeFilter && (
+              <button
+                type="button"
+                onClick={() => setThemeFilter(null)}
+                className="text-xs font-semibold text-pink hover:underline"
+              >
+                Clear theme filter
+              </button>
+            )}
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {visible.map((item) => (
+              <InsightCard key={item.id} {...item} onSelect={openInsight} />
+            ))}
+          </div>
+          {!visible.length && (
+            <p className="mt-2 text-sm text-muted">No research questions match this theme filter.</p>
+          )}
+        </section>
+
+        <Themes
+          questions={questions}
+          selectedId={themeFilter}
+          onSelect={(id) => {
+            setThemeFilter((prev) => (prev === id ? null : id));
+            document.getElementById("research")?.scrollIntoView({ behavior: "smooth" });
+          }}
+        />
+      </main>
+
+      <footer className="mt-16 border-t border-hairline bg-surface">
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-8 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="wordmark text-xl">NYKAA</p>
+            <p className="mt-2 text-xs text-muted">Growth catalog · no monetary incentives as the mechanism</p>
+          </div>
+          <div className="flex flex-wrap gap-5 text-sm text-muted">
+            <a href="#ask-question" className="hover:text-ink">
+              Ask
+            </a>
+            <a href="#pipeline" className="hover:text-ink">
+              Pipeline
+            </a>
+            <a href="#research" className="hover:text-ink">
+              Research Qs
+            </a>
+            <a href="#themes" className="hover:text-ink">
+              Themes
+            </a>
+          </div>
           <button
             type="button"
             onClick={handleExport}
-            className="rounded-full bg-pink px-5 py-2 text-sm font-semibold text-white hover:bg-pink-hover"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-pink px-5 py-2.5 text-sm font-bold text-white hover:bg-pink-hover"
           >
-            Export Q1–Q10
+            Export catalog report
+            <ArrowRight className="size-4" />
           </button>
         </div>
       </footer>
+
+      <AnswerDrawer
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        detail={drawerDetail}
+        loading={drawerLoading}
+      />
     </div>
   );
 }

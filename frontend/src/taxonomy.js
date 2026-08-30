@@ -1,0 +1,86 @@
+/** Phase 0 theme taxonomy — click a card to filter research questions. */
+export const TAXONOMY = [
+  {
+    id: "wishlist_motive",
+    title: "Wishlist motive",
+    description: "Why something was saved — occasion, compare, later.",
+    questions: ["q1_wishlist_motive", "q8_intent_vs_bookmark"],
+    icon: "heart",
+  },
+  {
+    id: "conversion_blocker",
+    title: "Conversion blocker",
+    description: "What stops a saved item from becoming an order.",
+    questions: ["q2_conversion_blockers"],
+    icon: "ban",
+  },
+  {
+    id: "post_like_uncertainty",
+    title: "Post-like uncertainty",
+    description: "Fit, fabric, colour, authenticity after liking.",
+    questions: ["q3_uncertainties", "q7_decision_factors"],
+    icon: "help",
+  },
+  {
+    id: "purchase_deferral",
+    title: "Purchase deferral",
+    description: "Waiting, payday, not sure yet, saving for now.",
+    questions: ["q4_postpone"],
+    icon: "clock",
+  },
+  {
+    id: "comparison_behavior",
+    title: "Shortlist comparison",
+    description: "Holding two or more saved pieces against each other.",
+    questions: ["q5_compare"],
+    icon: "compare",
+  },
+  {
+    id: "off_platform_research",
+    title: "Off-platform research",
+    description: "Instagram, YouTube hauls, friends before checkout.",
+    questions: ["q6_off_platform"],
+    icon: "globe",
+  },
+  {
+    id: "decision_factor",
+    title: "Decision factor",
+    description: "Fit, size, styling, price-as-signal, reviews, occasion.",
+    questions: ["q7_decision_factors"],
+    icon: "sliders",
+  },
+  {
+    id: "intent_vs_bookmark",
+    title: "Intent vs bookmark",
+    description: "Buy list versus moodboard / just saving.",
+    questions: ["q8_intent_vs_bookmark"],
+    icon: "bookmark",
+  },
+  {
+    id: "segment_context",
+    title: "Segment context",
+    description: "First-time vs repeat, ethnic / western / footwear.",
+    questions: ["q9_segments"],
+    icon: "users",
+  },
+  {
+    id: "unmet_need",
+    title: "Unmet need",
+    description: "Asks that recur across 3+ independent sources.",
+    questions: ["q10_unmet_needs"],
+    icon: "spark",
+  },
+];
+
+export const QUESTION_BADGES = {
+  q1_wishlist_motive: { badge: "Q1 · Motive", tone: "pink" },
+  q2_conversion_blockers: { badge: "Q2 · Blocker", tone: "ink" },
+  q3_uncertainties: { badge: "Q3 · Uncertainty", tone: "peach" },
+  q4_postpone: { badge: "Q4 · Deferral", tone: "pink" },
+  q5_compare: { badge: "Q5 · Compare", tone: "ink" },
+  q6_off_platform: { badge: "Q6 · Off-app", tone: "peach" },
+  q7_decision_factors: { badge: "Q7 · Factors", tone: "pink" },
+  q8_intent_vs_bookmark: { badge: "Q8 · Intent", tone: "ink" },
+  q9_segments: { badge: "Q9 · Segments", tone: "peach" },
+  q10_unmet_needs: { badge: "Q10 · Unmet", tone: "pink" },
+};

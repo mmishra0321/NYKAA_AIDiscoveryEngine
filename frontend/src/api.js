@@ -27,6 +27,11 @@ export async function getThemes() {
   return res.json();
 }
 
+export async function getInsight(queryId) {
+  const res = await request(`/api/v1/insights/${encodeURIComponent(queryId)}`);
+  return res.json();
+}
+
 export async function askQuestion(question) {
   const res = await request("/api/v1/ask", {
     method: "POST",
