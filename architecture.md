@@ -540,7 +540,7 @@ CLI: `python -m src.eval --stub` → `data/eval/{date}/eval_summary.json`.
 name: Ingest Classify Index Nykaa Fashion
 on:
   schedule:
-    - cron: '0 6 * * 1'
+    - cron: '0 6 */10 * *'
   workflow_dispatch:
 jobs:
   pipeline:
@@ -556,7 +556,7 @@ jobs:
       - run: python -m src.indexing
 ```
 
-Query path stays off the cron unless a catalog smoke step is added. **Enabled:** `.github/workflows/ingest.yml` runs Monday 06:00 UTC (`workflow_dispatch` too), then stub index + catalog refresh committed to `data/responses/`.
+Query path stays off the cron unless a catalog smoke step is added. **Enabled:** `.github/workflows/ingest.yml` runs every ~10 days at 06:00 UTC (`workflow_dispatch` too), then stub index + catalog refresh committed to `data/responses/`.
 
 ---
 

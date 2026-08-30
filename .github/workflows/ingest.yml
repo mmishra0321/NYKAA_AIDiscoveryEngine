@@ -1,10 +1,10 @@
 # Nykaa Fashion — scheduled scrape + catalog refresh
-# Architecture: Monday 06:00 UTC. Also runnable from the Actions tab.
+# Every ~10 days (1st, 11th, 21st, 31st at 06:00 UTC). Also runnable from the Actions tab.
 name: Ingest Classify Index Nykaa Fashion
 
 on:
   schedule:
-    - cron: "0 6 * * 1"
+    - cron: "0 6 */10 * *"
   workflow_dispatch:
     inputs:
       sources:
