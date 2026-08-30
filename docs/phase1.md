@@ -33,6 +33,16 @@ pytest tests/ingestion -q
 
 Writes `data/raw/_logs/{date}/ingestion_summary.json` with fetched / kept / drop reasons.
 
+## GitHub Actions (weekly scrape)
+
+Scheduled **Monday 06:00 UTC** (`cron: 0 6 * * 1`) plus **Run workflow** in the Actions tab.
+
+1. Repo → **Settings → Actions → General** → allow GitHub Actions (if it is off).
+2. Optional: **Settings → Secrets and variables → Actions** → add `GROQ_API_KEY` (classify/generate use Groq; without it the job uses `--stub`).
+3. **Actions → Ingest Classify Index Nykaa Fashion → Run workflow** once so the schedule is allowed to fire.
+
+The job scrapes Play + App + Reddit, then stub-indexes and refreshes `data/responses/` (committed). Raw JSONL stays gitignored and is uploaded as a run artifact (14 days). To scrape daily instead, change the cron to `0 6 * * *`.
+
 ## Known limitations
 
 - Keyword prefilter is recall-only; delivery-only reviews still appear until Phase 2.

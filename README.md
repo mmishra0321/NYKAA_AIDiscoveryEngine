@@ -40,6 +40,8 @@ pytest tests/ingestion -q
 
 **Limitations:** forum HTML, YouTube (no key), Twitter/X, and Quora are deferred. Keyword prefilter is recall-only; LLM relevance is Phase 2.
 
+Weekly scrape: GitHub Action `Ingest Classify Index Nykaa Fashion` (Monday 06:00 UTC). Enable Actions, add optional `GROQ_API_KEY`, then **Run workflow** once. See [docs/phase1.md](./docs/phase1.md).
+
 ## Phase 2
 
 ```bash

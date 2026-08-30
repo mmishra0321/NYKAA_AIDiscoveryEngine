@@ -556,7 +556,7 @@ jobs:
       - run: python -m src.indexing
 ```
 
-Query path stays off the cron unless a catalog smoke step is added.
+Query path stays off the cron unless a catalog smoke step is added. **Enabled:** `.github/workflows/ingest.yml` runs Monday 06:00 UTC (`workflow_dispatch` too), then stub index + catalog refresh committed to `data/responses/`.
 
 ---
 

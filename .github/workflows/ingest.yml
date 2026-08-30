@@ -1,30 +1,94 @@
-name: Ingest Nykaa Fashion reviews
+# Nykaa Fashion — scheduled scrape + catalog refresh
+# Architecture: Monday 06:00 UTC. Also runnable from the Actions tab.
+name: Ingest Classify Index Nykaa Fashion
 
 on:
+  schedule:
+    - cron: "0 6 * * 1"
   workflow_dispatch:
+    inputs:
+      sources:
+        description: "Sources to scrape (space-separated)"
+        required: false
+        default: "play_store app_store reddit"
+
+concurrency:
+  group: nykaa-ingest
+  cancel-in-progress: false
+
+permissions:
+  contents: write
 
 jobs:
   pipeline:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+      REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+      PYTHONUNBUFFERED: "1"
+      ANONYMIZED_TELEMETRY: "False"
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+          cache-dependency-path: requirements-ci.txt
+
+      - name: Install CI dependencies (no torch)
+        run: pip install -r requirements-ci.txt
+
       - name: Phase 0 check
         run: python -m src.phase0_check
-      - name: Unit tests (offline)
+
+      - name: Offline tests
         run: pytest tests/phase0 tests/ingestion -q
-      - name: Phase 1 ingestion (live stores; may be sparse)
+
+      - name: Phase 1 scrape
+        id: ingest
         continue-on-error: true
-        run: python -m src.ingestion --sources play_store app_store --verbose
-      - name: Upload raw artifacts
+        run: python -m src.ingestion --sources ${{ github.event.inputs.sources || 'play_store app_store reddit' }} --verbose
+
+      - name: Classify, index, catalog
+        if: steps.ingest.outcome == 'success'
+        run: |
+          set -euo pipefail
+          STUB=()
+          if [ -z "${GROQ_API_KEY:-}" ]; then
+            STUB=(--stub)
+            echo "GROQ_API_KEY unset — processing/generation use --stub"
+          fi
+          python -m src.processing "${STUB[@]}" --verbose
+          python -m src.indexing --stub --verbose
+          python -m src.retrieval --catalog --stub --verbose
+          python -m src.generation "${STUB[@]}" --verbose
+
+      - name: Commit logs and catalog
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data/raw/_logs data/processed/_logs data/index/_logs data/retrieval/_logs data/responses || true
+          if git diff --cached --quiet; then
+            echo "No tracked artifact changes"
+            exit 0
+          fi
+          git commit -m "chore: refresh Nykaa Fashion scrape ($(date -u +%F))"
+          git pull --rebase origin main
+          git push
+
+      - name: Upload raw + catalog artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: nykaa-raw-ingest
-          path: data/raw/
+          name: nykaa-batch-${{ github.run_id }}
+          path: |
+            data/raw/
+            data/processed/_logs/
+            data/responses/
           if-no-files-found: warn
+          retention-days: 14
