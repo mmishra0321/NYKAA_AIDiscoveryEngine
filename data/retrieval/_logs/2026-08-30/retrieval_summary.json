@@ -1,6 +1,6 @@
 {
   "run_date": "2026-08-30",
-  "finished_at": "2026-08-30T14:41:38+00:00",
+  "finished_at": "2026-08-30T15:33:18+00:00",
   "embedder": "stub",
   "collection": "nykaa_fashion_wishlist_v1",
   "questions": 10,
@@ -14,13 +14,13 @@
   "hit_counts": {
     "q1_wishlist_motive": 3,
     "q2_conversion_blockers": 0,
-    "q3_uncertainties": 6,
+    "q3_uncertainties": 7,
     "q4_postpone": 8,
-    "q5_compare": 4,
+    "q5_compare": 6,
     "q6_off_platform": 0,
-    "q7_decision_factors": 6,
+    "q7_decision_factors": 7,
     "q8_intent_vs_bookmark": 0,
-    "q9_segments": 1,
+    "q9_segments": 2,
     "q10_unmet_needs": 0
   },
   "limitations": [

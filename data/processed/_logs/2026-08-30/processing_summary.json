@@ -1,19 +1,19 @@
 {
   "run_date": "2026-08-30",
-  "finished_at": "2026-08-30T14:22:35+00:00",
+  "finished_at": "2026-08-30T15:33:16+00:00",
   "mode": "stub",
   "cluster_backend": "ngram",
-  "input_count": 80,
-  "cleaned_count": 80,
+  "input_count": 108,
+  "cleaned_count": 108,
   "relevance": {
-    "logistics_noise": 42,
-    "other": 25,
-    "wishlist_signal": 13
+    "logistics_noise": 55,
+    "other": 37,
+    "wishlist_signal": 16
   },
-  "classified": 13,
-  "with_q1_q9": 13,
+  "classified": 16,
+  "with_q1_q9": 16,
   "majority_labeled": true,
-  "chunks": 13,
+  "chunks": 16,
   "sub_themes": 6,
   "q10_themes": 0,
   "question_coverage": {
@@ -28,7 +28,7 @@
       "data_gap": "No named sub-theme for q2_conversion_blockers (What prevents wishlisted products from eventually being purchased?) in this run."
     },
     "q3_uncertainties": {
-      "docs": 6,
+      "docs": 7,
       "sub_themes": 1,
       "data_gap": null
     },
@@ -38,7 +38,7 @@
       "data_gap": null
     },
     "q5_compare": {
-      "docs": 4,
+      "docs": 6,
       "sub_themes": 1,
       "data_gap": null
     },
@@ -48,7 +48,7 @@
       "data_gap": "No named sub-theme for q6_off_platform (What information do users seek outside Nykaa Fashion before purchasing?) in this run."
     },
     "q7_decision_factors": {
-      "docs": 6,
+      "docs": 7,
       "sub_themes": 1,
       "data_gap": null
     },
@@ -58,7 +58,7 @@
       "data_gap": "No named sub-theme for q8_intent_vs_bookmark (When is the wishlist genuine purchase intent vs. pure bookmarking?) in this run."
     },
     "q9_segments": {
-      "docs": 1,
+      "docs": 2,
       "sub_themes": 1,
       "data_gap": null
     },

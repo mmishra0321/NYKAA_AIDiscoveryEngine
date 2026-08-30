@@ -1,11 +1,12 @@
 {
-  "generated_at": "2026-08-30T14:47:08+00:00",
+  "generated_at": "2026-08-30T15:33:18+00:00",
   "kpi": "wishlist_to_purchase_30d",
   "corpus": {
-    "relevant": 13,
-    "noise": 67,
+    "relevant": 16,
+    "noise": 92,
     "sources": {
-      "play_store": 28
+      "play_store": 28,
+      "app_store": 5
     }
   },
   "questions": [
@@ -26,7 +27,7 @@
           "frequency": "high",
           "severity": "low",
           "impact_rank": 1,
-          "impact_score": 0.79,
+          "impact_score": 0.64,
           "segment_skew": [],
           "paraphrased_examples": [
             "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
@@ -70,15 +71,16 @@
     {
       "id": "q3_uncertainties",
       "question": "What uncertainties remain after users have identified a product they like?",
-      "summary": "Observed from 6 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+      "summary": "Observed from 7 retrieved chunks across app_store, play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
       "sub_themes": [
         {
           "sub_theme_id": "q3_uncertainties_other",
           "question_id": "q3_uncertainties",
           "name": "Other",
           "share_of_bucket": 1.0,
-          "source_diversity": 1,
+          "source_diversity": 2,
           "sources": [
+            "app_store",
             "play_store"
           ],
           "frequency": "high",
@@ -86,7 +88,8 @@
           "impact_rank": 1,
           "impact_score": 0.79,
           "segment_skew": [
-            "first_time"
+            "first_time",
+            "repeat"
           ],
           "paraphrased_examples": [
             "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
@@ -101,7 +104,8 @@
             "dac7282c-2229-57f5-b02e-8f1faf1d7076",
             "fcd358e7-bade-5ce3-918c-4dc37c39210d",
             "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92",
-            "6bc01b14-6005-52ea-b7c3-6ed35e08f2af"
+            "6bc01b14-6005-52ea-b7c3-6ed35e08f2af",
+            "f0312ff3-504a-5968-80e5-41420f066b07"
           ]
         }
       ],
@@ -113,7 +117,7 @@
       ],
       "confidence": "medium",
       "data_gaps": "",
-      "evidence_count": 6,
+      "evidence_count": 7,
       "themes_count": 1
     },
     {
@@ -133,7 +137,7 @@
           "frequency": "high",
           "severity": "low",
           "impact_rank": 1,
-          "impact_score": 0.79,
+          "impact_score": 0.64,
           "segment_skew": [
             "first_time"
           ],
@@ -170,15 +174,16 @@
     {
       "id": "q5_compare",
       "question": "How do users compare multiple shortlisted products?",
-      "summary": "Observed from 4 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+      "summary": "Observed from 6 retrieved chunks across app_store, play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
       "sub_themes": [
         {
           "sub_theme_id": "q5_compare_other",
           "question_id": "q5_compare",
           "name": "Other",
           "share_of_bucket": 1.0,
-          "source_diversity": 1,
+          "source_diversity": 2,
           "sources": [
+            "app_store",
             "play_store"
           ],
           "frequency": "high",
@@ -199,7 +204,9 @@
             "e1e7d8b9-4dc7-5732-83a8-3391eee05d3b",
             "9225b30f-faa8-507b-b97c-eb5509c2a2de",
             "2ce0f436-28cb-5489-b155-f539bddc5097",
-            "d08be67f-f375-59d9-815d-f74389fcbee1"
+            "d08be67f-f375-59d9-815d-f74389fcbee1",
+            "145f49e6-872c-59b6-acea-341aeb73a01f",
+            "ec454aa6-86d0-5846-a107-823cd5ec2dd2"
           ]
         }
       ],
@@ -211,7 +218,7 @@
       ],
       "confidence": "medium",
       "data_gaps": "",
-      "evidence_count": 4,
+      "evidence_count": 6,
       "themes_count": 1
     },
     {
@@ -231,15 +238,16 @@
     {
       "id": "q7_decision_factors",
       "question": "What role do fit, size, styling, price, reviews, occasion, and social validation play?",
-      "summary": "Observed from 6 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+      "summary": "Observed from 7 retrieved chunks across app_store, play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
       "sub_themes": [
         {
           "sub_theme_id": "q7_decision_factors_other",
           "question_id": "q7_decision_factors",
           "name": "Other",
           "share_of_bucket": 1.0,
-          "source_diversity": 1,
+          "source_diversity": 2,
           "sources": [
+            "app_store",
             "play_store"
           ],
           "frequency": "high",
@@ -247,7 +255,8 @@
           "impact_rank": 1,
           "impact_score": 0.79,
           "segment_skew": [
-            "first_time"
+            "first_time",
+            "repeat"
           ],
           "paraphrased_examples": [
             "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
@@ -262,7 +271,8 @@
             "dac7282c-2229-57f5-b02e-8f1faf1d7076",
             "fcd358e7-bade-5ce3-918c-4dc37c39210d",
             "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92",
-            "6bc01b14-6005-52ea-b7c3-6ed35e08f2af"
+            "6bc01b14-6005-52ea-b7c3-6ed35e08f2af",
+            "f0312ff3-504a-5968-80e5-41420f066b07"
           ]
         }
       ],
@@ -274,7 +284,7 @@
       ],
       "confidence": "medium",
       "data_gaps": "",
-      "evidence_count": 6,
+      "evidence_count": 7,
       "themes_count": 1
     },
     {
@@ -294,15 +304,16 @@
     {
       "id": "q9_segments",
       "question": "How do these behaviours differ across user segments?",
-      "summary": "Observed from 1 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+      "summary": "Observed from 2 retrieved chunks across app_store, play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
       "sub_themes": [
         {
           "sub_theme_id": "q9_segments_other",
           "question_id": "q9_segments",
           "name": "Other",
           "share_of_bucket": 1.0,
-          "source_diversity": 1,
+          "source_diversity": 2,
           "sources": [
+            "app_store",
             "play_store"
           ],
           "frequency": "high",
@@ -310,7 +321,8 @@
           "impact_rank": 1,
           "impact_score": 0.79,
           "segment_skew": [
-            "first_time"
+            "first_time",
+            "repeat"
           ],
           "paraphrased_examples": [
             "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
@@ -320,7 +332,8 @@
             "When you saved something recently, did other come up?"
           ],
           "chunk_ids": [
-            "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92"
+            "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92",
+            "f0312ff3-504a-5968-80e5-41420f066b07"
           ]
         }
       ],
@@ -332,7 +345,7 @@
       ],
       "confidence": "low",
       "data_gaps": "",
-      "evidence_count": 1,
+      "evidence_count": 2,
       "themes_count": 1
     },
     {

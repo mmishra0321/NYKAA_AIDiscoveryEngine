@@ -1,8 +1,8 @@
 # Nykaa Fashion — Wishlist discovery catalog
 
-KPI: **wishlist_to_purchase_30d** · generated 2026-08-30T14:47:08+00:00
+KPI: **wishlist_to_purchase_30d** · generated 2026-08-30T15:33:18+00:00
 
-Corpus: **13** wishlist_signal · **67** noise · sources: {'play_store': 28}
+Corpus: **16** wishlist_signal · **92** noise · sources: {'play_store': 28, 'app_store': 5}
 
 User-facing examples are paraphrased. Monetary incentives are out of scope as the conversion mechanism.
 
@@ -16,7 +16,7 @@ Observed from 3 retrieved chunks across play_store: Other. Impact ranking uses s
 
 #### 1 Other
 
-Share of bucket: **100%** · source diversity: **1** (play_store) · frequency: high · severity: low · impact: 0.79
+Share of bucket: **100%** · source diversity: **1** (play_store) · frequency: high · severity: low · impact: 0.64
 
 Paraphrase: Users describe other after liking or saving a Nykaa Fashion item — enough to stall a 30-day purchase.
 
@@ -50,15 +50,15 @@ No indexed evidence for q2_conversion_blockers.
 
 ## q3_uncertainties — What uncertainties remain after users have identified a product they like?
 
-Confidence: **medium** · evidence chunks: **6** · sub-themes: **1**
+Confidence: **medium** · evidence chunks: **7** · sub-themes: **1**
 
-Observed from 6 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity — not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.
+Observed from 7 retrieved chunks across app_store, play_store: Other. Impact ranking uses share, source diversity, and severity — not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.
 
 ### Sub-themes (ranked by impact on 30-day wishlist purchase)
 
 #### 1 Other
 
-Share of bucket: **100%** · source diversity: **1** (play_store) · frequency: high · severity: low · impact: 0.79
+Share of bucket: **100%** · source diversity: **2** (app_store, play_store) · frequency: high · severity: low · impact: 0.79
 
 Paraphrase: Users describe other after liking or saving a Nykaa Fashion item — enough to stall a 30-day purchase.
 
@@ -84,7 +84,7 @@ Observed from 8 retrieved chunks across play_store: Other. Impact ranking uses s
 
 #### 1 Other
 
-Share of bucket: **100%** · source diversity: **1** (play_store) · frequency: high · severity: low · impact: 0.79
+Share of bucket: **100%** · source diversity: **1** (play_store) · frequency: high · severity: low · impact: 0.64
 
 Paraphrase: Users describe other after liking or saving a Nykaa Fashion item — enough to stall a 30-day purchase.
 
@@ -102,15 +102,15 @@ Hypothesis: Other may delay 30-day wishlist conversion.
 
 ## q5_compare — How do users compare multiple shortlisted products?
 
-Confidence: **medium** · evidence chunks: **4** · sub-themes: **1**
+Confidence: **medium** · evidence chunks: **6** · sub-themes: **1**
 
-Observed from 4 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity — not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.
+Observed from 6 retrieved chunks across app_store, play_store: Other. Impact ranking uses share, source diversity, and severity — not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.
 
 ### Sub-themes (ranked by impact on 30-day wishlist purchase)
 
 #### 1 Other
 
-Share of bucket: **100%** · source diversity: **1** (play_store) · frequency: high · severity: low · impact: 0.79
+Share of bucket: **100%** · source diversity: **2** (app_store, play_store) · frequency: high · severity: low · impact: 0.79
 
 Paraphrase: Users describe other after liking or saving a Nykaa Fashion item — enough to stall a 30-day purchase.
 
@@ -144,15 +144,15 @@ No indexed evidence for q6_off_platform.
 
 ## q7_decision_factors — What role do fit, size, styling, price, reviews, occasion, and social validation play?
 
-Confidence: **medium** · evidence chunks: **6** · sub-themes: **1**
+Confidence: **medium** · evidence chunks: **7** · sub-themes: **1**
 
-Observed from 6 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity — not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.
+Observed from 7 retrieved chunks across app_store, play_store: Other. Impact ranking uses share, source diversity, and severity — not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.
 
 ### Sub-themes (ranked by impact on 30-day wishlist purchase)
 
 #### 1 Other
 
-Share of bucket: **100%** · source diversity: **1** (play_store) · frequency: high · severity: low · impact: 0.79
+Share of bucket: **100%** · source diversity: **2** (app_store, play_store) · frequency: high · severity: low · impact: 0.79
 
 Paraphrase: Users describe other after liking or saving a Nykaa Fashion item — enough to stall a 30-day purchase.
 
@@ -186,15 +186,15 @@ No indexed evidence for q8_intent_vs_bookmark.
 
 ## q9_segments — How do these behaviours differ across user segments?
 
-Confidence: **low** · evidence chunks: **1** · sub-themes: **1**
+Confidence: **low** · evidence chunks: **2** · sub-themes: **1**
 
-Observed from 1 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity — not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.
+Observed from 2 retrieved chunks across app_store, play_store: Other. Impact ranking uses share, source diversity, and severity — not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.
 
 ### Sub-themes (ranked by impact on 30-day wishlist purchase)
 
 #### 1 Other
 
-Share of bucket: **100%** · source diversity: **1** (play_store) · frequency: high · severity: low · impact: 0.79
+Share of bucket: **100%** · source diversity: **2** (app_store, play_store) · frequency: high · severity: low · impact: 0.79
 
 Paraphrase: Users describe other after liking or saving a Nykaa Fashion item — enough to stall a 30-day purchase.
 

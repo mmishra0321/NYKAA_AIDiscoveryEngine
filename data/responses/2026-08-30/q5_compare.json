@@ -1,15 +1,16 @@
 {
   "id": "q5_compare",
   "question": "How do users compare multiple shortlisted products?",
-  "summary": "Observed from 4 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "summary": "Observed from 6 retrieved chunks across app_store, play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
   "sub_themes": [
     {
       "sub_theme_id": "q5_compare_other",
       "question_id": "q5_compare",
       "name": "Other",
       "share_of_bucket": 1.0,
-      "source_diversity": 1,
+      "source_diversity": 2,
       "sources": [
+        "app_store",
         "play_store"
       ],
       "frequency": "high",
@@ -30,7 +31,9 @@
         "e1e7d8b9-4dc7-5732-83a8-3391eee05d3b",
         "9225b30f-faa8-507b-b97c-eb5509c2a2de",
         "2ce0f436-28cb-5489-b155-f539bddc5097",
-        "d08be67f-f375-59d9-815d-f74389fcbee1"
+        "d08be67f-f375-59d9-815d-f74389fcbee1",
+        "145f49e6-872c-59b6-acea-341aeb73a01f",
+        "ec454aa6-86d0-5846-a107-823cd5ec2dd2"
       ]
     }
   ],
@@ -42,6 +45,6 @@
   ],
   "confidence": "medium",
   "data_gaps": "",
-  "evidence_count": 4,
+  "evidence_count": 6,
   "themes_count": 1
 }

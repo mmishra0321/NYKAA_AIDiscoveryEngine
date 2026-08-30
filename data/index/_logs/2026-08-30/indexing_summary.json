@@ -1,16 +1,16 @@
 {
   "run_date": "2026-08-30",
-  "finished_at": "2026-08-30T14:35:38+00:00",
+  "finished_at": "2026-08-30T15:33:17+00:00",
   "collection": "nykaa_fashion_wishlist_v1",
-  "persist_directory": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDISCOVERY/data/chroma",
+  "persist_directory": "/home/runner/work/NYKAA_AIDiscoveryEngine/NYKAA_AIDiscoveryEngine/data/chroma",
   "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
   "embedder": "stub",
   "embedding_dim": 384,
   "similarity": "cosine",
-  "chunks_in": 13,
-  "chunks_upserted": 13,
+  "chunks_in": 16,
+  "chunks_upserted": 16,
   "skipped_noise": 0,
-  "collection_count": 13,
+  "collection_count": 16,
   "smoke": {
     "questions": 10,
     "hits": {
@@ -18,11 +18,11 @@
       "q2_conversion_blockers": 0,
       "q3_uncertainties": 5,
       "q4_postpone": 5,
-      "q5_compare": 4,
+      "q5_compare": 5,
       "q6_off_platform": 0,
       "q7_decision_factors": 5,
       "q8_intent_vs_bookmark": 0,
-      "q9_segments": 1,
+      "q9_segments": 2,
       "q10_unmet_needs": 0
     },
     "empty": [

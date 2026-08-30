@@ -1,15 +1,16 @@
 {
   "id": "q3_uncertainties",
   "question": "What uncertainties remain after users have identified a product they like?",
-  "summary": "Observed from 6 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "summary": "Observed from 7 retrieved chunks across app_store, play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
   "sub_themes": [
     {
       "sub_theme_id": "q3_uncertainties_other",
       "question_id": "q3_uncertainties",
       "name": "Other",
       "share_of_bucket": 1.0,
-      "source_diversity": 1,
+      "source_diversity": 2,
       "sources": [
+        "app_store",
         "play_store"
       ],
       "frequency": "high",
@@ -17,7 +18,8 @@
       "impact_rank": 1,
       "impact_score": 0.79,
       "segment_skew": [
-        "first_time"
+        "first_time",
+        "repeat"
       ],
       "paraphrased_examples": [
         "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
@@ -32,7 +34,8 @@
         "dac7282c-2229-57f5-b02e-8f1faf1d7076",
         "fcd358e7-bade-5ce3-918c-4dc37c39210d",
         "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92",
-        "6bc01b14-6005-52ea-b7c3-6ed35e08f2af"
+        "6bc01b14-6005-52ea-b7c3-6ed35e08f2af",
+        "f0312ff3-504a-5968-80e5-41420f066b07"
       ]
     }
   ],
@@ -44,6 +47,6 @@
   ],
   "confidence": "medium",
   "data_gaps": "",
-  "evidence_count": 6,
+  "evidence_count": 7,
   "themes_count": 1
 }

@@ -1,15 +1,16 @@
 {
   "id": "q9_segments",
   "question": "How do these behaviours differ across user segments?",
-  "summary": "Observed from 1 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "summary": "Observed from 2 retrieved chunks across app_store, play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
   "sub_themes": [
     {
       "sub_theme_id": "q9_segments_other",
       "question_id": "q9_segments",
       "name": "Other",
       "share_of_bucket": 1.0,
-      "source_diversity": 1,
+      "source_diversity": 2,
       "sources": [
+        "app_store",
         "play_store"
       ],
       "frequency": "high",
@@ -17,7 +18,8 @@
       "impact_rank": 1,
       "impact_score": 0.79,
       "segment_skew": [
-        "first_time"
+        "first_time",
+        "repeat"
       ],
       "paraphrased_examples": [
         "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
@@ -27,7 +29,8 @@
         "When you saved something recently, did other come up?"
       ],
       "chunk_ids": [
-        "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92"
+        "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92",
+        "f0312ff3-504a-5968-80e5-41420f066b07"
       ]
     }
   ],
@@ -39,6 +42,6 @@
   ],
   "confidence": "low",
   "data_gaps": "",
-  "evidence_count": 1,
+  "evidence_count": 2,
   "themes_count": 1
 }
