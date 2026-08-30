@@ -1,0 +1,58 @@
+# Processing contracts (Phase 0 lock / Phase 2 implementation)
+chunking:
+  target_words: 350
+  overlap_words: 50
+  short_doc_word_threshold: 100
+
+cleaning:
+  strip_html: true
+  normalize_whitespace: true
+  drop_empty: true
+  strip_pii: true
+
+clustering:
+  method: agglomerative_cosine
+  distance_threshold: 0.35
+  min_cluster_size: 3
+  leftover_slug: other
+
+impact_weights:
+  share: 0.4
+  source_diversity: 0.3
+  severity: 0.3
+
+segments:
+  allowed:
+    - first_time
+    - repeat
+    - price_sensitive
+    - occasion_shopper
+    - unknown
+
+product_categories:
+  - ethnic
+  - western
+  - footwear
+  - accessories
+  - jewellery
+  - beauty_crossover
+  - unknown
+
+decision_factors:
+  - fit
+  - size
+  - styling
+  - price
+  - reviews
+  - occasion
+  - social_validation
+
+intent_labels:
+  - purchase_intent
+  - bookmark
+  - unclear
+
+relevance_labels:
+  - wishlist_signal
+  - logistics_noise
+  - other

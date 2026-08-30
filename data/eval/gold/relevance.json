@@ -1,0 +1,125 @@
+{
+  "description": "Phase 7 relevance gold — 10 wishlist_signal / 10 logistics_noise. Human labels on unambiguous Nykaa Fashion language (including Hinglish and delivery-dominated Play-style reviews).",
+  "items": [
+    {
+      "id": "rel-s01",
+      "relevance": "wishlist_signal",
+      "text": "Kept the lehenga on my wishlist for the sangeet instead of checking out.",
+      "note": "clear save motive"
+    },
+    {
+      "id": "rel-s02",
+      "relevance": "wishlist_signal",
+      "text": "I saved two heels to compare later on Nykaa Fashion.",
+      "note": "save + compare"
+    },
+    {
+      "id": "rel-s03",
+      "relevance": "wishlist_signal",
+      "text": "Size chart is confusing and I'm not sure, so the kurta sits in my wishlist.",
+      "note": "fit hesitation after save"
+    },
+    {
+      "id": "rel-s04",
+      "relevance": "wishlist_signal",
+      "text": "Just bookmarking kurtas I'm not ready to buy.",
+      "note": "bookmark language"
+    },
+    {
+      "id": "rel-s05",
+      "relevance": "wishlist_signal",
+      "text": "Shortlist mein daala because payday is next week.",
+      "note": "Hinglish deferral"
+    },
+    {
+      "id": "rel-s06",
+      "relevance": "wishlist_signal",
+      "text": "Fit looks off in reviews so I haven't bought the saved dress.",
+      "note": "blocker after save"
+    },
+    {
+      "id": "rel-s07",
+      "relevance": "wishlist_signal",
+      "text": "Saw it on Instagram so I wishlisted the co-ord set.",
+      "note": "off-platform then save"
+    },
+    {
+      "id": "rel-s08",
+      "relevance": "wishlist_signal",
+      "text": "Colour in photos vs real — still sitting in my wish list.",
+      "note": "post-like uncertainty"
+    },
+    {
+      "id": "rel-s09",
+      "relevance": "wishlist_signal",
+      "text": "Wishlist pe pada hai, size chart pe bharosa nahi.",
+      "note": "Hinglish size doubt"
+    },
+    {
+      "id": "rel-s10",
+      "relevance": "wishlist_signal",
+      "text": "Just bookmarking for inspiration, not really planning to check out this week.",
+      "note": "moodboard vs intent"
+    },
+    {
+      "id": "rel-n01",
+      "relevance": "logistics_noise",
+      "text": "Delivery was two days late and the rider never called.",
+      "note": "Play-style delivery rage"
+    },
+    {
+      "id": "rel-n02",
+      "relevance": "logistics_noise",
+      "text": "Refund took a week after I returned the parcel.",
+      "note": "refund only"
+    },
+    {
+      "id": "rel-n03",
+      "relevance": "logistics_noise",
+      "text": "OTP failed, couldn't login to the app.",
+      "note": "auth / OTP"
+    },
+    {
+      "id": "rel-n04",
+      "relevance": "logistics_noise",
+      "text": "Courier marked delivered but the packet is missing.",
+      "note": "courier"
+    },
+    {
+      "id": "rel-n05",
+      "relevance": "logistics_noise",
+      "text": "App crash on payment, last order's packaging was torn.",
+      "note": "crash + packing"
+    },
+    {
+      "id": "rel-n06",
+      "relevance": "logistics_noise",
+      "text": "Late delivery every single order this month.",
+      "note": "delivery-dominated Play review"
+    },
+    {
+      "id": "rel-n07",
+      "relevance": "logistics_noise",
+      "text": "Refund nahi aaya, rider ne call nahi kiya.",
+      "note": "Hinglish logistics"
+    },
+    {
+      "id": "rel-n08",
+      "relevance": "logistics_noise",
+      "text": "Packed in a damaged box and the delivery guy was rude.",
+      "note": "packaging"
+    },
+    {
+      "id": "rel-n09",
+      "relevance": "logistics_noise",
+      "text": "Login loop after OTP, the order never shipped.",
+      "note": "OTP + ship"
+    },
+    {
+      "id": "rel-n10",
+      "relevance": "logistics_noise",
+      "text": "Wrong item delivered, still waiting on the refund.",
+      "note": "delivery + refund; waiting is not a wishlist save"
+    }
+  ]
+}

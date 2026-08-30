@@ -1,0 +1,51 @@
+time_window_months: 12
+time_window_fallback_months: 24
+min_docs_per_source_before_fallback: 40
+min_corpus_total: 400
+max_corpus_total: 600
+min_relevant_after_gate: 400
+
+language:
+  prefer: en
+  min_confidence: 0.9
+  hinglish_note: Keep if the classifier can read it; log as a known limitation.
+
+length:
+  min_chars: 20
+  min_words: 4
+  max_chars: 2000
+
+dedupe:
+  near_duplicate_cosine: 0.95
+
+pii:
+  strip_before_save: true
+  patterns:
+    - email
+    - phone
+    - order_id
+    - social_handle
+
+# Recall prefilter only. Q1–Q9 assignment is LLM, not these keywords.
+keywords_any:
+  - wishlist
+  - wish list
+  - saved
+  - shortlist
+  - size
+  - sizing
+  - fit
+  - fabric
+  - colour
+  - color
+  - haul
+  - occasion
+  - wedding
+  - ethnic
+  - kurta
+  - "haven't bought"
+  - waiting
+  - compare
+  - instagram
+  - bookmark
+  - cart

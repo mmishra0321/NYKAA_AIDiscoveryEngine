@@ -1,0 +1,96 @@
+provider: groq
+base_url: https://api.groq.com/openai/v1
+model: llama-3.3-70b-versatile
+temperature: 0.2
+classify_temperature: 0.1
+timeout_seconds: 60
+max_retries: 1
+max_context_chunks: 10
+
+forbidden_mechanisms:
+  - coupons
+  - discounts
+  - cashback
+  - price-cuts
+  - price cuts
+
+classifier_allowed_questions:
+  - q1_wishlist_motive
+  - q2_conversion_blockers
+  - q3_uncertainties
+  - q4_postpone
+  - q5_compare
+  - q6_off_platform
+  - q7_decision_factors
+  - q8_intent_vs_bookmark
+  - q9_segments
+
+relevance_system: |
+  You label public text about Nykaa Fashion (India fashion marketplace, not Nykaa Beauty unless the text is about shared wishlist/account UX).
+  wishlist_signal = saving, shortlist, fit/quality/colour/authenticity doubt after liking,
+  postponing a buy, comparing saved items, checking Instagram/YouTube/friends before buying,
+  or bookmark vs real intent.
+  logistics_noise = delivery, refund, OTP, crash, packaging with no decision/wishlist language.
+  other = unrelated.
+  Output JSON only: {"relevance": "wishlist_signal|logistics_noise|other", "reason": "short"}
+
+classifier_system: |
+  You are a Nykaa Fashion Growth researcher. Assign zero or more of q1–q9 using the official
+  bucket definitions. Multi-label is allowed. Do not assign q10 (computed later from
+  sub-themes that appear in 3+ independent sources).
+  Do not treat competitor-only rants as in-scope. Do not invent segment tags.
+  Never recommend coupons or discounts.
+  Output JSON only with keys: research_questions, confidence, decision_factors,
+  segment_hint, product_category, intent_label, rationale.
+
+cluster_name_system: |
+  You name one sub-theme cluster from representative Nykaa Fashion wishlist texts.
+  Return JSON only: {"name": "short title", "slug": "snake_case", "severity": "high|medium|low",
+  "frequency_hint": "high|medium|low"}.
+  Title must describe a purchase-hesitation or wishlist behaviour, not delivery logistics.
+
+generate_system: |
+  You are a Nykaa Fashion Growth PM analyst. Answer ONLY from provided excerpts and sub-theme stats.
+  Cite [chunk_id] internally. User-facing examples must be paraphrased, never pasted at scale.
+  Rank sub-themes by potential impact on 30-day wishlist-to-purchase conversion.
+  NEVER recommend coupons, discounts, cashback, or price-cuts. Fix friction, doubt, or forgetting.
+  Separate observed feedback from hypothesis. Add interview probes for Part 3.
+  Output JSON: question, summary, sub_themes[], implications[], interview_probes[],
+  confidence, data_gaps.
+
+question_definitions: |
+  q1_wishlist_motive: why something was saved — price watching, styling later, comparing, gifting, aspirational saving, occasion planning.
+  q2_conversion_blockers: blocker after saving — doubt, distraction, friction, change of mind.
+  q3_uncertainties: fit, quality, colour-accuracy, material, authenticity doubts after liking the item.
+  q4_postpone: deferral language — waiting for, not sure yet, will decide later, saving for now.
+  q5_compare: comparing 2+ saved or considered items.
+  q6_off_platform: Instagram, YouTube, friends, other retailers, size-comparison elsewhere.
+  q7_decision_factors: fit, size, styling, price, reviews, occasion, social validation — positive or negative.
+  q8_intent_vs_bookmark: I will buy this vs just saving / for inspiration / not planning to buy.
+  q9_segments: inferable first-time vs repeat, category (ethnic/western/footwear/beauty-crossover), price sensitivity.
+
+few_shots:
+  - relevance: wishlist_signal
+    text: Saved a festive kurta to style later against pieces I already own. Not buying today.
+    research_questions: [q1_wishlist_motive, q8_intent_vs_bookmark]
+  - relevance: wishlist_signal
+    text: Liked the dress but reviews say it runs small so it sits in my wishlist.
+    research_questions: [q2_conversion_blockers, q3_uncertainties, q7_decision_factors]
+  - relevance: wishlist_signal
+    text: Will decide after payday. Wishlist is how I remember the listing.
+    research_questions: [q4_postpone, q1_wishlist_motive]
+  - relevance: wishlist_signal
+    text: Two black blazers saved. Comparing shoulder structure before I pick one.
+    research_questions: [q5_compare]
+  - relevance: wishlist_signal
+    text: I watch a YouTube haul of the same SKU before converting a wishlist item.
+    research_questions: [q6_off_platform]
+  - relevance: wishlist_signal
+    text: Most of my Nykaa Fashion wishlist is a moodboard. Not really planning to buy.
+    research_questions: [q8_intent_vs_bookmark]
+  - relevance: wishlist_signal
+    text: First order. I wishlist everything because I do not know which ethnic sizes work.
+    research_questions: [q9_segments, q3_uncertainties]
+  - relevance: logistics_noise
+    text: Delivery was two days late and refund took a week. OTP failed once.
+    research_questions: []

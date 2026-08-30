@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: nykaa-fashion-wishlist-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: ALLOW_VERCEL_ORIGINS
+        value: "1"
+      - key: FRONTEND_ORIGINS
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false

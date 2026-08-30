@@ -1,0 +1,7 @@
+# Embedding / vector index contracts (Phase 0 lock / Phase 3 implementation)
+model_name: sentence-transformers/all-MiniLM-L6-v2
+embedding_dim: 384
+collection_name: nykaa_fashion_wishlist_v1
+persist_directory: data/chroma
+batch_size: 128
+similarity: cosine

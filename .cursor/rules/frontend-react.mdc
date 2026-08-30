@@ -1,0 +1,11 @@
+---
+description: Nykaa discovery engine frontend must be React (Vite). Ask before each phase.
+alwaysApply: true
+---
+
+# Nykaa Fashion Wishlist Discovery
+
+- Implement **phase by phase**. Ask before starting the next phase.
+- **Phase 6 UI is React** — Vite + Tailwind in `frontend/`. Functional components. Not Streamlit, Next.js, Vue, or a static HTML dump.
+- Match live Nykaa brand (`#FC2779`, NYKAA wordmark, light listing UI). Do not copy Blinkit dark green/yellow.
+- Groq keys stay server-side. Browser talks to FastAPI only.

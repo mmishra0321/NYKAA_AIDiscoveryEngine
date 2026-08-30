@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7.5rem;
+}
+
+body {
+  margin: 0;
+  background: #f7f7f7;
+  color: #001325;
+  font-family: Outfit, sans-serif;
+}
+
+.wordmark {
+  font-family: "Barlow Condensed", sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fc2779;
+}
+
+.promo-bar {
+  background: linear-gradient(90deg, #ffc4a8 0%, #fc2779 50%, #ffc4a8 100%);
+  background-size: 200% 100%;
+}

@@ -1,0 +1,90 @@
+product: nykaa_fashion
+android_package: com.fsn.nds
+ios_app_id: "1439872423"
+beauty_xref_package: com.fsn.nykaa
+
+# V1 source priority: stores first → Reddit → ToS-safe forums/YouTube
+priority:
+  - play_store
+  - app_store
+  - reddit
+  - forum
+  - youtube
+
+play_store:
+  enabled: true
+  package_name: com.fsn.nds
+  country: in
+  lang: en
+  priority: P0
+  play_url: https://play.google.com/store/apps/details?id=com.fsn.nds&hl=en_IN
+
+app_store:
+  enabled: true
+  app_id: "1439872423"
+  country: in
+  priority: P0
+  app_url: https://apps.apple.com/in/app/nykaa-fashion-shopping-app/id1439872423
+
+reddit:
+  enabled: true
+  priority: P1
+  provider: pullpush
+  subreddits:
+    - IndianFashionAddicts
+    - IndianMakeupAddicts
+    - IndianSkincareAddicts
+    - india
+    - femalefashionadvice
+  search_queries:
+    - '"Nykaa Fashion" wishlist'
+    - '"Nykaa Fashion" size'
+    - '"Nykaa Fashion" review'
+    - '"Nykaa Fashion" haven''t bought'
+
+forum:
+  enabled: false
+  priority: P1
+  note: Trustpilot / MouthShut / consumercomplaints only if robots.txt and ToS allow; else defer.
+  urls:
+    - https://www.trustpilot.com/review/nykaa.com
+    - https://www.trustpilot.com/review/nykaafashion.com
+    - https://www.mouthshut.com/product-reviews/nykaa-fashion-reviews-926168279
+    - https://www.mouthshut.com/product-reviews/nykaa-reviews-925702993
+    - https://www.consumercomplaints.in/
+
+youtube:
+  enabled: false
+  priority: P1
+  note: Enable when YOUTUBE_API_KEY is present.
+  search_queries:
+    - Nykaa Fashion haul review
+    - Nykaa Fashion app review India
+    - Nykaa Fashion sizing review
+    - Nykaa Fashion honest review
+
+nykaa_beauty_xref:
+  enabled: false
+  package_name: com.fsn.nykaa
+  priority: P2
+  play_url: https://play.google.com/store/apps/details?id=com.fsn.nykaa&hl=en_IN
+  note: Cross-reference only for shared account/wishlist UX. Never mix into Fashion-primary counts.
+
+deferred:
+  - twitter_x
+  - quora
+  - authenticated_pages
+
+caps:
+  play_store: 220
+  app_store: 80
+  reddit: 150
+  forum: 80
+  youtube: 70
+
+competitor_blocklist:
+  - myntra
+  - ajio
+  - meesho
+  - "amazon fashion"
+  - "flipkart fashion"

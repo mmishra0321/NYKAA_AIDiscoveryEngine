@@ -1,0 +1,54 @@
+# Ingest dumps (summaries under _logs may be committed later)
+data/raw/**
+!data/raw/.gitkeep
+!data/raw/_logs/
+!data/raw/_logs/**
+
+# Processed dumps (summaries under _logs may be committed)
+data/processed/**
+!data/processed/.gitkeep
+!data/processed/_logs/
+!data/processed/_logs/**
+
+# Vector index
+data/chroma/**
+!data/chroma/.gitkeep
+data/index/**
+!data/index/.gitkeep
+!data/index/_logs/
+!data/index/_logs/**
+
+# Retrieval packs (summaries under _logs may be committed)
+data/retrieval/**
+!data/retrieval/.gitkeep
+!data/retrieval/_logs/
+!data/retrieval/_logs/**
+
+# Catalog — ship dated JSON/MD so Render can serve the live link without re-scraping
+data/responses/**
+!data/responses/.gitkeep
+!data/responses/_logs/
+!data/responses/_logs/**
+!data/responses/*/
+!data/responses/*/**
+
+# Python / env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.env
+.env.local
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+/package-lock.json
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.log

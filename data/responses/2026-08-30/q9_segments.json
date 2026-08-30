@@ -1,0 +1,44 @@
+{
+  "id": "q9_segments",
+  "question": "How do these behaviours differ across user segments?",
+  "summary": "Observed from 1 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q9_segments_other",
+      "question_id": "q9_segments",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 1,
+      "sources": [
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.79,
+      "segment_skew": [
+        "first_time"
+      ],
+      "paraphrased_examples": [
+        "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92"
+      ]
+    }
+  ],
+  "implications": [
+    "Observed: first-time vs repeat and category (ethnic/western/footwear) change the doubt. Hypothesis: segment-aware fit help on saved items would lift 30-day purchase unevenly \u2014 interview to confirm."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "low",
+  "data_gaps": "",
+  "evidence_count": 1,
+  "themes_count": 1
+}

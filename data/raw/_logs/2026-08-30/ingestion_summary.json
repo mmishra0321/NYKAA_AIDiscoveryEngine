@@ -1,0 +1,75 @@
+{
+  "run_date": "2026-08-30",
+  "finished_at": "2026-08-30T14:10:03.240003+00:00",
+  "corpus_target": 400,
+  "corpus_total": 80,
+  "corpus_target_met": false,
+  "sources": [
+    {
+      "source": "play_store",
+      "records_fetched": 800,
+      "records_saved": 75,
+      "records_skipped": 543,
+      "output_path": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDISCOVERY/data/raw/play_store/2026-08-30/documents.jsonl",
+      "errors": [],
+      "metadata": {
+        "filter_stats": {
+          "input_count": 618,
+          "output_count": 75,
+          "rejected_time": 2,
+          "rejected_length": 92,
+          "rejected_language": 3,
+          "rejected_keyword": 441,
+          "rejected_spam": 0,
+          "rejected_competitor": 5,
+          "rejected_exact_duplicate": 0,
+          "rejected_near_duplicate": 0,
+          "rejected_cap": 0,
+          "pii_stripped": 0,
+          "time_window_months": 12,
+          "total_rejected": 543
+        }
+      },
+      "finished_at": "2026-08-30T14:10:01.885971+00:00"
+    },
+    {
+      "source": "app_store",
+      "records_fetched": 100,
+      "records_saved": 5,
+      "records_skipped": 90,
+      "output_path": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDISCOVERY/data/raw/app_store/2026-08-30/documents.jsonl",
+      "errors": [],
+      "metadata": {
+        "filter_stats": {
+          "input_count": 50,
+          "output_count": 5,
+          "rejected_time": 0,
+          "rejected_length": 3,
+          "rejected_language": 0,
+          "rejected_keyword": 42,
+          "rejected_spam": 0,
+          "rejected_competitor": 0,
+          "rejected_exact_duplicate": 0,
+          "rejected_near_duplicate": 0,
+          "rejected_cap": 0,
+          "pii_stripped": 0,
+          "time_window_months": 24,
+          "total_rejected": 45
+        }
+      },
+      "finished_at": "2026-08-30T14:10:03.239730+00:00"
+    }
+  ],
+  "totals": {
+    "records_fetched": 900,
+    "records_saved": 80,
+    "records_skipped": 633,
+    "errors": 0
+  },
+  "limitations": [
+    "forum HTML scrape deferred (ToS / robots.txt)",
+    "youtube skipped unless YOUTUBE_API_KEY is set and adapter enabled",
+    "twitter_x / quora / login walls deferred",
+    "keyword prefilter is recall-only; LLM relevance is Phase 2"
+  ]
+}

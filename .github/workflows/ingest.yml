@@ -1,0 +1,30 @@
+name: Ingest Nykaa Fashion reviews
+
+on:
+  workflow_dispatch:
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Phase 0 check
+        run: python -m src.phase0_check
+      - name: Unit tests (offline)
+        run: pytest tests/phase0 tests/ingestion -q
+      - name: Phase 1 ingestion (live stores; may be sparse)
+        continue-on-error: true
+        run: python -m src.ingestion --sources play_store app_store --verbose
+      - name: Upload raw artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nykaa-raw-ingest
+          path: data/raw/
+          if-no-files-found: warn

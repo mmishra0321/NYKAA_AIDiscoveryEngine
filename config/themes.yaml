@@ -1,0 +1,39 @@
+version: 1
+deprioritize:
+  - logistics_noise
+
+themes:
+  - id: wishlist_motive
+    label: Wishlist motive
+    research_questions: [q1_wishlist_motive, q8_intent_vs_bookmark]
+  - id: conversion_blocker
+    label: Conversion blocker
+    research_questions: [q2_conversion_blockers]
+  - id: post_like_uncertainty
+    label: Post-like uncertainty
+    research_questions: [q3_uncertainties, q7_decision_factors]
+  - id: purchase_deferral
+    label: Purchase deferral
+    research_questions: [q4_postpone]
+  - id: comparison_behavior
+    label: Shortlist comparison
+    research_questions: [q5_compare]
+  - id: off_platform_research
+    label: Off-platform research
+    research_questions: [q6_off_platform]
+  - id: decision_factor
+    label: Decision factor
+    research_questions: [q7_decision_factors]
+  - id: intent_vs_bookmark
+    label: Intent vs bookmark
+    research_questions: [q8_intent_vs_bookmark]
+  - id: segment_context
+    label: Segment context
+    research_questions: [q9_segments]
+  - id: unmet_need
+    label: Unmet need
+    research_questions: [q10_unmet_needs]
+  - id: logistics_noise
+    label: Logistics noise
+    research_questions: []
+    note: Delivery, refund, OTP — keep counts, exclude from Q1–Q10

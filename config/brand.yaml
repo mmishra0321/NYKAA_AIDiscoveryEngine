@@ -1,0 +1,47 @@
+# Nykaa visual identity — from live nykaa.com UI (Phase 6 contract, locked in Phase 0)
+
+product: nykaa_fashion
+wordmark: NYKAA
+wordmark_style: italic_caps_bold
+
+frontend:
+  framework: react
+  bundler: vite
+  styling: tailwind
+  not:
+    - streamlit
+    - next
+    - vue
+
+colors:
+  pink: "#FC2779"
+  pink_hover: "#E01B68"
+  peach: "#FFC4A8"
+  promo_bar_gradient: "linear-gradient(90deg, #FFC4A8 0%, #FC2779 100%)"
+  canvas: "#F7F7F7"
+  surface: "#FFFFFF"
+  ink: "#001325"
+  muted: "#6F6F6F"
+  hairline: "#E8E8E8"
+  search_fill: "#F3F3F3"
+
+type:
+  wordmark: distinctive italic caps (not Inter, Roboto, or Arial)
+  ui_sans: fashion sans for body/nav (not Inter, Roboto, or Arial)
+
+radius:
+  panel_px: [8, 12]
+  pill_cta: true
+  pill_note: Use pills only on primary CTAs, matching Nykaa Shop Now.
+
+layout:
+  first_viewport: brand + one headline + one sentence + one CTA
+  no_cards_in_hero: true
+  no_metric_strip_in_hero: true
+  no_blinkit_bolt: true
+  no_dark_theme: true
+  no_yellow_green_accents: true
+
+forbidden_looks:
+  - blinkit_dark_green_yellow
+  - generic_purple_on_white_rag_console

@@ -1,0 +1,7 @@
+# Retrieval contracts (Phase 0 lock / Phase 4 implementation)
+top_k_initial: 30
+context_top_n: 10
+source_balance_max_fraction: 0.6
+min_similarity: 0.0
+empty_result_flag: data_gap
+q10_min_independent_sources: 3

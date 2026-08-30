@@ -1,0 +1,86 @@
+{
+  "description": "Manual 4-point review of the 2026-08-30 catalog sections (Phase 7). Pass if score ≥ 3/4. Stub leftover names ('Other') are weak for Part 3 but must not invent discounts or competitor scope.",
+  "catalog_run_date": "2026-08-30",
+  "reviews": [
+    {
+      "query_id": "q1_wishlist_motive",
+      "relevant_evidence": 1,
+      "cited_paraphrased": 1,
+      "no_hallucination": 0,
+      "actionable_without_discounts": 1,
+      "notes": "Chunk_ids resolve; paraphrase is generic. Implication (save-reason on return) is a hypothesis. Sub-theme name Other is leftover clustering, not a real pattern name."
+    },
+    {
+      "query_id": "q2_conversion_blockers",
+      "relevant_evidence": 1,
+      "cited_paraphrased": 1,
+      "no_hallucination": 1,
+      "actionable_without_discounts": 0,
+      "notes": "Honest data_gap — no invented blockers. No implication until more signal."
+    },
+    {
+      "query_id": "q3_uncertainties",
+      "relevant_evidence": 1,
+      "cited_paraphrased": 1,
+      "no_hallucination": 0,
+      "actionable_without_discounts": 1,
+      "notes": "Size/fit implication is in-scope; cluster still named Other."
+    },
+    {
+      "query_id": "q4_postpone",
+      "relevant_evidence": 1,
+      "cited_paraphrased": 1,
+      "no_hallucination": 0,
+      "actionable_without_discounts": 1,
+      "notes": "Deferral implication avoids promo language. Other leftover name."
+    },
+    {
+      "query_id": "q5_compare",
+      "relevant_evidence": 1,
+      "cited_paraphrased": 1,
+      "no_hallucination": 0,
+      "actionable_without_discounts": 1,
+      "notes": "Side-by-side hypothesis is fair; sparse Play-only compare speech. Architecture flagged Q5 as thin — this run had 4 hits, still Other."
+    },
+    {
+      "query_id": "q6_off_platform",
+      "relevant_evidence": 1,
+      "cited_paraphrased": 1,
+      "no_hallucination": 1,
+      "actionable_without_discounts": 0,
+      "notes": "Explicit data_gap. No YouTube key, no Instagram corpus."
+    },
+    {
+      "query_id": "q7_decision_factors",
+      "relevant_evidence": 1,
+      "cited_paraphrased": 1,
+      "no_hallucination": 0,
+      "actionable_without_discounts": 1,
+      "notes": "Price-as-signal (not markdown) is lint-clean."
+    },
+    {
+      "query_id": "q8_intent_vs_bookmark",
+      "relevant_evidence": 1,
+      "cited_paraphrased": 1,
+      "no_hallucination": 1,
+      "actionable_without_discounts": 0,
+      "notes": "Explicit data_gap — bookmark vs buy language is rare in Play reviews."
+    },
+    {
+      "query_id": "q9_segments",
+      "relevant_evidence": 1,
+      "cited_paraphrased": 1,
+      "no_hallucination": 0,
+      "actionable_without_discounts": 1,
+      "notes": "n=1 chunk; implication correctly asks for interviews rather than claiming a segment law."
+    },
+    {
+      "query_id": "q10_unmet_needs",
+      "relevant_evidence": 1,
+      "cited_paraphrased": 1,
+      "no_hallucination": 1,
+      "actionable_without_discounts": 0,
+      "notes": "Q10 needs 3+ independent sources. Play-only run cannot populate it — honest gap."
+    }
+  ]
+}

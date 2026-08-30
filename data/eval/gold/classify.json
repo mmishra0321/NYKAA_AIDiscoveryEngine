@@ -1,0 +1,205 @@
+{
+  "description": "Phase 7 multi-label gold for Q1–Q9 only. Q10 is never assigned. ~40 rows of unambiguous Nykaa Fashion wishlist language (some Hinglish, some multi-label).",
+  "items": [
+    {
+      "id": "clf-01",
+      "text": "I wishlisted this dress so I can find it again on Nykaa Fashion.",
+      "research_questions": ["q1_wishlist_motive"]
+    },
+    {
+      "id": "clf-02",
+      "text": "Saved a pair of earrings on Nykaa Fashion today.",
+      "research_questions": ["q1_wishlist_motive"]
+    },
+    {
+      "id": "clf-03",
+      "text": "Putting this blazer on my wishlist tonight.",
+      "research_questions": ["q1_wishlist_motive"]
+    },
+    {
+      "id": "clf-04",
+      "text": "Bookmarking the green kurta so it does not disappear.",
+      "research_questions": ["q1_wishlist_motive"]
+    },
+    {
+      "id": "clf-05",
+      "text": "That kurta sits in my list, I never bought it.",
+      "research_questions": ["q2_conversion_blockers"]
+    },
+    {
+      "id": "clf-06",
+      "text": "I did not buy those heels; they still sit in there unused.",
+      "research_questions": ["q2_conversion_blockers"]
+    },
+    {
+      "id": "clf-07",
+      "text": "Won't buy until I know more — still there after two weeks.",
+      "research_questions": ["q2_conversion_blockers"]
+    },
+    {
+      "id": "clf-08",
+      "text": "Didn't buy the set even after I liked the photos.",
+      "research_questions": ["q2_conversion_blockers"]
+    },
+    {
+      "id": "clf-09",
+      "text": "The size chart for this kurta is confusing and the fabric feels thin.",
+      "research_questions": ["q3_uncertainties", "q7_decision_factors"]
+    },
+    {
+      "id": "clf-10",
+      "text": "Colour on the model does not match the product photos.",
+      "research_questions": ["q3_uncertainties", "q7_decision_factors"]
+    },
+    {
+      "id": "clf-11",
+      "text": "Not sure if the material is authentic or a fake finish.",
+      "research_questions": ["q3_uncertainties", "q7_decision_factors"]
+    },
+    {
+      "id": "clf-12",
+      "text": "Fit looks tight in buyer photos so I still have doubts.",
+      "research_questions": ["q3_uncertainties", "q7_decision_factors"]
+    },
+    {
+      "id": "clf-13",
+      "text": "Waiting for payday before I check out.",
+      "research_questions": ["q4_postpone"]
+    },
+    {
+      "id": "clf-14",
+      "text": "Will decide later this month, not sure yet.",
+      "research_questions": ["q4_postpone"]
+    },
+    {
+      "id": "clf-15",
+      "text": "Saving for now until the wedding date is fixed.",
+      "research_questions": ["q4_postpone"]
+    },
+    {
+      "id": "clf-16",
+      "text": "I'll come back later when I have time to think.",
+      "research_questions": ["q4_postpone"]
+    },
+    {
+      "id": "clf-17",
+      "text": "Trying to decide between two kurtas versus the third option.",
+      "research_questions": ["q5_compare"]
+    },
+    {
+      "id": "clf-18",
+      "text": "I keep comparing the black dress and the printed one.",
+      "research_questions": ["q5_compare"]
+    },
+    {
+      "id": "clf-19",
+      "text": "Shortlist has three heels and I cannot pick.",
+      "research_questions": ["q1_wishlist_motive", "q5_compare"]
+    },
+    {
+      "id": "clf-20",
+      "text": "Need a side by side comparison of the two blazers.",
+      "research_questions": ["q5_compare"]
+    },
+    {
+      "id": "clf-21",
+      "text": "Checking Instagram hauls before I trust the colour.",
+      "research_questions": ["q3_uncertainties", "q6_off_platform", "q7_decision_factors"]
+    },
+    {
+      "id": "clf-22",
+      "text": "I'll watch a YouTube haul before ordering.",
+      "research_questions": ["q6_off_platform"]
+    },
+    {
+      "id": "clf-23",
+      "text": "Asked a friend on WhatsApp whether the sizing runs small.",
+      "research_questions": ["q3_uncertainties", "q6_off_platform", "q7_decision_factors"]
+    },
+    {
+      "id": "clf-24",
+      "text": "Saw a creator wear it on Instagram so I feel better.",
+      "research_questions": ["q6_off_platform"]
+    },
+    {
+      "id": "clf-25",
+      "text": "Reviews mention fit and styling more than the price.",
+      "research_questions": ["q3_uncertainties", "q7_decision_factors"]
+    },
+    {
+      "id": "clf-26",
+      "text": "Occasion is a sangeet so fit and size have to be right.",
+      "research_questions": ["q3_uncertainties", "q7_decision_factors"]
+    },
+    {
+      "id": "clf-27",
+      "text": "Price is fine as a signal; I care more about reviews of the fit.",
+      "research_questions": ["q3_uncertainties", "q7_decision_factors"]
+    },
+    {
+      "id": "clf-28",
+      "text": "Need social validation from a friend before I commit.",
+      "research_questions": ["q6_off_platform"]
+    },
+    {
+      "id": "clf-29",
+      "text": "Just saving this to a moodboard on my wishlist, not really planning to buy.",
+      "research_questions": ["q1_wishlist_motive", "q8_intent_vs_bookmark"]
+    },
+    {
+      "id": "clf-30",
+      "text": "This is inspiration for a dream closet, not a checkout.",
+      "research_questions": ["q8_intent_vs_bookmark"]
+    },
+    {
+      "id": "clf-31",
+      "text": "I will buy this kurta this week — genuine purchase intent.",
+      "research_questions": ["q8_intent_vs_bookmark"]
+    },
+    {
+      "id": "clf-32",
+      "text": "Going to buy the heels once I confirm the size.",
+      "research_questions": ["q3_uncertainties", "q7_decision_factors", "q8_intent_vs_bookmark"]
+    },
+    {
+      "id": "clf-33",
+      "text": "First time ordering from Nykaa Fashion and I am lost.",
+      "research_questions": ["q9_segments"]
+    },
+    {
+      "id": "clf-34",
+      "text": "Repeat buyer here — ethnic wear is where I hesitate.",
+      "research_questions": ["q9_segments"]
+    },
+    {
+      "id": "clf-35",
+      "text": "Footwear sizing is my issue as a budget shopper.",
+      "research_questions": ["q3_uncertainties", "q7_decision_factors", "q9_segments"]
+    },
+    {
+      "id": "clf-36",
+      "text": "Western dresses and ethnic wear — first order nerves.",
+      "research_questions": ["q9_segments"]
+    },
+    {
+      "id": "clf-37",
+      "text": "Saved it to my wishlist, will decide later after payday.",
+      "research_questions": ["q1_wishlist_motive", "q4_postpone"]
+    },
+    {
+      "id": "clf-38",
+      "text": "Wishlist pe pada hai, size chart pe bharosa nahi, Instagram pe check karungi.",
+      "research_questions": ["q1_wishlist_motive", "q3_uncertainties", "q6_off_platform", "q7_decision_factors"]
+    },
+    {
+      "id": "clf-39",
+      "text": "Comparing two saved kurtas because the fit reviews conflict.",
+      "research_questions": ["q1_wishlist_motive", "q3_uncertainties", "q5_compare", "q7_decision_factors"]
+    },
+    {
+      "id": "clf-40",
+      "text": "Never bought what I wishlisted — it still sits there while I am waiting.",
+      "research_questions": ["q1_wishlist_motive", "q2_conversion_blockers", "q4_postpone"]
+    }
+  ]
+}

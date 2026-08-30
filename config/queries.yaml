@@ -1,0 +1,115 @@
+queries:
+  - id: q1_wishlist_motive
+    number: 1
+    computed: false
+    question: Why do users add fashion products to their wishlist?
+    paraphrases:
+      - Why do shoppers save items on Nykaa Fashion instead of buying?
+      - What makes someone tap wishlist on a dress or pair of shoes?
+    theme_filters:
+      - wishlist_motive
+      - intent_vs_bookmark
+    generation_focus: Motives for saving — price watch, occasion, styling later, gifting, aspiration
+
+  - id: q2_conversion_blockers
+    number: 2
+    computed: false
+    question: What prevents wishlisted products from eventually being purchased?
+    paraphrases:
+      - Why do saved items never convert?
+      - What stops a wishlisted kurta or heel from becoming an order?
+    theme_filters:
+      - conversion_blocker
+    generation_focus: Blockers after save — doubt, friction, forgetting, change of mind
+
+  - id: q3_uncertainties
+    number: 3
+    computed: false
+    question: What uncertainties remain after users have identified a product they like?
+    paraphrases:
+      - After I like something, what am I still unsure about?
+      - Fit, fabric, colour, authenticity doubts on Nykaa Fashion
+    theme_filters:
+      - post_like_uncertainty
+      - decision_factor
+    generation_focus: Post-like doubt — size, quality, colour vs photo, authenticity
+
+  - id: q4_postpone
+    number: 4
+    computed: false
+    question: What causes users to postpone a purchase?
+    paraphrases:
+      - Why do people wait after wishlisting?
+      - Deferral language around Nykaa Fashion checkouts
+    theme_filters:
+      - purchase_deferral
+    generation_focus: Waiting for payday, occasion, more certainty — not a coupon as the fix
+
+  - id: q5_compare
+    number: 5
+    computed: false
+    question: How do users compare multiple shortlisted products?
+    paraphrases:
+      - How do shoppers decide between two saved items?
+      - Shortlist comparison behaviour on Nykaa Fashion
+    theme_filters:
+      - comparison_behavior
+    generation_focus: Comparing 2+ saved or considered items
+
+  - id: q6_off_platform
+    number: 6
+    computed: false
+    question: What information do users seek outside Nykaa Fashion before purchasing?
+    paraphrases:
+      - Do people check Instagram or YouTube before buying a wishlisted piece?
+      - Off-app research before converting a Nykaa Fashion save
+    theme_filters:
+      - off_platform_research
+    generation_focus: Instagram, YouTube hauls, friends, other retailers' size charts
+
+  - id: q7_decision_factors
+    number: 7
+    computed: false
+    question: What role do fit, size, styling, price, reviews, occasion, and social validation play?
+    paraphrases:
+      - Which factors actually decide a Nykaa Fashion purchase?
+      - Fit vs reviews vs occasion vs social proof
+    theme_filters:
+      - decision_factor
+      - post_like_uncertainty
+    generation_focus: The six decision factors — price as signal, not discount mechanic
+
+  - id: q8_intent_vs_bookmark
+    number: 8
+    computed: false
+    question: When is the wishlist genuine purchase intent vs. pure bookmarking?
+    paraphrases:
+      - Is the wishlist a buy list or a moodboard?
+      - Saving for later vs saving for inspiration
+    theme_filters:
+      - intent_vs_bookmark
+      - wishlist_motive
+    generation_focus: Language of "I will buy" vs "just saving"
+
+  - id: q9_segments
+    number: 9
+    computed: false
+    question: How do these behaviours differ across user segments?
+    paraphrases:
+      - First-time vs repeat Nykaa Fashion shoppers
+      - Ethnic vs western vs footwear hesitation
+    theme_filters:
+      - segment_context
+    generation_focus: Inferable segment and category differences
+
+  - id: q10_unmet_needs
+    number: 10
+    computed: true
+    question: What unmet needs emerge consistently across many independent sources?
+    paraphrases:
+      - Recurring asks that show up on Play, Reddit, and hauls
+      - What do independent sources keep requesting?
+    theme_filters:
+      - unmet_need
+    generation_focus: Needs in 3+ sources — strongest signal bucket
+    min_independent_sources: 3

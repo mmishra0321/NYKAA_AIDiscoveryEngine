@@ -1,0 +1,45 @@
+{
+  "run_date": "2026-08-30",
+  "finished_at": "2026-08-30T14:35:38+00:00",
+  "collection": "nykaa_fashion_wishlist_v1",
+  "persist_directory": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDISCOVERY/data/chroma",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedder": "stub",
+  "embedding_dim": 384,
+  "similarity": "cosine",
+  "chunks_in": 13,
+  "chunks_upserted": 13,
+  "skipped_noise": 0,
+  "collection_count": 13,
+  "smoke": {
+    "questions": 10,
+    "hits": {
+      "q1_wishlist_motive": 3,
+      "q2_conversion_blockers": 0,
+      "q3_uncertainties": 5,
+      "q4_postpone": 5,
+      "q5_compare": 4,
+      "q6_off_platform": 0,
+      "q7_decision_factors": 5,
+      "q8_intent_vs_bookmark": 0,
+      "q9_segments": 1,
+      "q10_unmet_needs": 0
+    },
+    "empty": [
+      "q2_conversion_blockers",
+      "q6_off_platform",
+      "q8_intent_vs_bookmark",
+      "q10_unmet_needs"
+    ],
+    "empty_count": 4,
+    "passed": true,
+    "threshold": "fail if empty_count >= 8/10",
+    "note": "Q10 may be thin early; metadata filter has_{question_id}."
+  },
+  "pii_hits": 0,
+  "limitations": [
+    "Embeddings are MiniLM when sentence-transformers is installed; --stub uses hash vectors.",
+    "Chroma metadata stores question flags as has_{qid} booleans (lists are not supported).",
+    "Q10 may be empty until 3+ independent sources exist in Phase 2."
+  ]
+}

@@ -1,0 +1,864 @@
+{
+  "run_date": "2026-08-30",
+  "finished_at": "2026-08-30T15:10:06+00:00",
+  "mode": "stub",
+  "catalog_dir": "data/responses/2026-08-30",
+  "kpi": "wishlist_to_purchase_30d",
+  "metrics": {
+    "relevance": {
+      "n": 20,
+      "n_signal": 10,
+      "n_noise": 10,
+      "precision_wishlist_signal": 1.0,
+      "accuracy": 1.0,
+      "target": 0.85,
+      "pass": true,
+      "rows": [
+        {
+          "id": "rel-s01",
+          "gold": "wishlist_signal",
+          "pred": "wishlist_signal",
+          "ok": true
+        },
+        {
+          "id": "rel-s02",
+          "gold": "wishlist_signal",
+          "pred": "wishlist_signal",
+          "ok": true
+        },
+        {
+          "id": "rel-s03",
+          "gold": "wishlist_signal",
+          "pred": "wishlist_signal",
+          "ok": true
+        },
+        {
+          "id": "rel-s04",
+          "gold": "wishlist_signal",
+          "pred": "wishlist_signal",
+          "ok": true
+        },
+        {
+          "id": "rel-s05",
+          "gold": "wishlist_signal",
+          "pred": "wishlist_signal",
+          "ok": true
+        },
+        {
+          "id": "rel-s06",
+          "gold": "wishlist_signal",
+          "pred": "wishlist_signal",
+          "ok": true
+        },
+        {
+          "id": "rel-s07",
+          "gold": "wishlist_signal",
+          "pred": "wishlist_signal",
+          "ok": true
+        },
+        {
+          "id": "rel-s08",
+          "gold": "wishlist_signal",
+          "pred": "wishlist_signal",
+          "ok": true
+        },
+        {
+          "id": "rel-s09",
+          "gold": "wishlist_signal",
+          "pred": "wishlist_signal",
+          "ok": true
+        },
+        {
+          "id": "rel-s10",
+          "gold": "wishlist_signal",
+          "pred": "wishlist_signal",
+          "ok": true
+        },
+        {
+          "id": "rel-n01",
+          "gold": "logistics_noise",
+          "pred": "logistics_noise",
+          "ok": true
+        },
+        {
+          "id": "rel-n02",
+          "gold": "logistics_noise",
+          "pred": "logistics_noise",
+          "ok": true
+        },
+        {
+          "id": "rel-n03",
+          "gold": "logistics_noise",
+          "pred": "logistics_noise",
+          "ok": true
+        },
+        {
+          "id": "rel-n04",
+          "gold": "logistics_noise",
+          "pred": "logistics_noise",
+          "ok": true
+        },
+        {
+          "id": "rel-n05",
+          "gold": "logistics_noise",
+          "pred": "logistics_noise",
+          "ok": true
+        },
+        {
+          "id": "rel-n06",
+          "gold": "logistics_noise",
+          "pred": "logistics_noise",
+          "ok": true
+        },
+        {
+          "id": "rel-n07",
+          "gold": "logistics_noise",
+          "pred": "logistics_noise",
+          "ok": true
+        },
+        {
+          "id": "rel-n08",
+          "gold": "logistics_noise",
+          "pred": "logistics_noise",
+          "ok": true
+        },
+        {
+          "id": "rel-n09",
+          "gold": "logistics_noise",
+          "pred": "logistics_noise",
+          "ok": true
+        },
+        {
+          "id": "rel-n10",
+          "gold": "logistics_noise",
+          "pred": "logistics_noise",
+          "ok": true
+        }
+      ]
+    },
+    "classify": {
+      "n": 40,
+      "macro_jaccard": 1.0,
+      "target": 0.75,
+      "pass": true,
+      "q10_leaks": 0,
+      "rows": [
+        {
+          "id": "clf-01",
+          "gold": [
+            "q1_wishlist_motive"
+          ],
+          "pred": [
+            "q1_wishlist_motive"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-02",
+          "gold": [
+            "q1_wishlist_motive"
+          ],
+          "pred": [
+            "q1_wishlist_motive"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-03",
+          "gold": [
+            "q1_wishlist_motive"
+          ],
+          "pred": [
+            "q1_wishlist_motive"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-04",
+          "gold": [
+            "q1_wishlist_motive"
+          ],
+          "pred": [
+            "q1_wishlist_motive"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-05",
+          "gold": [
+            "q2_conversion_blockers"
+          ],
+          "pred": [
+            "q2_conversion_blockers"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-06",
+          "gold": [
+            "q2_conversion_blockers"
+          ],
+          "pred": [
+            "q2_conversion_blockers"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-07",
+          "gold": [
+            "q2_conversion_blockers"
+          ],
+          "pred": [
+            "q2_conversion_blockers"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-08",
+          "gold": [
+            "q2_conversion_blockers"
+          ],
+          "pred": [
+            "q2_conversion_blockers"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-09",
+          "gold": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "pred": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-10",
+          "gold": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "pred": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-11",
+          "gold": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "pred": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-12",
+          "gold": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "pred": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-13",
+          "gold": [
+            "q4_postpone"
+          ],
+          "pred": [
+            "q4_postpone"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-14",
+          "gold": [
+            "q4_postpone"
+          ],
+          "pred": [
+            "q4_postpone"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-15",
+          "gold": [
+            "q4_postpone"
+          ],
+          "pred": [
+            "q4_postpone"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-16",
+          "gold": [
+            "q4_postpone"
+          ],
+          "pred": [
+            "q4_postpone"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-17",
+          "gold": [
+            "q5_compare"
+          ],
+          "pred": [
+            "q5_compare"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-18",
+          "gold": [
+            "q5_compare"
+          ],
+          "pred": [
+            "q5_compare"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-19",
+          "gold": [
+            "q1_wishlist_motive",
+            "q5_compare"
+          ],
+          "pred": [
+            "q1_wishlist_motive",
+            "q5_compare"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-20",
+          "gold": [
+            "q5_compare"
+          ],
+          "pred": [
+            "q5_compare"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-21",
+          "gold": [
+            "q3_uncertainties",
+            "q6_off_platform",
+            "q7_decision_factors"
+          ],
+          "pred": [
+            "q3_uncertainties",
+            "q7_decision_factors",
+            "q6_off_platform"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-22",
+          "gold": [
+            "q6_off_platform"
+          ],
+          "pred": [
+            "q6_off_platform"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-23",
+          "gold": [
+            "q3_uncertainties",
+            "q6_off_platform",
+            "q7_decision_factors"
+          ],
+          "pred": [
+            "q3_uncertainties",
+            "q7_decision_factors",
+            "q6_off_platform"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-24",
+          "gold": [
+            "q6_off_platform"
+          ],
+          "pred": [
+            "q6_off_platform"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-25",
+          "gold": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "pred": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-26",
+          "gold": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "pred": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-27",
+          "gold": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "pred": [
+            "q3_uncertainties",
+            "q7_decision_factors"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-28",
+          "gold": [
+            "q6_off_platform"
+          ],
+          "pred": [
+            "q6_off_platform"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-29",
+          "gold": [
+            "q1_wishlist_motive",
+            "q8_intent_vs_bookmark"
+          ],
+          "pred": [
+            "q1_wishlist_motive",
+            "q8_intent_vs_bookmark"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-30",
+          "gold": [
+            "q8_intent_vs_bookmark"
+          ],
+          "pred": [
+            "q8_intent_vs_bookmark"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-31",
+          "gold": [
+            "q8_intent_vs_bookmark"
+          ],
+          "pred": [
+            "q8_intent_vs_bookmark"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-32",
+          "gold": [
+            "q3_uncertainties",
+            "q7_decision_factors",
+            "q8_intent_vs_bookmark"
+          ],
+          "pred": [
+            "q3_uncertainties",
+            "q7_decision_factors",
+            "q8_intent_vs_bookmark"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-33",
+          "gold": [
+            "q9_segments"
+          ],
+          "pred": [
+            "q9_segments"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-34",
+          "gold": [
+            "q9_segments"
+          ],
+          "pred": [
+            "q9_segments"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-35",
+          "gold": [
+            "q3_uncertainties",
+            "q7_decision_factors",
+            "q9_segments"
+          ],
+          "pred": [
+            "q3_uncertainties",
+            "q7_decision_factors",
+            "q9_segments"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-36",
+          "gold": [
+            "q9_segments"
+          ],
+          "pred": [
+            "q9_segments"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-37",
+          "gold": [
+            "q1_wishlist_motive",
+            "q4_postpone"
+          ],
+          "pred": [
+            "q1_wishlist_motive",
+            "q4_postpone"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-38",
+          "gold": [
+            "q1_wishlist_motive",
+            "q3_uncertainties",
+            "q6_off_platform",
+            "q7_decision_factors"
+          ],
+          "pred": [
+            "q1_wishlist_motive",
+            "q3_uncertainties",
+            "q7_decision_factors",
+            "q6_off_platform"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-39",
+          "gold": [
+            "q1_wishlist_motive",
+            "q3_uncertainties",
+            "q5_compare",
+            "q7_decision_factors"
+          ],
+          "pred": [
+            "q1_wishlist_motive",
+            "q3_uncertainties",
+            "q7_decision_factors",
+            "q5_compare"
+          ],
+          "jaccard": 1.0
+        },
+        {
+          "id": "clf-40",
+          "gold": [
+            "q1_wishlist_motive",
+            "q2_conversion_blockers",
+            "q4_postpone"
+          ],
+          "pred": [
+            "q1_wishlist_motive",
+            "q2_conversion_blockers",
+            "q4_postpone"
+          ],
+          "jaccard": 1.0
+        }
+      ]
+    },
+    "paraphrases": {
+      "n": 20,
+      "accuracy": 1.0,
+      "pass": true,
+      "rows": [
+        {
+          "query_id": "q1_wishlist_motive",
+          "paraphrase": "Why do shoppers save items on Nykaa Fashion instead of buying?",
+          "routed": "q1_wishlist_motive",
+          "ok": true
+        },
+        {
+          "query_id": "q1_wishlist_motive",
+          "paraphrase": "What makes someone tap wishlist on a dress or pair of shoes?",
+          "routed": "q1_wishlist_motive",
+          "ok": true
+        },
+        {
+          "query_id": "q2_conversion_blockers",
+          "paraphrase": "Why do saved items never convert?",
+          "routed": "q2_conversion_blockers",
+          "ok": true
+        },
+        {
+          "query_id": "q2_conversion_blockers",
+          "paraphrase": "What stops a wishlisted kurta or heel from becoming an order?",
+          "routed": "q2_conversion_blockers",
+          "ok": true
+        },
+        {
+          "query_id": "q3_uncertainties",
+          "paraphrase": "After I like something, what am I still unsure about?",
+          "routed": "q3_uncertainties",
+          "ok": true
+        },
+        {
+          "query_id": "q3_uncertainties",
+          "paraphrase": "Fit, fabric, colour, authenticity doubts on Nykaa Fashion",
+          "routed": "q3_uncertainties",
+          "ok": true
+        },
+        {
+          "query_id": "q4_postpone",
+          "paraphrase": "Why do people wait after wishlisting?",
+          "routed": "q4_postpone",
+          "ok": true
+        },
+        {
+          "query_id": "q4_postpone",
+          "paraphrase": "Deferral language around Nykaa Fashion checkouts",
+          "routed": "q4_postpone",
+          "ok": true
+        },
+        {
+          "query_id": "q5_compare",
+          "paraphrase": "How do shoppers decide between two saved items?",
+          "routed": "q5_compare",
+          "ok": true
+        },
+        {
+          "query_id": "q5_compare",
+          "paraphrase": "Shortlist comparison behaviour on Nykaa Fashion",
+          "routed": "q5_compare",
+          "ok": true
+        },
+        {
+          "query_id": "q6_off_platform",
+          "paraphrase": "Do people check Instagram or YouTube before buying a wishlisted piece?",
+          "routed": "q6_off_platform",
+          "ok": true
+        },
+        {
+          "query_id": "q6_off_platform",
+          "paraphrase": "Off-app research before converting a Nykaa Fashion save",
+          "routed": "q6_off_platform",
+          "ok": true
+        },
+        {
+          "query_id": "q7_decision_factors",
+          "paraphrase": "Which factors actually decide a Nykaa Fashion purchase?",
+          "routed": "q7_decision_factors",
+          "ok": true
+        },
+        {
+          "query_id": "q7_decision_factors",
+          "paraphrase": "Fit vs reviews vs occasion vs social proof",
+          "routed": "q7_decision_factors",
+          "ok": true
+        },
+        {
+          "query_id": "q8_intent_vs_bookmark",
+          "paraphrase": "Is the wishlist a buy list or a moodboard?",
+          "routed": "q8_intent_vs_bookmark",
+          "ok": true
+        },
+        {
+          "query_id": "q8_intent_vs_bookmark",
+          "paraphrase": "Saving for later vs saving for inspiration",
+          "routed": "q8_intent_vs_bookmark",
+          "ok": true
+        },
+        {
+          "query_id": "q9_segments",
+          "paraphrase": "First-time vs repeat Nykaa Fashion shoppers",
+          "routed": "q9_segments",
+          "ok": true
+        },
+        {
+          "query_id": "q9_segments",
+          "paraphrase": "Ethnic vs western vs footwear hesitation",
+          "routed": "q9_segments",
+          "ok": true
+        },
+        {
+          "query_id": "q10_unmet_needs",
+          "paraphrase": "Recurring asks that show up on Play, Reddit, and hauls",
+          "routed": "q10_unmet_needs",
+          "ok": true
+        },
+        {
+          "query_id": "q10_unmet_needs",
+          "paraphrase": "What do independent sources keep requesting?",
+          "routed": "q10_unmet_needs",
+          "ok": true
+        }
+      ]
+    },
+    "citations": {
+      "n": 28,
+      "resolved": 28,
+      "accuracy": 1.0,
+      "pii_in_paraphrases": 0,
+      "skipped": false,
+      "target": 0.9,
+      "pass": true
+    },
+    "coverage": {
+      "questions": 10,
+      "coverage_10_of_10": true,
+      "with_themes": [
+        "q1_wishlist_motive",
+        "q3_uncertainties",
+        "q4_postpone",
+        "q5_compare",
+        "q7_decision_factors",
+        "q9_segments"
+      ],
+      "explicit_gaps": [
+        "q2_conversion_blockers",
+        "q6_off_platform",
+        "q8_intent_vs_bookmark",
+        "q10_unmet_needs"
+      ],
+      "target": "10/10 sections or explicit data_gap",
+      "pass": true,
+      "relevant_corpus": 13,
+      "relevant_corpus_target": 400,
+      "relevant_corpus_pass": false
+    },
+    "lint": {
+      "hits": [],
+      "n": 0,
+      "target": 0,
+      "pass": true
+    },
+    "answers": {
+      "n": 10,
+      "pass_rate": 1.0,
+      "mean_score": 3.0,
+      "target": 0.85,
+      "pass": true,
+      "rows": [
+        {
+          "query_id": "q1_wishlist_motive",
+          "score": 3,
+          "pass": true,
+          "notes": "Chunk_ids resolve; paraphrase is generic. Implication (save-reason on return) is a hypothesis. Sub-theme name Other is leftover clustering, not a real pattern name."
+        },
+        {
+          "query_id": "q2_conversion_blockers",
+          "score": 3,
+          "pass": true,
+          "notes": "Honest data_gap \u2014 no invented blockers. No implication until more signal."
+        },
+        {
+          "query_id": "q3_uncertainties",
+          "score": 3,
+          "pass": true,
+          "notes": "Size/fit implication is in-scope; cluster still named Other."
+        },
+        {
+          "query_id": "q4_postpone",
+          "score": 3,
+          "pass": true,
+          "notes": "Deferral implication avoids promo language. Other leftover name."
+        },
+        {
+          "query_id": "q5_compare",
+          "score": 3,
+          "pass": true,
+          "notes": "Side-by-side hypothesis is fair; sparse Play-only compare speech. Architecture flagged Q5 as thin \u2014 this run had 4 hits, still Other."
+        },
+        {
+          "query_id": "q6_off_platform",
+          "score": 3,
+          "pass": true,
+          "notes": "Explicit data_gap. No YouTube key, no Instagram corpus."
+        },
+        {
+          "query_id": "q7_decision_factors",
+          "score": 3,
+          "pass": true,
+          "notes": "Price-as-signal (not markdown) is lint-clean."
+        },
+        {
+          "query_id": "q8_intent_vs_bookmark",
+          "score": 3,
+          "pass": true,
+          "notes": "Explicit data_gap \u2014 bookmark vs buy language is rare in Play reviews."
+        },
+        {
+          "query_id": "q9_segments",
+          "score": 3,
+          "pass": true,
+          "notes": "n=1 chunk; implication correctly asks for interviews rather than claiming a segment law."
+        },
+        {
+          "query_id": "q10_unmet_needs",
+          "score": 3,
+          "pass": true,
+          "notes": "Q10 needs 3+ independent sources. Play-only run cannot populate it \u2014 honest gap."
+        }
+      ]
+    },
+    "latency": {
+      "n": 22,
+      "p95_seconds": 0.0031,
+      "max_seconds": 0.0057,
+      "target": 5.0,
+      "pass": true,
+      "note": "Cached catalog path (/api/v1/ask, /catalog, /health). Architecture /query maps to /api/v1/ask.",
+      "catalog_questions": 10
+    },
+    "live_link": {
+      "url": null,
+      "pass": false,
+      "target": "public URL third party can open + export",
+      "note": "Set PUBLIC_UI_URL after Render + Vercel deploy (docs/phase6.md). Local export works at POST /api/v1/export."
+    }
+  },
+  "hard_gates_pass": true,
+  "limitations": [
+    "Play reviews are delivery-dominated; relevance gold treats those as logistics_noise, not Q1\u2013Q10.",
+    "Hinglish rows are in the gold set; stub keywords are English-leaning.",
+    "Sparse / gap questions in this catalog: q2_conversion_blockers, q6_off_platform, q8_intent_vs_bookmark, q10_unmet_needs.",
+    "Architecture called out sparse Q5/Q6/Q8; this Play+App run gaps Q2/Q6/Q8/Q10 (Q5 had hits but leftover Other names).",
+    "No YOUTUBE_API_KEY \u2014 haul comments deferred.",
+    "Twitter/X, Quora, Trustpilot/MouthShut HTML are deferred V1.",
+    "Relevant corpus after gate is 13 (target \u2265 400).",
+    "Stub leftover cluster name Other is weak for Part 3; Groq naming needs a larger signal set.",
+    "Q10 needs \u22653 independent sources; Play-only cannot populate it.",
+    "Public live link is not created without Render/Vercel accounts."
+  ],
+  "root": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDISCOVERY"
+}
