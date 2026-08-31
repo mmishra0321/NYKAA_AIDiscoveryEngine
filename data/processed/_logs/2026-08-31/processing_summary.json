@@ -1,0 +1,77 @@
+{
+  "run_date": "2026-08-31",
+  "finished_at": "2026-08-31T12:00:21+00:00",
+  "mode": "groq",
+  "cluster_backend": "ngram",
+  "input_count": 108,
+  "cleaned_count": 108,
+  "relevance": {
+    "logistics_noise": 55,
+    "other": 37,
+    "wishlist_signal": 16
+  },
+  "classified": 16,
+  "with_q1_q9": 16,
+  "majority_labeled": true,
+  "chunks": 16,
+  "sub_themes": 6,
+  "q10_themes": 0,
+  "question_coverage": {
+    "q1_wishlist_motive": {
+      "docs": 3,
+      "sub_themes": 1,
+      "data_gap": null
+    },
+    "q2_conversion_blockers": {
+      "docs": 0,
+      "sub_themes": 0,
+      "data_gap": "No named sub-theme for q2_conversion_blockers (What prevents wishlisted products from eventually being purchased?) in this run."
+    },
+    "q3_uncertainties": {
+      "docs": 7,
+      "sub_themes": 1,
+      "data_gap": null
+    },
+    "q4_postpone": {
+      "docs": 8,
+      "sub_themes": 1,
+      "data_gap": null
+    },
+    "q5_compare": {
+      "docs": 6,
+      "sub_themes": 1,
+      "data_gap": null
+    },
+    "q6_off_platform": {
+      "docs": 0,
+      "sub_themes": 0,
+      "data_gap": "No named sub-theme for q6_off_platform (What information do users seek outside Nykaa Fashion before purchasing?) in this run."
+    },
+    "q7_decision_factors": {
+      "docs": 7,
+      "sub_themes": 1,
+      "data_gap": null
+    },
+    "q8_intent_vs_bookmark": {
+      "docs": 0,
+      "sub_themes": 0,
+      "data_gap": "No named sub-theme for q8_intent_vs_bookmark (When is the wishlist genuine purchase intent vs. pure bookmarking?) in this run."
+    },
+    "q9_segments": {
+      "docs": 2,
+      "sub_themes": 1,
+      "data_gap": null
+    },
+    "q10_unmet_needs": {
+      "docs": 0,
+      "sub_themes": 0,
+      "data_gap": "No named sub-theme for q10_unmet_needs (What unmet needs emerge consistently across many independent sources?) in this run."
+    }
+  },
+  "pii_hits": 0,
+  "limitations": [
+    "Classifier never assigns q10; Q10 is computed from slugs in 3+ sources.",
+    "Stub mode uses keyword heuristics; Groq is the production classifier.",
+    "MiniLM clustering requires sentence-transformers; otherwise n-gram cosine."
+  ]
+}

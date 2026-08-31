@@ -1,0 +1,14 @@
+{
+  "id": "q2_conversion_blockers",
+  "question": "What prevents wishlisted products from eventually being purchased?",
+  "summary": "No quantified, evidence-backed sub-theme in this run. Treat as an explicit data_gap until more wishlist language is classified.",
+  "sub_themes": [],
+  "implications": [],
+  "interview_probes": [
+    "Walk me through the last Nykaa Fashion item you saved but did not buy in 30 days \u2014 did this come up: What prevents wishlisted products from eventually being purchased?"
+  ],
+  "confidence": "low",
+  "data_gaps": "No indexed evidence for q2_conversion_blockers.",
+  "evidence_count": 0,
+  "themes_count": 0
+}

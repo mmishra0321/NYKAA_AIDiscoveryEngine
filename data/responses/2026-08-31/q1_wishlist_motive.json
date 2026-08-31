@@ -1,0 +1,44 @@
+{
+  "id": "q1_wishlist_motive",
+  "question": "Why do users add fashion products to their wishlist?",
+  "summary": "Observed from 3 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q1_wishlist_motive_other",
+      "question_id": "q1_wishlist_motive",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 1,
+      "sources": [
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.64,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "94a97f38-2577-5efe-8442-ff0baab6a2de",
+        "eae66a4c-3336-5d44-9e2d-16b9b1b0d008",
+        "0ace7dd5-17d0-5927-b767-27ce62df59ad"
+      ]
+    }
+  ],
+  "implications": [
+    "Observed: people save to style later, compare, or wait. Hypothesis: showing the original save reason at return-to-wishlist would raise 30-day conversion without making items cheaper."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 3,
+  "themes_count": 1
+}

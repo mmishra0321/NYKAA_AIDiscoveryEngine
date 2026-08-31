@@ -1,0 +1,52 @@
+{
+  "id": "q7_decision_factors",
+  "question": "What role do fit, size, styling, price, reviews, occasion, and social validation play?",
+  "summary": "Observed from 7 retrieved chunks across app_store, play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q7_decision_factors_other",
+      "question_id": "q7_decision_factors",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 2,
+      "sources": [
+        "app_store",
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.79,
+      "segment_skew": [
+        "first_time",
+        "repeat"
+      ],
+      "paraphrased_examples": [
+        "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "49fed4ca-7479-5d92-842f-f66fe27f49d1",
+        "85450465-dc40-56b3-b728-ecac234e75a7",
+        "dac7282c-2229-57f5-b02e-8f1faf1d7076",
+        "fcd358e7-bade-5ce3-918c-4dc37c39210d",
+        "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92",
+        "6bc01b14-6005-52ea-b7c3-6ed35e08f2af",
+        "f0312ff3-504a-5968-80e5-41420f066b07"
+      ]
+    }
+  ],
+  "implications": [
+    "Observed: fit, size, reviews, occasion, and price-as-signal show up in the same breath. Hypothesis: surface those factors on the saved item, not a markdown."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 7,
+  "themes_count": 1
+}
