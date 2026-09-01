@@ -1,0 +1,47 @@
+{
+  "id": "q5_compare",
+  "question": "How do users compare multiple shortlisted products?",
+  "summary": "Observed from 4 retrieved chunks across play_store: Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q5_compare_other",
+      "question_id": "q5_compare",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 1,
+      "sources": [
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.79,
+      "segment_skew": [
+        "price_sensitive"
+      ],
+      "paraphrased_examples": [
+        "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "e1e7d8b9-4dc7-5732-83a8-3391eee05d3b",
+        "9225b30f-faa8-507b-b97c-eb5509c2a2de",
+        "d08be67f-f375-59d9-815d-f74389fcbee1",
+        "2ce0f436-28cb-5489-b155-f539bddc5097"
+      ]
+    }
+  ],
+  "implications": [
+    "Observed: shoppers hold two or more saved items. Hypothesis: a side-by-side of saved pieces would reduce stalled shortlists."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 4,
+  "themes_count": 1
+}

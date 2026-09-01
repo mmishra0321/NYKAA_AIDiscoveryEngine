@@ -1,0 +1,12 @@
+{
+  "logistics_noise": 40,
+  "other": 23,
+  "wishlist_signal": 13,
+  "by_source": {
+    "play_store": {
+      "logistics_noise": 40,
+      "other": 23
+    }
+  },
+  "note": "logistics_noise and other are excluded from Q1\u2013Q10."
+}

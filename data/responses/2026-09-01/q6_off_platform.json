@@ -1,0 +1,14 @@
+{
+  "id": "q6_off_platform",
+  "question": "What information do users seek outside Nykaa Fashion before purchasing?",
+  "summary": "No quantified, evidence-backed sub-theme in this run. Treat as an explicit data_gap until more wishlist language is classified.",
+  "sub_themes": [],
+  "implications": [],
+  "interview_probes": [
+    "Walk me through the last Nykaa Fashion item you saved but did not buy in 30 days \u2014 did this come up: What information do users seek outside Nykaa Fashion before purchasing?"
+  ],
+  "confidence": "low",
+  "data_gaps": "No indexed evidence for q6_off_platform.",
+  "evidence_count": 0,
+  "themes_count": 0
+}

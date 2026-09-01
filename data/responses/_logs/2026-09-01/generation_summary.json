@@ -1,0 +1,20 @@
+{
+  "run_date": "2026-09-01",
+  "finished_at": "2026-09-01T10:39:35+00:00",
+  "mode": "groq",
+  "section_modes": {
+    "groq_fallback_stub": 10
+  },
+  "questions": 10,
+  "with_themes": 6,
+  "explicit_gaps": 4,
+  "coverage_10_of_10": true,
+  "lint_blocked": 0,
+  "lint_markdown_hits": [],
+  "kpi": "wishlist_to_purchase_30d",
+  "limitations": [
+    "Groq retry-once then retrieval stub if parse or discount-lint fails.",
+    "User-facing examples are paraphrases; chunk_ids stay internal on sub-themes.",
+    "Price as a decision factor is in scope; coupons/discounts as a mechanism are not."
+  ]
+}
