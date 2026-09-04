@@ -21,24 +21,118 @@ def heuristic_classify(text: str) -> dict[str, Any]:
     qs: list[str] = []
     factors: list[str] = []
 
-    if any(k in lower for k in ("wishlist", "saved", "save it", "shortlist", "bookmark")):
+    if any(k in lower for k in ("wishlist", "saved", "save it", "shortlist", "bookmark", "heart", "liked it")):
         qs.append("q1_wishlist_motive")
-    if any(k in lower for k in ("never bought", "didn't buy", "did not buy", "won't buy", "sits in", "still there")):
+    if any(
+        k in lower
+        for k in (
+            "never bought",
+            "didn't buy",
+            "did not buy",
+            "won't buy",
+            "wont buy",
+            "sits in",
+            "still there",
+            "dead list",
+            "never convert",
+            "stall",
+            "stuck in wishlist",
+            "can't convert",
+            "cant convert",
+            "no nudge",
+            "never notified",
+            "feedback loop",
+            "can't tell the app",
+            "cant tell the app",
+        )
+    ):
         qs.append("q2_conversion_blockers")
-    if any(k in lower for k in ("size", "sizing", "fit", "fabric", "colour", "color", "authentic", "fake", "material")):
+    if any(
+        k in lower
+        for k in (
+            "size",
+            "sizing",
+            "fit",
+            "fabric",
+            "colour",
+            "color",
+            "authentic",
+            "fake",
+            "material",
+            "still unsure",
+            "not sure if it fits",
+            "will this fit",
+        )
+    ):
         qs.append("q3_uncertainties")
         qs.append("q7_decision_factors")
-    if any(k in lower for k in ("waiting", "later", "payday", "not sure yet", "saving for now", "will decide")):
+    if any(
+        k in lower
+        for k in (
+            "waiting",
+            "later",
+            "payday",
+            "not sure yet",
+            "saving for now",
+            "will decide",
+            "when the moment",
+            "after salary",
+            "postpone",
+        )
+    ):
         qs.append("q4_postpone")
-    if any(k in lower for k in ("compar", "between two", "vs ", " versus ", "shortlist")):
+    if any(k in lower for k in ("compar", "between two", "vs ", " versus ", "shortlist", "side by side")):
         qs.append("q5_compare")
-    if any(k in lower for k in ("instagram", "youtube", "haul", "friend", "whatsapp")):
+    if any(
+        k in lower
+        for k in (
+            "instagram",
+            "youtube",
+            "haul",
+            "friend",
+            "whatsapp",
+            "reels",
+            "size chart",
+            "off nykaa",
+            "outside nykaa",
+            "other app",
+            "google",
+        )
+    ):
         qs.append("q6_off_platform")
-    if any(k in lower for k in ("inspiration", "moodboard", "just saving", "not really planning", "dream closet")):
+    if any(
+        k in lower
+        for k in (
+            "inspiration",
+            "moodboard",
+            "just saving",
+            "not really planning",
+            "dream closet",
+            "open to buying",
+            "actively considering",
+            "genuine intent",
+            "dead list",
+        )
+    ):
         qs.append("q8_intent_vs_bookmark")
-    if "i will buy" in lower or "going to buy" in lower:
+    if "i will buy" in lower or "going to buy" in lower or "planning to buy" in lower:
         qs.append("q8_intent_vs_bookmark")
-    if any(k in lower for k in ("first time", "first order", "repeat", "ethnic", "western", "footwear", "budget")):
+    if any(
+        k in lower
+        for k in (
+            "first time",
+            "first order",
+            "repeat",
+            "ethnic",
+            "western",
+            "footwear",
+            "budget",
+            "open listener",
+            "frustrated explorer",
+            "work week",
+            "occasion shopper",
+        )
+    ):
         qs.append("q9_segments")
 
     if "fit" in lower:

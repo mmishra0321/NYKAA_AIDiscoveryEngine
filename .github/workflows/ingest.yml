@@ -67,6 +67,40 @@ jobs:
           python -m src.retrieval --catalog --stub --verbose
           python -m src.generation "${STUB[@]}" --verbose
 
+      - name: Write workflow run marker
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          set -euo pipefail
+          DAY="$(date -u +%F)"
+          TARGET="$(ls -1d data/raw/_logs/20* 2>/dev/null | sort | tail -1 || true)"
+          if [ -z "${TARGET}" ]; then
+            TARGET="data/raw/_logs/${DAY}"
+            mkdir -p "${TARGET}"
+          fi
+          export TARGET
+          python - <<'PY'
+          import json, os, pathlib
+          from datetime import datetime, timezone
+          target = pathlib.Path(os.environ["TARGET"])
+          payload = {
+              "id": int(os.environ["GITHUB_RUN_ID"]),
+              "status": "completed",
+              "conclusion": os.environ.get("JOB_STATUS") or "unknown",
+              "event": os.environ.get("GITHUB_EVENT_NAME") or "",
+              "display_title": "Ingest Classify Index Nykaa Fashion",
+              "created_at": os.environ.get("GITHUB_RUN_STARTED_AT") or "",
+              "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "run_started_at": os.environ.get("GITHUB_RUN_STARTED_AT") or "",
+              "html_url": f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
+              "head_branch": os.environ.get("GITHUB_REF_NAME") or "",
+              "actor": os.environ.get("GITHUB_ACTOR") or "",
+          }
+          target.joinpath("workflow_run.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+          print(f"wrote {target / 'workflow_run.json'}")
+          PY
+
       - name: Commit logs and catalog
         if: always()
         run: |

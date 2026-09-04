@@ -1,0 +1,161 @@
+{
+  "id": "q6_off_platform",
+  "question": "What information do users seek outside Nykaa Fashion before purchasing?",
+  "summary": "Observed from 10 retrieved chunks across app_store, blog, forum, play_store, social: Fit / size doubt after save, Off-Nykaa size charts and other apps, YouTube / haul research before convert, Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q6_off_platform_fit_doubt_after_save",
+      "question_id": "q6_off_platform",
+      "name": "Fit / size doubt after save",
+      "share_of_bucket": 0.353,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 1,
+      "impact_score": 0.94,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe fit / size doubt after save after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Fit / size doubt after save may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did fit / size doubt after save come up?"
+      ],
+      "chunk_ids": [
+        "9d7799be-b8f4-5acc-9e76-400ac3582649",
+        "97e543c5-4b6b-5062-9692-fead1d8101cf",
+        "2008b269-4267-5525-b2d6-e740873fc3fc",
+        "ee5e85cc-0bb7-50d5-acc6-43663a31dc6d",
+        "8cd6f3e5-9323-528b-ac19-9f4ef7b737fe",
+        "ce2ded11-dd94-5f57-a270-00c6e5031bb6",
+        "74318c9a-415d-51ff-8f45-5223e2cdd3dc",
+        "5f4cc444-409b-5553-8289-9292020367c2",
+        "5c27745f-8128-5a74-9ac7-5505798ef029",
+        "1d3d1c47-b56f-50be-aabd-b0fabb97de9f",
+        "44b68d5b-bfa7-5868-952d-a125f9a9da8a",
+        "be4ff97e-6fc0-51a4-a84d-1b93c585ef8f"
+      ]
+    },
+    {
+      "sub_theme_id": "q6_off_platform_off_platform_size_chart",
+      "question_id": "q6_off_platform",
+      "name": "Off-Nykaa size charts and other apps",
+      "share_of_bucket": 0.206,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "play_store",
+        "social"
+      ],
+      "frequency": "low",
+      "severity": "high",
+      "impact_rank": 2,
+      "impact_score": 0.773,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe off-nykaa size charts and other apps after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Off-Nykaa size charts and other apps may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did off-nykaa size charts and other apps come up?"
+      ],
+      "chunk_ids": [
+        "a64cff48-3da6-5543-afe1-21d093e7f9cf",
+        "fed1b0d2-9f7c-52ec-a4ce-5eeeb4c540fd",
+        "4dd8b0a9-5edf-5bf7-b120-b2a0b13dc542",
+        "196367a1-3d28-5c75-b63d-d5aa34e3856b",
+        "09abab24-6ad7-5c24-a678-fc1d229c5821",
+        "9c6ad7e3-5704-5e6d-bfbf-ca4bf06c821a",
+        "ac21e53a-d776-50d0-9af1-f23081389e3a"
+      ]
+    },
+    {
+      "sub_theme_id": "q6_off_platform_youtube_haul",
+      "question_id": "q6_off_platform",
+      "name": "YouTube / haul research before convert",
+      "share_of_bucket": 0.265,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "medium",
+      "impact_rank": 3,
+      "impact_score": 0.72,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe youtube / haul research before convert after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "YouTube / haul research before convert may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did youtube / haul research before convert come up?"
+      ],
+      "chunk_ids": [
+        "5594f8bd-e37f-5fea-94d7-f215a5245b01",
+        "0e12bbdc-055d-5039-be41-0309d88f4d4a",
+        "acc6959c-da0e-5dfc-8732-c8cf2a463ee9",
+        "1c5ac2dc-d8e9-5d0c-a275-f42f80acee90",
+        "60407121-0359-556d-a4c1-4a0da2064cda",
+        "0697d6d7-2540-533a-bb2b-2a691479adb6",
+        "87dbb622-ae3c-5da2-8846-d6b99d3e89c6",
+        "3d839667-ebeb-5537-91bd-8fbc61955f7c",
+        "7af67876-df3d-57f3-a98c-f4ea6e970df8"
+      ]
+    },
+    {
+      "sub_theme_id": "q6_off_platform_other",
+      "question_id": "q6_off_platform",
+      "name": "Other",
+      "share_of_bucket": 0.176,
+      "source_diversity": 3,
+      "sources": [
+        "blog",
+        "play_store",
+        "social"
+      ],
+      "frequency": "low",
+      "severity": "low",
+      "impact_rank": 4,
+      "impact_score": 0.469,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "5c3926f3-34db-5a64-8cb8-2d6e529b0705",
+        "4c099880-f467-57c2-8ebc-69c8ef23673e",
+        "d29ef08b-a9eb-5bbf-8fdf-7e7a6b4f32bc",
+        "d70ea330-aac6-5c54-8a6e-cd30642cc352",
+        "06750c39-1e31-598e-927a-bc9a34493a59",
+        "6c6f3e38-efb7-5281-896f-47b2a32681cb"
+      ]
+    }
+  ],
+  "implications": [
+    "Observed: YouTube/Instagram/friends are checked before converting a save. Hypothesis: in-app proof (hauls, try-ons) should be reachable from the wishlist."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did fit / size doubt after save come up?",
+    "When you saved something recently, did off-nykaa size charts and other apps come up?",
+    "When you saved something recently, did youtube / haul research before convert come up?",
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 10,
+  "themes_count": 4
+}

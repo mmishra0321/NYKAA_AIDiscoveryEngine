@@ -23,6 +23,7 @@ from src.api.store import (
     flatten_themes,
     get_catalog,
     pipeline_summary,
+    scrape_status,
 )
 
 app = FastAPI(title="Nykaa Fashion Wishlist Discovery", version="1.0.0")
@@ -66,6 +67,12 @@ def health() -> dict[str, Any]:
 @app.get("/api/v1/pipeline/summary")
 def pipeline() -> dict[str, Any]:
     return pipeline_summary()
+
+
+@app.get("/api/v1/scrape/status")
+def scrape() -> dict[str, Any]:
+    """Last scrape log + latest GitHub Actions ingest run."""
+    return scrape_status()
 
 
 @app.get("/api/v1/catalog")

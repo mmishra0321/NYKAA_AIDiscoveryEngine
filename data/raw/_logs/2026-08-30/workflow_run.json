@@ -1,0 +1,13 @@
+{
+  "id": 33319936893,
+  "status": "completed",
+  "conclusion": "success",
+  "event": "workflow_dispatch",
+  "display_title": "Ingest Classify Index Nykaa Fashion",
+  "created_at": "2026-08-30T15:33:00Z",
+  "updated_at": "2026-08-30T15:34:00Z",
+  "run_started_at": "2026-08-30T15:33:00Z",
+  "html_url": "https://github.com/mmishra0321/NYKAA_AIDiscoveryEngine/actions/runs/33319936893",
+  "head_branch": "main",
+  "actor": "github-actions[bot]"
+}

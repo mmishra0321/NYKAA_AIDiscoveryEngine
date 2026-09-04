@@ -87,8 +87,20 @@ def test_insights_by_id(client):
 def test_pipeline_summary(client):
     res = client.get("/api/v1/pipeline/summary")
     assert res.status_code == 200
-    ids = [s["id"] for s in res.json()["steps"]]
+    body = res.json()
+    ids = [s["id"] for s in body["steps"]]
     assert ids == ["ingest", "relevance", "classify", "index", "retrieve", "catalog"]
+    assert "scrape" in body
+    assert body["scrape"]["workflow_name"]
+
+
+def test_scrape_status(client):
+    res = client.get("/api/v1/scrape/status")
+    assert res.status_code == 200
+    body = res.json()
+    assert "schedule" in body
+    assert "actions_url" in body
+    assert "ingest.yml" in body["actions_url"]
 
 
 def test_export_markdown(client):

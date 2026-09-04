@@ -15,7 +15,9 @@ logger = logging.getLogger(__name__)
 WISHLIST_HINTS = (
     "wishlist",
     "wish list",
+    "wishlisted",
     "saved",
+    "saving",
     "shortlist",
     "bookmark",
     "haven't bought",
@@ -24,6 +26,17 @@ WISHLIST_HINTS = (
     "instagram",
     "youtube",
     "haul",
+    "dead list",
+    "heart",
+    "liked it",
+    "reels",
+    "fit confidence",
+    "one-click",
+    "one click",
+    "back in stock",
+    "feedback loop",
+    "move to cart",
+    "nykaa fashion",
 )
 FIT_HINTS = (
     "size",
@@ -32,6 +45,10 @@ FIT_HINTS = (
     "fabric",
     "colour",
     "color",
+    "still unsure",
+    "wrong size",
+    "pre-filled",
+    "prefilled",
 )
 HESITATION_HINTS = (
     "not sure",
@@ -44,6 +61,17 @@ HESITATION_HINTS = (
     "still there",
     "waiting",
     "later",
+    "stall",
+    "never notified",
+    "no nudge",
+    "can't tell",
+    "cant tell",
+    "still unsure",
+    "abandon",
+    "postpone",
+    "didn't buy",
+    "wont buy",
+    "won't act",
 )
 LOGISTICS_HINTS = (
     "delivery",

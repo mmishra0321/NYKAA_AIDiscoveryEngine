@@ -1,0 +1,26 @@
+{
+  "run_date": "2026-09-04",
+  "finished_at": "2026-09-04T14:14:11+00:00",
+  "embedder": "stub",
+  "collection": "nykaa_fashion_wishlist_v1",
+  "questions": 10,
+  "with_hits": 10,
+  "data_gaps": [],
+  "hit_counts": {
+    "q1_wishlist_motive": 10,
+    "q2_conversion_blockers": 10,
+    "q3_uncertainties": 10,
+    "q4_postpone": 10,
+    "q5_compare": 10,
+    "q6_off_platform": 10,
+    "q7_decision_factors": 10,
+    "q8_intent_vs_bookmark": 10,
+    "q9_segments": 10,
+    "q10_unmet_needs": 10
+  },
+  "limitations": [
+    "Source mix is capped at ~60% per source when alternatives exist.",
+    "Q10 requires sub-themes with source_diversity >= 3.",
+    "Empty packs are flagged data_gap for Phase 5."
+  ]
+}

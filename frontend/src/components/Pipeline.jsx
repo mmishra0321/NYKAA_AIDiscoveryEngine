@@ -21,6 +21,10 @@ function blurb(step) {
   const d = step.detail;
   if (typeof d === "string" && d) return d;
   if (!d || typeof d !== "object") return "Completed in this run";
+  if (step.id === "ingest" && (d.records_saved != null || d.run_date)) {
+    const when = d.finished_at || d.run_date || "—";
+    return `${d.records_saved ?? "—"} saved · ${when}`;
+  }
   if (step.id === "relevance" && d.wishlist_signal != null) {
     return `${d.wishlist_signal} wishlist signal · ${d.logistics_noise || 0} logistics`;
   }

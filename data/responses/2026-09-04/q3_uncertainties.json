@@ -1,0 +1,428 @@
+{
+  "id": "q3_uncertainties",
+  "question": "What uncertainties remain after users have identified a product they like?",
+  "summary": "Observed from 10 retrieved chunks across app_store, blog, forum, play_store, social: Fit / size doubt after save, No resurface when size / stock improves, Wants size-prefilled move to cart, Sizing runs small. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q3_uncertainties_fit_doubt_after_save",
+      "question_id": "q3_uncertainties",
+      "name": "Fit / size doubt after save",
+      "share_of_bucket": 0.544,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 1,
+      "impact_score": 1.0,
+      "segment_skew": [
+        "first_time",
+        "occasion_shopper",
+        "price_sensitive",
+        "repeat"
+      ],
+      "paraphrased_examples": [
+        "Users describe fit / size doubt after save after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Fit / size doubt after save may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did fit / size doubt after save come up?"
+      ],
+      "chunk_ids": [
+        "31fc9c6d-6191-51a7-b343-6c8375eb0c78",
+        "1e89fe83-9f28-5088-b47b-e79a86a29598",
+        "0be521b4-8220-534b-abcd-0a5154c75a6c",
+        "9d7799be-b8f4-5acc-9e76-400ac3582649",
+        "b80b5307-cf12-5130-8c86-f21d8097ca29",
+        "da8f42f8-41b4-51c8-ae4c-a649329f2257",
+        "b6b1daf4-c6c3-503b-bc68-5205b21eeab0",
+        "f9bfe374-8769-5b76-922d-73df4792b32f",
+        "97e543c5-4b6b-5062-9692-fead1d8101cf",
+        "2008b269-4267-5525-b2d6-e740873fc3fc",
+        "691c6059-bf03-5d62-89ab-ab7a2a0fb257",
+        "39137288-c4cf-5861-a4e3-2bb8de0d609a",
+        "4c10ca1a-7217-5dde-bf05-99f1f68ab79c",
+        "3dbce3b5-2f68-5e3d-9775-09fa20edab7c",
+        "16736384-2b11-557b-8a56-dd7ec1dc7e89",
+        "93deb0c5-5f7c-5625-8378-60bcb7dfdb79",
+        "ee5e85cc-0bb7-50d5-acc6-43663a31dc6d",
+        "0f6b5927-af0a-5ed7-a7cc-70a5c29d0841",
+        "6b23e570-87d7-53eb-a2eb-eda72969a767",
+        "dca28dca-ee0d-5cad-b26a-5e7058e72fa1",
+        "69575a9c-9fe1-5983-a4b6-e883e2525ac9",
+        "49f21319-8644-54f4-8bbf-428377b6f693",
+        "b6be7967-ea20-5427-b0b0-824b558ca6cb",
+        "66b59383-8b11-589e-a7d3-390669370073",
+        "3a1d6ce0-282e-59b0-a792-7335555d6a81",
+        "245cf6dc-762f-5404-a24e-301f47fdbf20",
+        "bb175173-7b48-52e0-a5bb-b5b815c1e239",
+        "8cd6f3e5-9323-528b-ac19-9f4ef7b737fe",
+        "f8b899a8-fec2-5589-906f-dadee58cebb1",
+        "7a830030-cc7d-5bcc-a62e-0fb87b687894",
+        "ce2ded11-dd94-5f57-a270-00c6e5031bb6",
+        "60d395f1-a0b6-5b95-b89d-6327ca44bcbb",
+        "74318c9a-415d-51ff-8f45-5223e2cdd3dc",
+        "1dd69dfd-4da2-5b0f-9ffd-62a13be51484",
+        "ba651bb6-e17a-56d6-83c2-b0dfb6f119cd",
+        "40e26a56-e73e-5db3-b4c7-8c312899bbd4",
+        "1584d583-5120-5232-bada-e417df5600a0",
+        "ad176968-857f-57fc-85b6-308fd44c9216",
+        "8da1afdb-5b27-5db0-ba53-d4cf0bd4e6bf",
+        "ff897e82-84c1-585d-890f-35fed90923d3",
+        "1252402d-ab3b-5728-ade1-c19a15365d18",
+        "bf01eebb-c7cf-5ef2-98a3-f31cd70cba09",
+        "cf9a526e-8885-5b2a-bbbd-3bfe0f33587f",
+        "90a84d36-e18b-553d-959c-7222b80944c8",
+        "fd9d743e-d800-5435-a8be-e650f7f48ae0",
+        "ecb83f5f-ef93-5a0c-887a-9d7e215c2dbd",
+        "2fee940c-64b3-5a3a-8352-690ba688422a",
+        "5f4cc444-409b-5553-8289-9292020367c2",
+        "5c27745f-8128-5a74-9ac7-5505798ef029",
+        "bb87ae33-d3ff-5c9e-8503-0e4fa7857347",
+        "1d3d1c47-b56f-50be-aabd-b0fabb97de9f",
+        "b7cfedbf-09d9-5f44-9f01-42a252b31333",
+        "d59a583c-1c61-5b6c-9902-326a3e06b003",
+        "5a58ccd3-2543-51bb-96bf-87beab187ad8",
+        "b489569e-c448-5177-a7c5-7929d6c7f986",
+        "44b68d5b-bfa7-5868-952d-a125f9a9da8a",
+        "be4ff97e-6fc0-51a4-a84d-1b93c585ef8f",
+        "0f04a3c8-b7b6-52ed-a4d8-92ae20482028",
+        "4d9f2aad-3934-5c7b-97cf-82961e58f36c",
+        "f84d4e37-07a7-5783-8b40-19b5dfc649dd",
+        "f17a8502-095f-55d6-b869-cb43a76b72d9",
+        "b21228ff-86a8-5d2d-8ade-77dc404aadad",
+        "f6ec3312-0e6b-573c-ae0d-a959654b2a5d",
+        "1cd99e11-abb4-52a5-9150-34f1e18ff43e",
+        "822edf7e-84ae-5a29-9ce1-c4d13da072c8",
+        "78c79b2a-ad2b-563f-b018-989db893d6c4",
+        "57035e71-2f33-573a-9a5f-cde23715a6be",
+        "b04767b0-57a0-57e6-8dff-cfd02e54e3d4"
+      ]
+    },
+    {
+      "sub_theme_id": "q3_uncertainties_silent_back_in_stock",
+      "question_id": "q3_uncertainties",
+      "name": "No resurface when size / stock improves",
+      "share_of_bucket": 0.08,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 2,
+      "impact_score": 0.659,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe no resurface when size / stock improves after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "No resurface when size / stock improves may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did no resurface when size / stock improves come up?"
+      ],
+      "chunk_ids": [
+        "7a337548-2549-5188-a01b-edac242d1b07",
+        "d65fcc6e-ad8c-53c9-b37d-3175e1b014df",
+        "e824c933-78ee-55ed-8aaf-185009d3e12b",
+        "ec415a03-37a3-5b27-ad2e-6bd895d059f4",
+        "df72aa9e-3392-5772-83ee-240ae02a7141",
+        "8ad92066-ecb3-5289-8598-50a54dc50151",
+        "2c8bf95e-0418-513a-8566-80c5463c095f",
+        "6221f424-80f2-541d-be14-98e464063dc4",
+        "e42e960d-cf37-5538-9e8a-6948801de23c",
+        "5293dfad-4487-5f9b-b367-633fc6321d43"
+      ]
+    },
+    {
+      "sub_theme_id": "q3_uncertainties_one_click_cart_gap",
+      "question_id": "q3_uncertainties",
+      "name": "Wants size-prefilled move to cart",
+      "share_of_bucket": 0.072,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 3,
+      "impact_score": 0.653,
+      "segment_skew": [
+        "repeat"
+      ],
+      "paraphrased_examples": [
+        "Users describe wants size-prefilled move to cart after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Wants size-prefilled move to cart may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did wants size-prefilled move to cart come up?"
+      ],
+      "chunk_ids": [
+        "d550e6c0-fb87-515b-b707-b050c008f3d2",
+        "ab67f57f-8dbc-5307-9538-4cb6e40634e3",
+        "f65c47d2-f993-5d3e-9f6e-f94f5473ab23",
+        "c7b32ef0-8dfa-5181-872f-a62ef6f53df5",
+        "dba2f3ea-0814-5957-b822-7d1bbb7d0d50",
+        "91042672-a842-5d0a-a8cb-eab70c89508c",
+        "34970700-6838-5b52-95ce-f6e22307a3b7",
+        "125c87ba-3ffb-50df-9fd5-fd0d5ceb37b1",
+        "57cbcc91-c663-5e9b-a5b3-a9d5c3df8b49"
+      ]
+    },
+    {
+      "sub_theme_id": "q3_uncertainties_sizing_runs_small",
+      "question_id": "q3_uncertainties",
+      "name": "Sizing runs small",
+      "share_of_bucket": 0.064,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "play_store",
+        "social"
+      ],
+      "frequency": "medium",
+      "severity": "high",
+      "impact_rank": 4,
+      "impact_score": 0.587,
+      "segment_skew": [
+        "first_time"
+      ],
+      "paraphrased_examples": [
+        "Users describe sizing runs small after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Sizing runs small may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did sizing runs small come up?"
+      ],
+      "chunk_ids": [
+        "73725442-3c22-53a2-9dab-6835cce5a771",
+        "cb58549e-bcd0-53b7-818f-0d4b24666cea",
+        "035166e8-cc5f-5ca5-9166-b292904cf6d0",
+        "9f070d8c-c829-59db-93c9-e9e416f0ad7f",
+        "5b3b7732-2c0f-5761-a9d1-a548e974c3aa",
+        "dbec1608-5b8a-5b2c-8e62-da9c2a87f33f",
+        "2b2d4ec5-556e-55de-b39b-2443b8ae445d",
+        "549268ae-d3cf-56e4-b441-df56da3d8659"
+      ]
+    },
+    {
+      "sub_theme_id": "q3_uncertainties_fabric_quality_doubt",
+      "question_id": "q3_uncertainties",
+      "name": "Fabric quality doubt",
+      "share_of_bucket": 0.04,
+      "source_diversity": 3,
+      "sources": [
+        "app_store",
+        "play_store",
+        "social"
+      ],
+      "frequency": "low",
+      "severity": "high",
+      "impact_rank": 5,
+      "impact_score": 0.509,
+      "segment_skew": [
+        "occasion_shopper"
+      ],
+      "paraphrased_examples": [
+        "Users describe fabric quality doubt after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Fabric quality doubt may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did fabric quality doubt come up?"
+      ],
+      "chunk_ids": [
+        "0867bc67-1152-5714-9a3d-8b552cb6cd43",
+        "f1f703ad-76ca-5c16-946e-7c776f473362",
+        "de48c906-d7e6-506f-9a4e-b38abe22647f",
+        "f89a8d15-c542-5ccd-80b3-a504a8d5ffc6",
+        "6c6f3e38-efb7-5281-896f-47b2a32681cb"
+      ]
+    },
+    {
+      "sub_theme_id": "q3_uncertainties_off_platform_size_chart",
+      "question_id": "q3_uncertainties",
+      "name": "Off-Nykaa size charts and other apps",
+      "share_of_bucket": 0.04,
+      "source_diversity": 3,
+      "sources": [
+        "app_store",
+        "play_store",
+        "social"
+      ],
+      "frequency": "low",
+      "severity": "high",
+      "impact_rank": 6,
+      "impact_score": 0.509,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe off-nykaa size charts and other apps after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Off-Nykaa size charts and other apps may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did off-nykaa size charts and other apps come up?"
+      ],
+      "chunk_ids": [
+        "a64cff48-3da6-5543-afe1-21d093e7f9cf",
+        "fed1b0d2-9f7c-52ec-a4ce-5eeeb4c540fd",
+        "4dd8b0a9-5edf-5bf7-b120-b2a0b13dc542",
+        "196367a1-3d28-5c75-b63d-d5aa34e3856b",
+        "9c6ad7e3-5704-5e6d-bfbf-ca4bf06c821a"
+      ]
+    },
+    {
+      "sub_theme_id": "q3_uncertainties_youtube_haul",
+      "question_id": "q3_uncertainties",
+      "name": "YouTube / haul research before convert",
+      "share_of_bucket": 0.032,
+      "source_diversity": 3,
+      "sources": [
+        "app_store",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "medium",
+      "impact_rank": 7,
+      "impact_score": 0.384,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe youtube / haul research before convert after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "YouTube / haul research before convert may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did youtube / haul research before convert come up?"
+      ],
+      "chunk_ids": [
+        "0e12bbdc-055d-5039-be41-0309d88f4d4a",
+        "acc6959c-da0e-5dfc-8732-c8cf2a463ee9",
+        "0697d6d7-2540-533a-bb2b-2a691479adb6",
+        "87dbb622-ae3c-5da2-8846-d6b99d3e89c6"
+      ]
+    },
+    {
+      "sub_theme_id": "q3_uncertainties_other_2",
+      "question_id": "q3_uncertainties",
+      "name": "Other",
+      "share_of_bucket": 0.072,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 8,
+      "impact_score": 0.383,
+      "segment_skew": [
+        "occasion_shopper",
+        "repeat"
+      ],
+      "paraphrased_examples": [
+        "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "7ae134ed-9b0b-560f-a13a-76f002d95930",
+        "d24f65a3-f683-5251-bfb9-c153e4f3f3e8",
+        "9e695e51-4bcd-5db4-ac06-a2deeff01359",
+        "bca390be-3be1-5a9c-8f6b-31aed5401122",
+        "b72d948b-c86c-57e5-ba6c-e14af950eadc",
+        "08a8a4de-f0ef-52e7-84db-3aa3ab3d7fea",
+        "302dc9cc-355b-51c9-8986-517b59045617",
+        "d66e72d2-4844-58e0-93b7-34c5fe6257b0",
+        "176ccfef-d347-5b25-af75-716e19f63b98"
+      ]
+    },
+    {
+      "sub_theme_id": "q3_uncertainties_comparing_saved_items",
+      "question_id": "q3_uncertainties",
+      "name": "Comparing saved items",
+      "share_of_bucket": 0.032,
+      "source_diversity": 2,
+      "sources": [
+        "app_store",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "medium",
+      "impact_rank": 9,
+      "impact_score": 0.324,
+      "segment_skew": [
+        "first_time"
+      ],
+      "paraphrased_examples": [
+        "Users describe comparing saved items after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Comparing saved items may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did comparing saved items come up?"
+      ],
+      "chunk_ids": [
+        "51a09fcd-4237-52fa-9d1f-8d2b4ec75ad3",
+        "e98070ac-8d30-5a99-9191-abc8760786a7",
+        "3a0c36e1-1bd6-58f9-9181-aec3c40da81c",
+        "a6e3d4d9-151c-52d4-a25c-b3a5f1ed338e"
+      ]
+    },
+    {
+      "sub_theme_id": "q3_uncertainties_other",
+      "question_id": "q3_uncertainties",
+      "name": "Other wishlist language",
+      "share_of_bucket": 0.024,
+      "source_diversity": 2,
+      "sources": [
+        "forum",
+        "social"
+      ],
+      "frequency": "low",
+      "severity": "low",
+      "impact_rank": 10,
+      "impact_score": 0.228,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe other wishlist language after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Other wishlist language may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other wishlist language come up?"
+      ],
+      "chunk_ids": [
+        "3f0b3d82-dea4-59d9-bf93-9c433a607c84",
+        "f595b5aa-4c6d-5e67-af70-ff5971d9ac48",
+        "9f85dfae-3133-5458-8d2d-65385be6a935"
+      ]
+    }
+  ],
+  "implications": [
+    "Observed: size/fit/fabric doubt after liking. Hypothesis: a clearer size story on saved items would cut hesitation."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did fit / size doubt after save come up?",
+    "When you saved something recently, did no resurface when size / stock improves come up?",
+    "When you saved something recently, did wants size-prefilled move to cart come up?",
+    "When you saved something recently, did sizing runs small come up?",
+    "When you saved something recently, did fabric quality doubt come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 10,
+  "themes_count": 10
+}

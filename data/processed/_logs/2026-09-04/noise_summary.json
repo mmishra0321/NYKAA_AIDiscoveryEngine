@@ -1,0 +1,24 @@
+{
+  "logistics_noise": 0,
+  "other": 12,
+  "wishlist_signal": 162,
+  "by_source": {
+    "app_store": {
+      "logistics_noise": 0,
+      "other": 2
+    },
+    "forum": {
+      "logistics_noise": 0,
+      "other": 7
+    },
+    "blog": {
+      "logistics_noise": 0,
+      "other": 1
+    },
+    "social": {
+      "logistics_noise": 0,
+      "other": 2
+    }
+  },
+  "note": "logistics_noise and other are excluded from Q1\u2013Q10."
+}

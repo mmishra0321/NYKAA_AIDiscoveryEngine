@@ -1,0 +1,92 @@
+{
+  "id": "q4_postpone",
+  "question": "What causes users to postpone a purchase?",
+  "summary": "Observed from 10 retrieved chunks across app_store, blog, play_store, social: Fit / size doubt after save, Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q4_postpone_fit_doubt_after_save",
+      "question_id": "q4_postpone",
+      "name": "Fit / size doubt after save",
+      "share_of_bucket": 0.4,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 1,
+      "impact_score": 0.807,
+      "segment_skew": [
+        "occasion_shopper",
+        "price_sensitive"
+      ],
+      "paraphrased_examples": [
+        "Users describe fit / size doubt after save after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Fit / size doubt after save may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did fit / size doubt after save come up?"
+      ],
+      "chunk_ids": [
+        "93deb0c5-5f7c-5625-8378-60bcb7dfdb79",
+        "6b23e570-87d7-53eb-a2eb-eda72969a767",
+        "bb175173-7b48-52e0-a5bb-b5b815c1e239",
+        "60d395f1-a0b6-5b95-b89d-6327ca44bcbb",
+        "b7cfedbf-09d9-5f44-9f01-42a252b31333",
+        "b21228ff-86a8-5d2d-8ade-77dc404aadad"
+      ]
+    },
+    {
+      "sub_theme_id": "q4_postpone_other",
+      "question_id": "q4_postpone",
+      "name": "Other",
+      "share_of_bucket": 0.6,
+      "source_diversity": 3,
+      "sources": [
+        "app_store",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 2,
+      "impact_score": 0.67,
+      "segment_skew": [
+        "occasion_shopper",
+        "price_sensitive"
+      ],
+      "paraphrased_examples": [
+        "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "4aa3a3eb-92d5-5b58-9dbd-a19f5f0e7d88",
+        "a909051a-5696-5d6f-b68a-cebb433f26e6",
+        "c33f0371-7c14-597e-846b-955ab72e30c8",
+        "6e77ae4e-8960-58cd-b369-944cf81786c4",
+        "90148f9f-8a7e-5f58-9e5c-3ccd6bd2c26a",
+        "54d07410-6286-509f-93c5-8fe03864605b",
+        "a9ae93a9-d33b-5cc1-908b-4f094328b24c",
+        "176ccfef-d347-5b25-af75-716e19f63b98",
+        "55c6566a-9a7c-51e8-b4c0-702b0f340dc1"
+      ]
+    }
+  ],
+  "implications": [
+    "Observed: deferral language (later, payday, not sure yet). Hypothesis: a non-promo reminder tied to occasion or timing beats forgetting."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did fit / size doubt after save come up?",
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 10,
+  "themes_count": 2
+}

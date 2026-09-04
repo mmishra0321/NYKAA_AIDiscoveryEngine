@@ -8,6 +8,7 @@ import AskQuestionBox from "./components/AskQuestionBox.jsx";
 import InsightCard from "./components/InsightCard.jsx";
 import Themes from "./components/Themes.jsx";
 import AnswerDrawer from "./components/AnswerDrawer.jsx";
+import ScrapeStatus from "./components/ScrapeStatus.jsx";
 import { TAXONOMY } from "./taxonomy.js";
 
 export default function App() {
@@ -82,6 +83,8 @@ export default function App() {
 
         <Pipeline summary={pipeline} />
 
+        <ScrapeStatus scrape={pipeline?.scrape} />
+
         <section aria-label="Pipeline metrics">
           <h2 className="mb-4 font-ui text-lg font-semibold tracking-tight">Pipeline metrics</h2>
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
@@ -149,6 +152,9 @@ export default function App() {
             <p className="mt-2 text-xs text-muted">Growth catalog · no monetary incentives as the mechanism</p>
           </div>
           <div className="flex flex-wrap gap-5 text-sm text-muted">
+            <a href="#scrape-status" className="hover:text-ink">
+              Scrape
+            </a>
             <a href="#ask-question" className="hover:text-ink">
               Ask
             </a>

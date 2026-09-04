@@ -1,0 +1,13 @@
+{
+  "id": null,
+  "status": "completed",
+  "conclusion": "success",
+  "event": "local_seed",
+  "display_title": "Synthetic wishlist corpus seed (local)",
+  "created_at": "2026-09-04T14:12:00Z",
+  "updated_at": "2026-09-04T14:13:32Z",
+  "run_started_at": "2026-09-04T14:12:00Z",
+  "html_url": "https://github.com/mmishra0321/NYKAA_AIDiscoveryEngine/actions/workflows/ingest.yml",
+  "head_branch": "main",
+  "actor": "local"
+}

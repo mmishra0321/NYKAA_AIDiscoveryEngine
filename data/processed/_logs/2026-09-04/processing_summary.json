@@ -1,0 +1,76 @@
+{
+  "run_date": "2026-09-04",
+  "finished_at": "2026-09-04T14:14:09+00:00",
+  "mode": "stub",
+  "cluster_backend": "ngram",
+  "input_count": 174,
+  "cleaned_count": 174,
+  "relevance": {
+    "wishlist_signal": 162,
+    "other": 12
+  },
+  "classified": 162,
+  "with_q1_q9": 162,
+  "majority_labeled": true,
+  "chunks": 162,
+  "sub_themes": 68,
+  "q10_themes": 10,
+  "question_coverage": {
+    "q1_wishlist_motive": {
+      "docs": 124,
+      "sub_themes": 13,
+      "data_gap": null
+    },
+    "q2_conversion_blockers": {
+      "docs": 63,
+      "sub_themes": 6,
+      "data_gap": null
+    },
+    "q3_uncertainties": {
+      "docs": 125,
+      "sub_themes": 10,
+      "data_gap": null
+    },
+    "q4_postpone": {
+      "docs": 15,
+      "sub_themes": 2,
+      "data_gap": null
+    },
+    "q5_compare": {
+      "docs": 19,
+      "sub_themes": 4,
+      "data_gap": null
+    },
+    "q6_off_platform": {
+      "docs": 34,
+      "sub_themes": 4,
+      "data_gap": null
+    },
+    "q7_decision_factors": {
+      "docs": 125,
+      "sub_themes": 10,
+      "data_gap": null
+    },
+    "q8_intent_vs_bookmark": {
+      "docs": 42,
+      "sub_themes": 5,
+      "data_gap": null
+    },
+    "q9_segments": {
+      "docs": 29,
+      "sub_themes": 4,
+      "data_gap": null
+    },
+    "q10_unmet_needs": {
+      "docs": 136,
+      "sub_themes": 10,
+      "data_gap": null
+    }
+  },
+  "pii_hits": 0,
+  "limitations": [
+    "Classifier never assigns q10; Q10 is computed from slugs in 3+ sources.",
+    "Stub mode uses keyword heuristics; Groq is the production classifier.",
+    "MiniLM clustering requires sentence-transformers; otherwise n-gram cosine."
+  ]
+}

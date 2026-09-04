@@ -9,6 +9,8 @@ priority:
   - app_store
   - reddit
   - forum
+  - blog
+  - social
   - youtube
 
 play_store:

@@ -1,0 +1,26 @@
+{
+  "run_date": "2026-09-04",
+  "finished_at": "2026-09-04T14:14:10+00:00",
+  "collection": "nykaa_fashion_wishlist_v1",
+  "persist_directory": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDiscovery/data/chroma",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedder": "stub",
+  "embedding_dim": 384,
+  "similarity": "cosine",
+  "chunks_in": 162,
+  "chunks_upserted": 162,
+  "skipped_noise": 0,
+  "collection_count": 175,
+  "smoke": {
+    "skipped": true,
+    "passed": true,
+    "empty_count": null,
+    "hits": {}
+  },
+  "pii_hits": 0,
+  "limitations": [
+    "Embeddings are MiniLM when sentence-transformers is installed; --stub uses hash vectors.",
+    "Chroma metadata stores question flags as has_{qid} booleans (lists are not supported).",
+    "Q10 may be empty until 3+ independent sources exist in Phase 2."
+  ]
+}

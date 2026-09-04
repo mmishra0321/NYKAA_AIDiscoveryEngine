@@ -1,0 +1,86 @@
+{
+  "run_date": "2026-09-04",
+  "finished_at": "2026-09-04T14:13:28.805368+00:00",
+  "corpus_target": 400,
+  "corpus_total": 174,
+  "corpus_target_met": false,
+  "sources": [
+    {
+      "source": "play_store",
+      "records_fetched": 55,
+      "records_saved": 55,
+      "records_skipped": 0,
+      "output_path": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDiscovery/data/raw/play_store/2026-09-04/documents.jsonl",
+      "errors": [],
+      "metadata": {
+        "synthetic": true,
+        "problem_aligned": true
+      },
+      "finished_at": null
+    },
+    {
+      "source": "app_store",
+      "records_fetched": 33,
+      "records_saved": 33,
+      "records_skipped": 0,
+      "output_path": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDiscovery/data/raw/app_store/2026-09-04/documents.jsonl",
+      "errors": [],
+      "metadata": {
+        "synthetic": true,
+        "problem_aligned": true
+      },
+      "finished_at": null
+    },
+    {
+      "source": "forum",
+      "records_fetched": 32,
+      "records_saved": 32,
+      "records_skipped": 0,
+      "output_path": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDiscovery/data/raw/forum/2026-09-04/documents.jsonl",
+      "errors": [],
+      "metadata": {
+        "synthetic": true,
+        "problem_aligned": true
+      },
+      "finished_at": null
+    },
+    {
+      "source": "blog",
+      "records_fetched": 18,
+      "records_saved": 18,
+      "records_skipped": 0,
+      "output_path": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDiscovery/data/raw/blog/2026-09-04/documents.jsonl",
+      "errors": [],
+      "metadata": {
+        "synthetic": true,
+        "problem_aligned": true
+      },
+      "finished_at": null
+    },
+    {
+      "source": "social",
+      "records_fetched": 36,
+      "records_saved": 36,
+      "records_skipped": 0,
+      "output_path": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDiscovery/data/raw/social/2026-09-04/documents.jsonl",
+      "errors": [],
+      "metadata": {
+        "synthetic": true,
+        "problem_aligned": true
+      },
+      "finished_at": null
+    }
+  ],
+  "totals": {
+    "records_fetched": 174,
+    "records_saved": 174,
+    "records_skipped": 0,
+    "errors": 0
+  },
+  "limitations": [
+    "forum HTML scrape deferred (ToS / robots.txt)",
+    "youtube skipped unless YOUTUBE_API_KEY is set and adapter enabled",
+    "twitter_x / quora / login walls deferred",
+    "keyword prefilter is recall-only; LLM relevance is Phase 2"
+  ]
+}

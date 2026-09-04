@@ -1,0 +1,253 @@
+{
+  "id": "q2_conversion_blockers",
+  "question": "What prevents wishlisted products from eventually being purchased?",
+  "summary": "Observed from 10 retrieved chunks across app_store, blog, forum, play_store, social: Fit / size doubt after save, No resurface when size / stock improves, Wishlist feels like a dead list, Sizing runs small. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q2_conversion_blockers_fit_doubt_after_save",
+      "question_id": "q2_conversion_blockers",
+      "name": "Fit / size doubt after save",
+      "share_of_bucket": 0.524,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 1,
+      "impact_score": 1.0,
+      "segment_skew": [
+        "first_time"
+      ],
+      "paraphrased_examples": [
+        "Users describe fit / size doubt after save after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Fit / size doubt after save may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did fit / size doubt after save come up?"
+      ],
+      "chunk_ids": [
+        "31fc9c6d-6191-51a7-b343-6c8375eb0c78",
+        "1e89fe83-9f28-5088-b47b-e79a86a29598",
+        "da8f42f8-41b4-51c8-ae4c-a649329f2257",
+        "2008b269-4267-5525-b2d6-e740873fc3fc",
+        "691c6059-bf03-5d62-89ab-ab7a2a0fb257",
+        "39137288-c4cf-5861-a4e3-2bb8de0d609a",
+        "4c10ca1a-7217-5dde-bf05-99f1f68ab79c",
+        "3dbce3b5-2f68-5e3d-9775-09fa20edab7c",
+        "16736384-2b11-557b-8a56-dd7ec1dc7e89",
+        "ee5e85cc-0bb7-50d5-acc6-43663a31dc6d",
+        "0f6b5927-af0a-5ed7-a7cc-70a5c29d0841",
+        "dca28dca-ee0d-5cad-b26a-5e7058e72fa1",
+        "49f21319-8644-54f4-8bbf-428377b6f693",
+        "b6be7967-ea20-5427-b0b0-824b558ca6cb",
+        "3a1d6ce0-282e-59b0-a792-7335555d6a81",
+        "245cf6dc-762f-5404-a24e-301f47fdbf20",
+        "7a830030-cc7d-5bcc-a62e-0fb87b687894",
+        "ce2ded11-dd94-5f57-a270-00c6e5031bb6",
+        "74318c9a-415d-51ff-8f45-5223e2cdd3dc",
+        "ba651bb6-e17a-56d6-83c2-b0dfb6f119cd",
+        "40e26a56-e73e-5db3-b4c7-8c312899bbd4",
+        "1584d583-5120-5232-bada-e417df5600a0",
+        "bf01eebb-c7cf-5ef2-98a3-f31cd70cba09",
+        "90a84d36-e18b-553d-959c-7222b80944c8",
+        "2fee940c-64b3-5a3a-8352-690ba688422a",
+        "5f4cc444-409b-5553-8289-9292020367c2",
+        "bb87ae33-d3ff-5c9e-8503-0e4fa7857347",
+        "1d3d1c47-b56f-50be-aabd-b0fabb97de9f",
+        "d59a583c-1c61-5b6c-9902-326a3e06b003",
+        "f84d4e37-07a7-5783-8b40-19b5dfc649dd",
+        "f17a8502-095f-55d6-b869-cb43a76b72d9",
+        "f6ec3312-0e6b-573c-ae0d-a959654b2a5d",
+        "1cd99e11-abb4-52a5-9150-34f1e18ff43e"
+      ]
+    },
+    {
+      "sub_theme_id": "q2_conversion_blockers_silent_back_in_stock",
+      "question_id": "q2_conversion_blockers",
+      "name": "No resurface when size / stock improves",
+      "share_of_bucket": 0.127,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 2,
+      "impact_score": 0.697,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe no resurface when size / stock improves after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "No resurface when size / stock improves may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did no resurface when size / stock improves come up?"
+      ],
+      "chunk_ids": [
+        "7a337548-2549-5188-a01b-edac242d1b07",
+        "d65fcc6e-ad8c-53c9-b37d-3175e1b014df",
+        "e824c933-78ee-55ed-8aaf-185009d3e12b",
+        "ec415a03-37a3-5b27-ad2e-6bd895d059f4",
+        "8ad92066-ecb3-5289-8598-50a54dc50151",
+        "2c8bf95e-0418-513a-8566-80c5463c095f",
+        "6221f424-80f2-541d-be14-98e464063dc4",
+        "5293dfad-4487-5f9b-b367-633fc6321d43"
+      ]
+    },
+    {
+      "sub_theme_id": "q2_conversion_blockers_dead_wishlist",
+      "question_id": "q2_conversion_blockers",
+      "name": "Wishlist feels like a dead list",
+      "share_of_bucket": 0.111,
+      "source_diversity": 3,
+      "sources": [
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "medium",
+      "severity": "high",
+      "impact_rank": 3,
+      "impact_score": 0.565,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe wishlist feels like a dead list after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Wishlist feels like a dead list may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did wishlist feels like a dead list come up?"
+      ],
+      "chunk_ids": [
+        "08a8a4de-f0ef-52e7-84db-3aa3ab3d7fea",
+        "0d5e3355-680d-52da-b738-b989aa7a01b3",
+        "88a59f19-9f6e-507c-a144-f6eb8e23cff1",
+        "8bad693d-f1f9-5aef-bd68-78025939b39f",
+        "b5858e71-f097-59ae-9d95-62d5ff9df4a1",
+        "615ffb50-d569-5485-95de-289dd2918fd4",
+        "16f8c5c7-4978-5fe3-9369-2120b9c38784"
+      ]
+    },
+    {
+      "sub_theme_id": "q2_conversion_blockers_sizing_runs_small",
+      "question_id": "q2_conversion_blockers",
+      "name": "Sizing runs small",
+      "share_of_bucket": 0.095,
+      "source_diversity": 3,
+      "sources": [
+        "app_store",
+        "play_store",
+        "social"
+      ],
+      "frequency": "low",
+      "severity": "high",
+      "impact_rank": 4,
+      "impact_score": 0.553,
+      "segment_skew": [
+        "first_time"
+      ],
+      "paraphrased_examples": [
+        "Users describe sizing runs small after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Sizing runs small may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did sizing runs small come up?"
+      ],
+      "chunk_ids": [
+        "cb58549e-bcd0-53b7-818f-0d4b24666cea",
+        "035166e8-cc5f-5ca5-9166-b292904cf6d0",
+        "9f070d8c-c829-59db-93c9-e9e416f0ad7f",
+        "5b3b7732-2c0f-5761-a9d1-a548e974c3aa",
+        "2b2d4ec5-556e-55de-b39b-2443b8ae445d",
+        "549268ae-d3cf-56e4-b441-df56da3d8659"
+      ]
+    },
+    {
+      "sub_theme_id": "q2_conversion_blockers_fabric_quality_doubt",
+      "question_id": "q2_conversion_blockers",
+      "name": "Fabric quality doubt",
+      "share_of_bucket": 0.048,
+      "source_diversity": 2,
+      "sources": [
+        "app_store",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "high",
+      "impact_rank": 5,
+      "impact_score": 0.457,
+      "segment_skew": [
+        "occasion_shopper"
+      ],
+      "paraphrased_examples": [
+        "Users describe fabric quality doubt after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Fabric quality doubt may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did fabric quality doubt come up?"
+      ],
+      "chunk_ids": [
+        "0867bc67-1152-5714-9a3d-8b552cb6cd43",
+        "f1f703ad-76ca-5c16-946e-7c776f473362",
+        "de48c906-d7e6-506f-9a4e-b38abe22647f"
+      ]
+    },
+    {
+      "sub_theme_id": "q2_conversion_blockers_other",
+      "question_id": "q2_conversion_blockers",
+      "name": "Other",
+      "share_of_bucket": 0.095,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "low",
+      "impact_rank": 6,
+      "impact_score": 0.403,
+      "segment_skew": [
+        "first_time",
+        "repeat"
+      ],
+      "paraphrased_examples": [
+        "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "50a7b1d2-0045-5bc7-8ed7-0d2690fb1ba0",
+        "bca390be-3be1-5a9c-8f6b-31aed5401122",
+        "ab67f57f-8dbc-5307-9538-4cb6e40634e3",
+        "3a0c36e1-1bd6-58f9-9181-aec3c40da81c",
+        "3d839667-ebeb-5537-91bd-8fbc61955f7c",
+        "d66e72d2-4844-58e0-93b7-34c5fe6257b0"
+      ]
+    }
+  ],
+  "implications": [
+    "Observed: liked items sit after fit/quality doubt. Hypothesis: resolving post-save uncertainty (size, fabric, colour) unblocks purchase more than a promo."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did fit / size doubt after save come up?",
+    "When you saved something recently, did no resurface when size / stock improves come up?",
+    "When you saved something recently, did wishlist feels like a dead list come up?",
+    "When you saved something recently, did sizing runs small come up?",
+    "When you saved something recently, did fabric quality doubt come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 10,
+  "themes_count": 6
+}

@@ -19,20 +19,26 @@ logger = logging.getLogger(__name__)
 SLUG_RE = re.compile(r"[^a-z0-9]+")
 
 KEYWORD_SLUGS: list[tuple[str, str, str]] = [
-    ("sizing_runs_small", "Sizing runs small", r"size|sizing|runs small|too small"),
+    ("sizing_runs_small", "Sizing runs small", r"runs small|too small|size m fits|sizing chart"),
     ("fabric_quality_doubt", "Fabric quality doubt", r"fabric|polyester|material|thin"),
     ("color_mismatch", "Colour mismatch vs photos", r"colour|color|shade"),
     ("authenticity_doubt", "Authenticity doubt", r"authentic|fake|original"),
-    ("fit_doubt_after_save", "Fit doubt after save", r"fit|return"),
+    ("fit_doubt_after_save", "Fit / size doubt after save", r"fit|still unsure|will this fit|wrong size"),
+    ("dead_wishlist", "Wishlist feels like a dead list", r"dead list|won't act|wont act|sits unused|never open wishlist"),
+    ("no_fit_feedback", "Can't tell the app wrong size / still unsure", r"can't tell the app|cant tell the app|feedback loop|still unsure|no way to say"),
+    ("silent_back_in_stock", "No resurface when size / stock improves", r"back in stock|never notified|no nudge|my size came|silent wishlist"),
+    ("fit_confidence_gap", "No fit confidence on the tile", r"fit confidence|on the tile|badge|fifteen.second|15.second"),
+    ("one_click_cart_gap", "Wants size-prefilled move to cart", r"one.click|pre-filled|prefilled|move to cart|pdp again|re-pick size"),
     ("forgot_wishlist", "Wishlist forgotten", r"forgot|forget|don't remember|dont remember"),
     ("occasion_planning", "Occasion planning", r"wedding|occasion|festive|sangeet"),
     ("styling_later", "Saving to style later", r"style later|styling|outfit"),
-    ("comparing_saved_items", "Comparing saved items", r"compar|between|vs |versus"),
-    ("youtube_haul", "YouTube hauls before convert", r"youtube|haul"),
-    ("instagram_try_on", "Instagram try-ons", r"instagram"),
+    ("comparing_saved_items", "Comparing saved items", r"compar|between|vs |versus|side by side"),
+    ("youtube_haul", "YouTube / haul research before convert", r"youtube|haul"),
+    ("instagram_try_on", "Instagram / Reels try-ons", r"instagram|reels"),
+    ("off_platform_size_chart", "Off-Nykaa size charts and other apps", r"size chart|other app|outside nykaa|off nykaa"),
     ("moodboard_bookmark", "Moodboard / bookmark only", r"inspiration|moodboard|just saving"),
-    ("genuine_intent", "Genuine purchase intent", r"will buy|going to buy"),
-    ("waiting_for_payday", "Waiting for payday", r"payday|salary"),
+    ("genuine_intent", "Genuine purchase intent", r"will buy|going to buy|open to buying|actively considering"),
+    ("waiting_for_payday", "Waiting for payday / right moment", r"payday|salary|when the moment"),
     ("non_promo_nudge", "Non-promo wishlist reminder", r"remind|nudge"),
     ("side_by_side_gap", "No side-by-side compare", r"side by side|compare"),
 ]
@@ -42,6 +48,12 @@ HIGH_SEVERITY = {
     "fit_doubt_after_save",
     "fabric_quality_doubt",
     "authenticity_doubt",
+    "dead_wishlist",
+    "no_fit_feedback",
+    "silent_back_in_stock",
+    "fit_confidence_gap",
+    "one_click_cart_gap",
+    "off_platform_size_chart",
 }
 
 
@@ -84,6 +96,33 @@ def try_minilm_vectors(texts: list[str]) -> list[list[float]] | None:
     except Exception as exc:  # noqa: BLE001
         logger.warning("MiniLM unavailable, using n-gram clustering: %s", exc)
         return None
+
+
+def keyword_groups(
+    texts: list[str],
+    *,
+    min_cluster_size: int,
+) -> tuple[list[list[int]], list[int]]:
+    """Group indices by first matching KEYWORD_SLUGS pattern (stub-friendly)."""
+    buckets: dict[str, list[int]] = defaultdict(list)
+    unmatched: list[int] = []
+    for i, text in enumerate(texts):
+        lower = text.lower()
+        matched = None
+        for slug, _name, pattern in KEYWORD_SLUGS:
+            if re.search(pattern, lower):
+                matched = slug
+                break
+        if matched is None:
+            unmatched.append(i)
+        else:
+            buckets[matched].append(i)
+    kept = [idxs for idxs in buckets.values() if len(idxs) >= min_cluster_size]
+    leftover = list(unmatched)
+    for idxs in buckets.values():
+        if len(idxs) < min_cluster_size:
+            leftover.extend(idxs)
+    return kept, leftover
 
 
 def agglomerative_groups(
@@ -269,12 +308,26 @@ def cluster_and_score(
         bucket_vectors = None
         if vectors_all is not None:
             bucket_vectors = [vectors_all[doc_index[d.id]] for d in bucket]
-        kept, leftover_idxs = agglomerative_groups(
-            texts,
-            distance_threshold=dist,
-            min_cluster_size=min_size,
-            vectors=bucket_vectors,
-        )
+        if stub or bucket_vectors is None:
+            kept, leftover_idxs = keyword_groups(texts, min_cluster_size=min_size)
+            # Merge tiny leftover via n-gram so we do not drop signal
+            if leftover_idxs and len(leftover_idxs) >= min_size:
+                sub_texts = [texts[i] for i in leftover_idxs]
+                sub_kept, sub_left = agglomerative_groups(
+                    sub_texts,
+                    distance_threshold=dist,
+                    min_cluster_size=min_size,
+                    vectors=None,
+                )
+                kept.extend([[leftover_idxs[j] for j in group] for group in sub_kept])
+                leftover_idxs = [leftover_idxs[j] for j in sub_left]
+        else:
+            kept, leftover_idxs = agglomerative_groups(
+                texts,
+                distance_threshold=dist,
+                min_cluster_size=min_size,
+                vectors=bucket_vectors,
+            )
         used_ids: set[str] = set()
         bucket_themes: list[SubTheme] = []
 

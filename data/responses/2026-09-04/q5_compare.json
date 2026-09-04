@@ -1,0 +1,148 @@
+{
+  "id": "q5_compare",
+  "question": "How do users compare multiple shortlisted products?",
+  "summary": "Observed from 10 retrieved chunks across app_store, blog, forum, play_store, social: Fit / size doubt after save, Comparing saved items, Sizing runs small, Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q5_compare_fit_doubt_after_save",
+      "question_id": "q5_compare",
+      "name": "Fit / size doubt after save",
+      "share_of_bucket": 0.421,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 1,
+      "impact_score": 1.0,
+      "segment_skew": [
+        "price_sensitive"
+      ],
+      "paraphrased_examples": [
+        "Users describe fit / size doubt after save after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Fit / size doubt after save may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did fit / size doubt after save come up?"
+      ],
+      "chunk_ids": [
+        "b80b5307-cf12-5130-8c86-f21d8097ca29",
+        "ee5e85cc-0bb7-50d5-acc6-43663a31dc6d",
+        "66b59383-8b11-589e-a7d3-390669370073",
+        "8da1afdb-5b27-5db0-ba53-d4cf0bd4e6bf",
+        "ecb83f5f-ef93-5a0c-887a-9d7e215c2dbd",
+        "b7cfedbf-09d9-5f44-9f01-42a252b31333",
+        "4d9f2aad-3934-5c7b-97cf-82961e58f36c",
+        "b21228ff-86a8-5d2d-8ade-77dc404aadad"
+      ]
+    },
+    {
+      "sub_theme_id": "q5_compare_comparing_saved_items",
+      "question_id": "q5_compare",
+      "name": "Comparing saved items",
+      "share_of_bucket": 0.316,
+      "source_diversity": 2,
+      "sources": [
+        "app_store",
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "medium",
+      "impact_rank": 2,
+      "impact_score": 0.6,
+      "segment_skew": [
+        "first_time"
+      ],
+      "paraphrased_examples": [
+        "Users describe comparing saved items after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Comparing saved items may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did comparing saved items come up?"
+      ],
+      "chunk_ids": [
+        "c33f0371-7c14-597e-846b-955ab72e30c8",
+        "51a09fcd-4237-52fa-9d1f-8d2b4ec75ad3",
+        "e98070ac-8d30-5a99-9191-abc8760786a7",
+        "3a0c36e1-1bd6-58f9-9181-aec3c40da81c",
+        "a6e3d4d9-151c-52d4-a25c-b3a5f1ed338e",
+        "6e77ae4e-8960-58cd-b369-944cf81786c4"
+      ]
+    },
+    {
+      "sub_theme_id": "q5_compare_sizing_runs_small",
+      "question_id": "q5_compare",
+      "name": "Sizing runs small",
+      "share_of_bucket": 0.158,
+      "source_diversity": 2,
+      "sources": [
+        "play_store",
+        "social"
+      ],
+      "frequency": "low",
+      "severity": "high",
+      "impact_rank": 3,
+      "impact_score": 0.57,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe sizing runs small after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Sizing runs small may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did sizing runs small come up?"
+      ],
+      "chunk_ids": [
+        "cb58549e-bcd0-53b7-818f-0d4b24666cea",
+        "2b2d4ec5-556e-55de-b39b-2443b8ae445d",
+        "549268ae-d3cf-56e4-b441-df56da3d8659"
+      ]
+    },
+    {
+      "sub_theme_id": "q5_compare_other",
+      "question_id": "q5_compare",
+      "name": "Other",
+      "share_of_bucket": 0.105,
+      "source_diversity": 2,
+      "sources": [
+        "forum",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "low",
+      "impact_rank": 4,
+      "impact_score": 0.31,
+      "segment_skew": [
+        "price_sensitive"
+      ],
+      "paraphrased_examples": [
+        "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "a909051a-5696-5d6f-b68a-cebb433f26e6",
+        "8bad693d-f1f9-5aef-bd68-78025939b39f"
+      ]
+    }
+  ],
+  "implications": [
+    "Observed: shoppers hold two or more saved items. Hypothesis: a side-by-side of saved pieces would reduce stalled shortlists."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did fit / size doubt after save come up?",
+    "When you saved something recently, did comparing saved items come up?",
+    "When you saved something recently, did sizing runs small come up?",
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 10,
+  "themes_count": 4
+}

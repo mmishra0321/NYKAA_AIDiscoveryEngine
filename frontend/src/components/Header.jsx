@@ -2,6 +2,7 @@ import { Download } from "lucide-react";
 
 const NAV = [
   { href: "#pipeline", label: "Pipeline" },
+  { href: "#scrape-status", label: "Scrape" },
   { href: "#ask-question", label: "Ask" },
   { href: "#research", label: "Research Qs" },
   { href: "#themes", label: "Themes" },

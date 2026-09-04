@@ -1,0 +1,167 @@
+{
+  "id": "q9_segments",
+  "question": "How do these behaviours differ across user segments?",
+  "summary": "Observed from 10 retrieved chunks across app_store, blog, forum, play_store, social: Fit / size doubt after save, Other, Sizing runs small, Comparing saved items. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q9_segments_fit_doubt_after_save",
+      "question_id": "q9_segments",
+      "name": "Fit / size doubt after save",
+      "share_of_bucket": 0.379,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 1,
+      "impact_score": 1.0,
+      "segment_skew": [
+        "first_time",
+        "occasion_shopper",
+        "repeat"
+      ],
+      "paraphrased_examples": [
+        "Users describe fit / size doubt after save after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Fit / size doubt after save may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did fit / size doubt after save come up?"
+      ],
+      "chunk_ids": [
+        "b6b1daf4-c6c3-503b-bc68-5205b21eeab0",
+        "f9bfe374-8769-5b76-922d-73df4792b32f",
+        "dca28dca-ee0d-5cad-b26a-5e7058e72fa1",
+        "66b59383-8b11-589e-a7d3-390669370073",
+        "f8b899a8-fec2-5589-906f-dadee58cebb1",
+        "ff897e82-84c1-585d-890f-35fed90923d3",
+        "bf01eebb-c7cf-5ef2-98a3-f31cd70cba09",
+        "d59a583c-1c61-5b6c-9902-326a3e06b003",
+        "4d9f2aad-3934-5c7b-97cf-82961e58f36c",
+        "f6ec3312-0e6b-573c-ae0d-a959654b2a5d",
+        "1cd99e11-abb4-52a5-9150-34f1e18ff43e"
+      ]
+    },
+    {
+      "sub_theme_id": "q9_segments_other",
+      "question_id": "q9_segments",
+      "name": "Other",
+      "share_of_bucket": 0.379,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 2,
+      "impact_score": 0.73,
+      "segment_skew": [
+        "occasion_shopper",
+        "price_sensitive",
+        "repeat"
+      ],
+      "paraphrased_examples": [
+        "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "d24f65a3-f683-5251-bfb9-c153e4f3f3e8",
+        "bca390be-3be1-5a9c-8f6b-31aed5401122",
+        "e232f69a-a520-5559-9a59-1d9ad77119e5",
+        "90148f9f-8a7e-5f58-9e5c-3ccd6bd2c26a",
+        "d65fcc6e-ad8c-53c9-b37d-3175e1b014df",
+        "b16b09b8-260d-5c83-86fb-f0a2754d4d69",
+        "fed1b0d2-9f7c-52ec-a4ce-5eeeb4c540fd",
+        "f65c47d2-f993-5d3e-9f6e-f94f5473ab23",
+        "125c87ba-3ffb-50df-9fd5-fd0d5ceb37b1",
+        "de48c906-d7e6-506f-9a4e-b38abe22647f",
+        "f89a8d15-c542-5ccd-80b3-a504a8d5ffc6"
+      ]
+    },
+    {
+      "sub_theme_id": "q9_segments_sizing_runs_small",
+      "question_id": "q9_segments",
+      "name": "Sizing runs small",
+      "share_of_bucket": 0.138,
+      "source_diversity": 3,
+      "sources": [
+        "blog",
+        "play_store",
+        "social"
+      ],
+      "frequency": "low",
+      "severity": "high",
+      "impact_rank": 3,
+      "impact_score": 0.626,
+      "segment_skew": [
+        "first_time"
+      ],
+      "paraphrased_examples": [
+        "Users describe sizing runs small after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Sizing runs small may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did sizing runs small come up?"
+      ],
+      "chunk_ids": [
+        "035166e8-cc5f-5ca5-9166-b292904cf6d0",
+        "9f070d8c-c829-59db-93c9-e9e416f0ad7f",
+        "dbec1608-5b8a-5b2c-8e62-da9c2a87f33f",
+        "549268ae-d3cf-56e4-b441-df56da3d8659"
+      ]
+    },
+    {
+      "sub_theme_id": "q9_segments_comparing_saved_items",
+      "question_id": "q9_segments",
+      "name": "Comparing saved items",
+      "share_of_bucket": 0.103,
+      "source_diversity": 2,
+      "sources": [
+        "app_store",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "medium",
+      "impact_rank": 4,
+      "impact_score": 0.409,
+      "segment_skew": [
+        "first_time"
+      ],
+      "paraphrased_examples": [
+        "Users describe comparing saved items after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Comparing saved items may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did comparing saved items come up?"
+      ],
+      "chunk_ids": [
+        "c33f0371-7c14-597e-846b-955ab72e30c8",
+        "3a0c36e1-1bd6-58f9-9181-aec3c40da81c",
+        "6e77ae4e-8960-58cd-b369-944cf81786c4"
+      ]
+    }
+  ],
+  "implications": [
+    "Observed: first-time vs repeat and category (ethnic/western/footwear) change the doubt. Hypothesis: segment-aware fit help on saved items would lift 30-day purchase unevenly \u2014 interview to confirm."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did fit / size doubt after save come up?",
+    "When you saved something recently, did other come up?",
+    "When you saved something recently, did sizing runs small come up?",
+    "When you saved something recently, did comparing saved items come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 10,
+  "themes_count": 4
+}

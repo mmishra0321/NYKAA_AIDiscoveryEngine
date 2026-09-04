@@ -1,0 +1,424 @@
+{
+  "id": "q10_unmet_needs",
+  "question": "What unmet needs emerge consistently across many independent sources?",
+  "summary": "Observed from 10 retrieved chunks across app_store, blog, forum, play_store, social: Fit / size doubt after save, No resurface when size / stock improves, Wants size-prefilled move to cart, Sizing runs small. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q10_unmet_needs_fit_doubt_after_save",
+      "question_id": "q10_unmet_needs",
+      "name": "Fit / size doubt after save",
+      "share_of_bucket": 0.42,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 1,
+      "impact_score": 0.797,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe fit / size doubt after save after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Recurs across independent sources \u2014 treat as a high-confidence unmet need.",
+      "interview_probes": [
+        "Have you seen this same gap on more than one channel?"
+      ],
+      "chunk_ids": [
+        "31fc9c6d-6191-51a7-b343-6c8375eb0c78",
+        "1e89fe83-9f28-5088-b47b-e79a86a29598",
+        "b80b5307-cf12-5130-8c86-f21d8097ca29",
+        "da8f42f8-41b4-51c8-ae4c-a649329f2257",
+        "b6b1daf4-c6c3-503b-bc68-5205b21eeab0",
+        "f9bfe374-8769-5b76-922d-73df4792b32f",
+        "691c6059-bf03-5d62-89ab-ab7a2a0fb257",
+        "39137288-c4cf-5861-a4e3-2bb8de0d609a",
+        "4c10ca1a-7217-5dde-bf05-99f1f68ab79c",
+        "3dbce3b5-2f68-5e3d-9775-09fa20edab7c",
+        "16736384-2b11-557b-8a56-dd7ec1dc7e89",
+        "ee5e85cc-0bb7-50d5-acc6-43663a31dc6d",
+        "0f6b5927-af0a-5ed7-a7cc-70a5c29d0841",
+        "6b23e570-87d7-53eb-a2eb-eda72969a767",
+        "dca28dca-ee0d-5cad-b26a-5e7058e72fa1",
+        "69575a9c-9fe1-5983-a4b6-e883e2525ac9",
+        "49f21319-8644-54f4-8bbf-428377b6f693",
+        "66b59383-8b11-589e-a7d3-390669370073",
+        "3a1d6ce0-282e-59b0-a792-7335555d6a81",
+        "8cd6f3e5-9323-528b-ac19-9f4ef7b737fe",
+        "7a830030-cc7d-5bcc-a62e-0fb87b687894",
+        "ce2ded11-dd94-5f57-a270-00c6e5031bb6",
+        "60d395f1-a0b6-5b95-b89d-6327ca44bcbb",
+        "1dd69dfd-4da2-5b0f-9ffd-62a13be51484",
+        "ba651bb6-e17a-56d6-83c2-b0dfb6f119cd",
+        "40e26a56-e73e-5db3-b4c7-8c312899bbd4",
+        "8da1afdb-5b27-5db0-ba53-d4cf0bd4e6bf",
+        "ff897e82-84c1-585d-890f-35fed90923d3",
+        "cf9a526e-8885-5b2a-bbbd-3bfe0f33587f",
+        "90a84d36-e18b-553d-959c-7222b80944c8",
+        "ecb83f5f-ef93-5a0c-887a-9d7e215c2dbd",
+        "2fee940c-64b3-5a3a-8352-690ba688422a",
+        "5f4cc444-409b-5553-8289-9292020367c2",
+        "5c27745f-8128-5a74-9ac7-5505798ef029",
+        "bb87ae33-d3ff-5c9e-8503-0e4fa7857347",
+        "b7cfedbf-09d9-5f44-9f01-42a252b31333",
+        "d59a583c-1c61-5b6c-9902-326a3e06b003",
+        "5a58ccd3-2543-51bb-96bf-87beab187ad8",
+        "0f04a3c8-b7b6-52ed-a4d8-92ae20482028",
+        "4d9f2aad-3934-5c7b-97cf-82961e58f36c",
+        "f17a8502-095f-55d6-b869-cb43a76b72d9",
+        "b21228ff-86a8-5d2d-8ade-77dc404aadad",
+        "f6ec3312-0e6b-573c-ae0d-a959654b2a5d",
+        "1cd99e11-abb4-52a5-9150-34f1e18ff43e",
+        "57035e71-2f33-573a-9a5f-cde23715a6be",
+        "b04767b0-57a0-57e6-8dff-cfd02e54e3d4",
+        "93deb0c5-5f7c-5625-8378-60bcb7dfdb79",
+        "bb175173-7b48-52e0-a5bb-b5b815c1e239",
+        "245cf6dc-762f-5404-a24e-301f47fdbf20",
+        "78c79b2a-ad2b-563f-b018-989db893d6c4",
+        "f8b899a8-fec2-5589-906f-dadee58cebb1",
+        "bf01eebb-c7cf-5ef2-98a3-f31cd70cba09",
+        "2008b269-4267-5525-b2d6-e740873fc3fc",
+        "b6be7967-ea20-5427-b0b0-824b558ca6cb",
+        "74318c9a-415d-51ff-8f45-5223e2cdd3dc",
+        "1584d583-5120-5232-bada-e417df5600a0",
+        "1d3d1c47-b56f-50be-aabd-b0fabb97de9f",
+        "f84d4e37-07a7-5783-8b40-19b5dfc649dd",
+        "0be521b4-8220-534b-abcd-0a5154c75a6c",
+        "9d7799be-b8f4-5acc-9e76-400ac3582649",
+        "97e543c5-4b6b-5062-9692-fead1d8101cf",
+        "ad176968-857f-57fc-85b6-308fd44c9216",
+        "1252402d-ab3b-5728-ade1-c19a15365d18",
+        "fd9d743e-d800-5435-a8be-e650f7f48ae0",
+        "b489569e-c448-5177-a7c5-7929d6c7f986",
+        "44b68d5b-bfa7-5868-952d-a125f9a9da8a",
+        "be4ff97e-6fc0-51a4-a84d-1b93c585ef8f",
+        "822edf7e-84ae-5a29-9ce1-c4d13da072c8"
+      ]
+    },
+    {
+      "sub_theme_id": "q10_unmet_needs_silent_back_in_stock",
+      "question_id": "q10_unmet_needs",
+      "name": "No resurface when size / stock improves",
+      "share_of_bucket": 0.068,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 2,
+      "impact_score": 0.674,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe no resurface when size / stock improves after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Recurs across independent sources \u2014 treat as a high-confidence unmet need.",
+      "interview_probes": [
+        "Have you seen this same gap on more than one channel?"
+      ],
+      "chunk_ids": [
+        "7a337548-2549-5188-a01b-edac242d1b07",
+        "d65fcc6e-ad8c-53c9-b37d-3175e1b014df",
+        "e824c933-78ee-55ed-8aaf-185009d3e12b",
+        "ec415a03-37a3-5b27-ad2e-6bd895d059f4",
+        "8ad92066-ecb3-5289-8598-50a54dc50151",
+        "6221f424-80f2-541d-be14-98e464063dc4",
+        "e42e960d-cf37-5538-9e8a-6948801de23c",
+        "b16b09b8-260d-5c83-86fb-f0a2754d4d69",
+        "2c8bf95e-0418-513a-8566-80c5463c095f",
+        "5293dfad-4487-5f9b-b367-633fc6321d43",
+        "df72aa9e-3392-5772-83ee-240ae02a7141"
+      ]
+    },
+    {
+      "sub_theme_id": "q10_unmet_needs_one_click_cart_gap",
+      "question_id": "q10_unmet_needs",
+      "name": "Wants size-prefilled move to cart",
+      "share_of_bucket": 0.056,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 3,
+      "impact_score": 0.669,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe wants size-prefilled move to cart after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Recurs across independent sources \u2014 treat as a high-confidence unmet need.",
+      "interview_probes": [
+        "Have you seen this same gap on more than one channel?"
+      ],
+      "chunk_ids": [
+        "f65c47d2-f993-5d3e-9f6e-f94f5473ab23",
+        "c7b32ef0-8dfa-5181-872f-a62ef6f53df5",
+        "91042672-a842-5d0a-a8cb-eab70c89508c",
+        "d550e6c0-fb87-515b-b707-b050c008f3d2",
+        "125c87ba-3ffb-50df-9fd5-fd0d5ceb37b1",
+        "ab67f57f-8dbc-5307-9538-4cb6e40634e3",
+        "dba2f3ea-0814-5957-b822-7d1bbb7d0d50",
+        "34970700-6838-5b52-95ce-f6e22307a3b7",
+        "57cbcc91-c663-5e9b-a5b3-a9d5c3df8b49"
+      ]
+    },
+    {
+      "sub_theme_id": "q10_unmet_needs_sizing_runs_small",
+      "question_id": "q10_unmet_needs",
+      "name": "Sizing runs small",
+      "share_of_bucket": 0.049,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 4,
+      "impact_score": 0.587,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe sizing runs small after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Recurs across independent sources \u2014 treat as a high-confidence unmet need.",
+      "interview_probes": [
+        "Have you seen this same gap on more than one channel?"
+      ],
+      "chunk_ids": [
+        "73725442-3c22-53a2-9dab-6835cce5a771",
+        "cb58549e-bcd0-53b7-818f-0d4b24666cea",
+        "9f070d8c-c829-59db-93c9-e9e416f0ad7f",
+        "5b3b7732-2c0f-5761-a9d1-a548e974c3aa",
+        "dbec1608-5b8a-5b2c-8e62-da9c2a87f33f",
+        "2b2d4ec5-556e-55de-b39b-2443b8ae445d",
+        "549268ae-d3cf-56e4-b441-df56da3d8659",
+        "035166e8-cc5f-5ca5-9166-b292904cf6d0"
+      ]
+    },
+    {
+      "sub_theme_id": "q10_unmet_needs_off_platform_size_chart",
+      "question_id": "q10_unmet_needs",
+      "name": "Off-Nykaa size charts and other apps",
+      "share_of_bucket": 0.043,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 5,
+      "impact_score": 0.585,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe off-nykaa size charts and other apps after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Recurs across independent sources \u2014 treat as a high-confidence unmet need.",
+      "interview_probes": [
+        "Have you seen this same gap on more than one channel?"
+      ],
+      "chunk_ids": [
+        "a64cff48-3da6-5543-afe1-21d093e7f9cf",
+        "fed1b0d2-9f7c-52ec-a4ce-5eeeb4c540fd",
+        "4dd8b0a9-5edf-5bf7-b120-b2a0b13dc542",
+        "196367a1-3d28-5c75-b63d-d5aa34e3856b",
+        "09abab24-6ad7-5c24-a678-fc1d229c5821",
+        "ac21e53a-d776-50d0-9af1-f23081389e3a",
+        "9c6ad7e3-5704-5e6d-bfbf-ca4bf06c821a"
+      ]
+    },
+    {
+      "sub_theme_id": "q10_unmet_needs_genuine_intent",
+      "question_id": "q10_unmet_needs",
+      "name": "Genuine purchase intent",
+      "share_of_bucket": 0.043,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "medium",
+      "impact_rank": 6,
+      "impact_score": 0.565,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe genuine purchase intent after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Recurs across independent sources \u2014 treat as a high-confidence unmet need.",
+      "interview_probes": [
+        "Have you seen this same gap on more than one channel?"
+      ],
+      "chunk_ids": [
+        "90148f9f-8a7e-5f58-9e5c-3ccd6bd2c26a",
+        "d70ea330-aac6-5c54-8a6e-cd30642cc352",
+        "54d07410-6286-509f-93c5-8fe03864605b",
+        "86157978-d219-509d-b6a5-c77a26376eeb",
+        "3389a0c5-7de2-5635-a2f4-590eb375bc29",
+        "d66e72d2-4844-58e0-93b7-34c5fe6257b0",
+        "94ea495c-eb92-51c6-854e-32e30da9f133"
+      ]
+    },
+    {
+      "sub_theme_id": "q10_unmet_needs_dead_wishlist",
+      "question_id": "q10_unmet_needs",
+      "name": "Wishlist feels like a dead list",
+      "share_of_bucket": 0.049,
+      "source_diversity": 3,
+      "sources": [
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 7,
+      "impact_score": 0.507,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe wishlist feels like a dead list after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Recurs across independent sources \u2014 treat as a high-confidence unmet need.",
+      "interview_probes": [
+        "Have you seen this same gap on more than one channel?"
+      ],
+      "chunk_ids": [
+        "08a8a4de-f0ef-52e7-84db-3aa3ab3d7fea",
+        "0d5e3355-680d-52da-b738-b989aa7a01b3",
+        "302dc9cc-355b-51c9-8986-517b59045617",
+        "88a59f19-9f6e-507c-a144-f6eb8e23cff1",
+        "8bad693d-f1f9-5aef-bd68-78025939b39f",
+        "b5858e71-f097-59ae-9d95-62d5ff9df4a1",
+        "615ffb50-d569-5485-95de-289dd2918fd4",
+        "16f8c5c7-4978-5fe3-9369-2120b9c38784"
+      ]
+    },
+    {
+      "sub_theme_id": "q10_unmet_needs_fabric_quality_doubt",
+      "question_id": "q10_unmet_needs",
+      "name": "Fabric quality doubt",
+      "share_of_bucket": 0.031,
+      "source_diversity": 3,
+      "sources": [
+        "app_store",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 8,
+      "impact_score": 0.501,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe fabric quality doubt after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Recurs across independent sources \u2014 treat as a high-confidence unmet need.",
+      "interview_probes": [
+        "Have you seen this same gap on more than one channel?"
+      ],
+      "chunk_ids": [
+        "0867bc67-1152-5714-9a3d-8b552cb6cd43",
+        "f1f703ad-76ca-5c16-946e-7c776f473362",
+        "de48c906-d7e6-506f-9a4e-b38abe22647f",
+        "f89a8d15-c542-5ccd-80b3-a504a8d5ffc6",
+        "6c6f3e38-efb7-5281-896f-47b2a32681cb"
+      ]
+    },
+    {
+      "sub_theme_id": "q10_unmet_needs_youtube_haul",
+      "question_id": "q10_unmet_needs",
+      "name": "YouTube / haul research before convert",
+      "share_of_bucket": 0.056,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "medium",
+      "impact_rank": 9,
+      "impact_score": 0.489,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe youtube / haul research before convert after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Recurs across independent sources \u2014 treat as a high-confidence unmet need.",
+      "interview_probes": [
+        "Have you seen this same gap on more than one channel?"
+      ],
+      "chunk_ids": [
+        "5594f8bd-e37f-5fea-94d7-f215a5245b01",
+        "0e12bbdc-055d-5039-be41-0309d88f4d4a",
+        "acc6959c-da0e-5dfc-8732-c8cf2a463ee9",
+        "1c5ac2dc-d8e9-5d0c-a275-f42f80acee90",
+        "60407121-0359-556d-a4c1-4a0da2064cda",
+        "0697d6d7-2540-533a-bb2b-2a691479adb6",
+        "87dbb622-ae3c-5da2-8846-d6b99d3e89c6",
+        "7af67876-df3d-57f3-a98c-f4ea6e970df8",
+        "3d839667-ebeb-5537-91bd-8fbc61955f7c"
+      ]
+    },
+    {
+      "sub_theme_id": "q10_unmet_needs_occasion_planning",
+      "question_id": "q10_unmet_needs",
+      "name": "Occasion planning",
+      "share_of_bucket": 0.025,
+      "source_diversity": 3,
+      "sources": [
+        "blog",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "medium",
+      "impact_rank": 10,
+      "impact_score": 0.399,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Users describe occasion planning after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      ],
+      "hypothesis": "Recurs across independent sources \u2014 treat as a high-confidence unmet need.",
+      "interview_probes": [
+        "Have you seen this same gap on more than one channel?"
+      ],
+      "chunk_ids": [
+        "7e9641f0-ef16-542c-b4d6-a186ca81f1c0",
+        "a9ae93a9-d33b-5cc1-908b-4f094328b24c",
+        "b34d74bc-94c9-5ac0-b9e2-418cdf08b0d2",
+        "176ccfef-d347-5b25-af75-716e19f63b98"
+      ]
+    }
+  ],
+  "implications": [
+    "Observed: the same slug appearing in three or more independent sources is a high-confidence unmet need. Hypothesis: fix that cross-source friction first."
+  ],
+  "interview_probes": [
+    "Have you seen this same gap on more than one channel?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 10,
+  "themes_count": 10
+}
