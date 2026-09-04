@@ -1,13 +1,13 @@
 {
   "id": "q5_compare",
   "question": "How do users compare multiple shortlisted products?",
-  "summary": "Observed from 10 retrieved chunks across app_store, blog, forum, play_store, social: Fit / size doubt after save, Comparing saved items, Sizing runs small, Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "summary": "Will this fit me today? No fit confidence on the tile. they open the PDP again and guess size. / shortlist.",
   "sub_themes": [
     {
       "sub_theme_id": "q5_compare_fit_doubt_after_save",
       "question_id": "q5_compare",
       "name": "Fit / size doubt after save",
-      "share_of_bucket": 0.421,
+      "share_of_bucket": 0.266,
       "source_diversity": 5,
       "sources": [
         "app_store",
@@ -21,128 +21,473 @@
       "impact_rank": 1,
       "impact_score": 1.0,
       "segment_skew": [
+        "occasion_shopper",
         "price_sensitive"
       ],
       "paraphrased_examples": [
-        "Users describe fit / size doubt after save after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+        "Discover looks on Reels, save a dress, decide in seconds. If Nykaa does not answer fit fast they leave. / shortlist.",
+        "Will this fit me today? No fit confidence on the tile. they open the PDP again and guess size. / shortlist.",
+        "Discover looks on Reels, save a dress, decide in seconds. If Nykaa does not answer fit fast they leave. Noted on a saved saree. On iOS the wishlist / shortlist looks prettier but still silent."
       ],
       "hypothesis": "Fit / size doubt after save may delay 30-day wishlist conversion.",
       "interview_probes": [
         "When you saved something recently, did fit / size doubt after save come up?"
       ],
       "chunk_ids": [
-        "b80b5307-cf12-5130-8c86-f21d8097ca29",
-        "ee5e85cc-0bb7-50d5-acc6-43663a31dc6d",
-        "66b59383-8b11-589e-a7d3-390669370073",
-        "8da1afdb-5b27-5db0-ba53-d4cf0bd4e6bf",
-        "ecb83f5f-ef93-5a0c-887a-9d7e215c2dbd",
-        "b7cfedbf-09d9-5f44-9f01-42a252b31333",
-        "4d9f2aad-3934-5c7b-97cf-82961e58f36c",
-        "b21228ff-86a8-5d2d-8ade-77dc404aadad"
+        "18da930c-255f-5948-a2cf-e7484b9f0826",
+        "4f9426c0-4a24-5a6f-bb02-fbb036befb6c",
+        "2136d96c-b9e2-55ad-ae39-c639c41203c8",
+        "48f2681f-8b98-5408-a88d-11fbc5a4c81a",
+        "4c461429-b4e3-509a-8a16-9c82ce5e86ff",
+        "e9ce446b-319c-5bda-9687-876718dbfa9b",
+        "989e2da5-1f22-56c2-a9a0-e58b0ec87634",
+        "755d9d2a-b002-534a-82d2-b60106c50fef",
+        "6adfa011-706a-5b90-b7d6-142994ceb9c4",
+        "cfba6190-613d-59d9-874a-0b17b744680c",
+        "32020fd2-9987-5635-b28c-3eca9eff2690",
+        "0a66679e-ebc7-5c17-adfb-3673e4d96f56",
+        "aebadf04-a956-5b7b-a023-cb0e6a9d5052",
+        "55541e44-3a15-5d56-a503-0a4457612ffc",
+        "16695925-d7db-5594-b359-0d97d000eed8",
+        "eb683da5-ca5b-5991-a70a-9d690eedb458",
+        "f236456e-020b-5b81-8629-6183db3a267e",
+        "d73ed657-23d7-5d6f-88a5-abe8356526af",
+        "da13d63c-7464-5e2d-bb72-3314ba2479e6",
+        "e6da89a2-5ebc-598c-b9ef-1ccf5f6ce0ce",
+        "4e037b4c-7197-5327-8511-e4a1c5178b54",
+        "f2289e92-76cf-5b20-97a2-9d10cc045da5",
+        "cf0da0b4-c39b-59f4-9fde-9cad81c6d11f",
+        "c77deefd-3fd9-5e9e-80de-e785d22d682d",
+        "d2bc3320-d65a-573c-abaf-6434f4362c44",
+        "467d5987-d8b1-5029-aae7-f9728bc07f13",
+        "60d5dc6f-f8eb-5ab0-99c8-e637d4b2800f",
+        "4a78705f-b511-5a2d-819e-129d87895e61",
+        "215a39ae-8b23-54f0-8916-55accbc83a04",
+        "49cc0f77-cdf6-52aa-a5e1-2d8dc0afcf15",
+        "975d060c-2160-5ac1-93d2-707bc9f4fa96",
+        "ee97ed28-609c-574f-ba9b-cb7c66e755ff",
+        "8ae6212f-d380-5733-b024-a926c2fd5c63",
+        "eb3c4a3c-446b-56fd-a09f-5d9d2c1fda66",
+        "ac85f29a-0797-5bca-b280-09151ca12c40",
+        "6982a65e-3ddd-5494-8e06-0659ffd3ae93",
+        "e25524c3-7b21-59cd-a2ff-7499f253ccfe",
+        "44b578b6-23ed-51fa-b6be-c70532352e9d",
+        "c38d8de1-5c1d-55a0-93f9-44be647d1871",
+        "577cdfab-570c-55f7-b93d-24fb0e2a6ead",
+        "14c46e6d-8177-5944-a031-bccef99e7e97",
+        "06c45e55-afcf-59df-b485-af024e60a4ac",
+        "453469ee-edd4-57c7-93df-7f8c4b82b6e3",
+        "dc1fd018-7fe0-517d-9ee8-c561b4da5409",
+        "96653f01-8ee5-5106-a5dc-085a476a0efc",
+        "46d2f998-7728-5b7e-aa1a-a814cffe31e3",
+        "10d5c93d-aecb-5fae-bd83-ebd2218a20ef",
+        "dc523440-a152-5348-bdc0-8fbfc0a4ed43",
+        "1072a000-7fa0-5202-9211-14dc5b2f81d1"
+      ]
+    },
+    {
+      "sub_theme_id": "q5_compare_dead_wishlist",
+      "question_id": "q5_compare",
+      "name": "Wishlist feels like a dead list",
+      "share_of_bucket": 0.179,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 2,
+      "impact_score": 0.809,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Silent wishlist / shortlist. Back in stock in their size never nudged me, so the saved dress still sits unused.",
+        "Silent wishlist / shortlist. Back in stock in their size never nudged me, so the saved dress still sits unused. / shortlist.",
+        "Silent wishlist / shortlist. Back in stock in their size never nudged me, so the saved dress still sits unused. Noted on a saved saree. On iOS the wishlist / shortlist looks prettier but still silent."
+      ],
+      "hypothesis": "Wishlist feels like a dead list may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did wishlist feels like a dead list come up?"
+      ],
+      "chunk_ids": [
+        "5e4ec97d-1e77-56fe-95c6-0247fafd20db",
+        "76e78ace-3469-519e-9390-e451fb3eae29",
+        "511c9067-2ed8-5a78-8ee5-6b913b1f74f9",
+        "fe13064d-0065-547e-8776-e1deb816bc42",
+        "4c4d5d2c-e287-52ff-894e-6569533ab6a6",
+        "29e9398e-7a99-5cea-acba-ae630f9d42db",
+        "19e54abe-3824-5385-9e24-ea225ac5ddfd",
+        "3dbd3b6b-fe64-5365-9601-685f739e1cc9",
+        "57679948-ab50-5594-aa4e-537e8136694e",
+        "00dbb378-c938-50f2-be63-1492d5cd2c01",
+        "cf67fc6d-d499-5994-8528-2594a8d31b72",
+        "358a5cbc-d7d0-58a2-8c36-7c13f3338c7c",
+        "b29a221a-2137-56d6-9448-f173aad59159",
+        "6a7e777a-1645-5c05-8731-6cff03fa1750",
+        "75c16563-20f0-5c72-90ca-ff13a320810c",
+        "94b2241d-8d04-5717-8bbd-f2fa9da351db",
+        "c8f31f2b-b629-59ee-beb7-69e1cc987fa8",
+        "e4571036-4efe-5118-933e-b82c3c5b622f",
+        "6c60612b-83d1-5122-b3e9-66f31b6b38b0",
+        "a24d6034-7ef4-590a-b78a-2fd3981ae0f4",
+        "8e019089-d71b-5b58-8eaf-902c0d835894",
+        "ab47ccbd-6e72-5f3a-83c5-bdb76baa3a09",
+        "7ad4b066-770f-50d8-b4c1-e6abdfd0b3d7",
+        "076faf0d-2993-5b87-9ef9-3537747f6f96",
+        "575359fc-a4c6-541a-b965-0d98e272c5ae",
+        "24b0c6bb-00ab-5a39-b784-20a86e69517b",
+        "460109c9-d701-524c-80d3-802c930131de",
+        "54dc8426-88ea-5d72-a444-1c4a6018c66e",
+        "07adcf20-18cb-51b3-a5d0-755496c79b0c",
+        "2d8bbfd8-7edd-5e12-8396-8b3e272edf6d",
+        "2efb30dd-2324-5f82-af66-ea6759e24bb9",
+        "21a85dd4-6bb7-5423-ad0f-288ee009a061",
+        "f0554d58-b5d7-5364-a0b8-59ce100ccaca"
+      ]
+    },
+    {
+      "sub_theme_id": "q5_compare_fabric_quality_doubt",
+      "question_id": "q5_compare",
+      "name": "Fabric quality doubt",
+      "share_of_bucket": 0.163,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 3,
+      "impact_score": 0.785,
+      "segment_skew": [
+        "price_sensitive"
+      ],
+      "paraphrased_examples": [
+        "Stuck in wishlist / shortlist again. Liked the dress, still unsure on size L, never bought because nothing resurfaced. Noted on a saved saree. On iOS the wishlist / shortlist looks prettier but still silent.",
+        "Stuck in wishlist / shortlist again. Liked the dress, still unsure on size L, never bought because nothing resurfaced.",
+        "Stuck in wishlist / shortlist again. Liked the dress, still unsure on size L, never bought because nothing resurfaced. / shortlist."
+      ],
+      "hypothesis": "Fabric quality doubt may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did fabric quality doubt come up?"
+      ],
+      "chunk_ids": [
+        "54fc5818-ff4d-5fdf-8ee2-148bff3c5c9b",
+        "a24fc7db-0c0a-5ddb-b8e2-93978e86208d",
+        "129d72ed-35e0-5d03-a9ce-49716d6fb99b",
+        "54d5a072-dc9b-52b6-9cfd-e6d099a3b395",
+        "6e1e71ab-66a3-5229-847a-04903d004892",
+        "8f5fe678-40eb-5b3d-903e-2cd6598abf4b",
+        "790ad6fb-fc8b-52d5-9bbd-a32e33e6fbd2",
+        "ed7878c3-3fea-5617-88d5-e40fc74a88e9",
+        "44805f41-f87a-5717-bb64-17614a03e6ec",
+        "77dd7177-4b55-5cc1-93a9-270d736be990",
+        "61f7a42b-2def-54e5-a17d-d4d2bc463945",
+        "9e95f255-6ebe-5765-852e-d4e479fa4c8c",
+        "ffe22830-75c4-5a4e-aa62-55a775b82df3",
+        "3537a58c-e6d6-52f7-ace3-824392906fe9",
+        "1ec9bbba-0d4c-5d38-bc7b-702b6bc4580d",
+        "2aa040ef-aba1-519c-b37d-5b874aa7b600",
+        "6e910ca7-59b5-5154-83d1-32911409610d",
+        "0f780bb7-546a-5b8d-a990-55623d4d099f",
+        "44134ff6-7abf-5476-8ff0-5fa032128d23",
+        "177a7b13-5b43-5903-9068-8264742ccf46",
+        "62f3a651-0b3e-5b13-b488-4cc4a772df99",
+        "0db4d10c-457e-5d08-a476-d2df5ca221e1",
+        "a8bebb10-7246-55ed-af54-2e04d38db990",
+        "1965a33e-758c-5f02-af44-0b6b93135871",
+        "4f9e3497-265c-5864-aec7-7e4cd1cd7b8f",
+        "c18f11b1-2da1-5331-a1af-dff6c584d934",
+        "aad8f282-7970-5a0a-8ca1-a9ffe1ab54bc",
+        "483d5c51-94a8-55d8-b4a2-8e021fb4ece8",
+        "6c43187b-141a-56eb-a9a4-b0942682e1d6",
+        "428eb15a-aea5-55bb-a462-cdd3e553350c"
       ]
     },
     {
       "sub_theme_id": "q5_compare_comparing_saved_items",
       "question_id": "q5_compare",
       "name": "Comparing saved items",
-      "share_of_bucket": 0.316,
-      "source_diversity": 2,
+      "share_of_bucket": 0.13,
+      "source_diversity": 4,
       "sources": [
         "app_store",
+        "blog",
+        "forum",
         "play_store"
       ],
       "frequency": "high",
       "severity": "medium",
-      "impact_rank": 2,
-      "impact_score": 0.6,
+      "impact_rank": 4,
+      "impact_score": 0.615,
       "segment_skew": [
-        "first_time"
+        "price_sensitive"
       ],
       "paraphrased_examples": [
-        "Users describe comparing saved items after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+        "Added three western dresses to wishlist to compare later. Actively considering one for office parties."
       ],
       "hypothesis": "Comparing saved items may delay 30-day wishlist conversion.",
       "interview_probes": [
         "When you saved something recently, did comparing saved items come up?"
       ],
       "chunk_ids": [
-        "c33f0371-7c14-597e-846b-955ab72e30c8",
-        "51a09fcd-4237-52fa-9d1f-8d2b4ec75ad3",
-        "e98070ac-8d30-5a99-9191-abc8760786a7",
-        "3a0c36e1-1bd6-58f9-9181-aec3c40da81c",
-        "a6e3d4d9-151c-52d4-a25c-b3a5f1ed338e",
-        "6e77ae4e-8960-58cd-b369-944cf81786c4"
+        "c4811bd3-9f30-5d9f-876b-cf641bfc4f05",
+        "1520671d-37a7-55e3-b2c8-b40a0f442b8a",
+        "03ce8d48-e82c-5266-9668-9e0c415eef34",
+        "d7b9a77c-df57-560b-9bfa-40ac5803e8ca",
+        "7a88ebfb-d2a4-5e75-860a-080e865fe6ad",
+        "6cfa6290-3a39-52b9-a77a-b9ebbaa35c95",
+        "61d940e4-8ee0-52b6-9442-3d08bc9ba038",
+        "2e980f32-0acc-502f-9bee-3354a03e1b13",
+        "399847eb-12f8-5fed-af37-1e893d1333dc",
+        "337ea187-40fc-559c-8913-62cafbff7d36",
+        "d44b0ffc-a92c-5edb-8572-db8af5103f6a",
+        "9f908672-5307-5320-b930-0794514f6246",
+        "cb130663-d4be-585b-b414-5996ffcb412d",
+        "aef8b3f2-533d-51b3-8322-9dd493f3ff5d",
+        "21bc358f-618c-59f5-a2f6-b5527a94a499",
+        "86e6cfae-3960-566f-8f78-475431e0c70b",
+        "20b11f75-aee7-5190-83d0-43281436820c",
+        "e8c804fc-ea3a-511e-bfcb-16c83be4a7f5",
+        "7196b60b-7b51-50d3-b577-bc9da7e22bc0",
+        "cb660dd5-465a-5658-9a7b-2e5d2b932f88",
+        "07c15f0a-e4b1-5844-b172-f7883e12c80c",
+        "a794b420-2baf-5ad0-810c-97a88bae75e0",
+        "5e739180-533d-5300-95e9-22fd1e130c61",
+        "43148a94-db39-5efa-b629-2d687c9be958"
       ]
     },
     {
       "sub_theme_id": "q5_compare_sizing_runs_small",
       "question_id": "q5_compare",
       "name": "Sizing runs small",
-      "share_of_bucket": 0.158,
-      "source_diversity": 2,
+      "share_of_bucket": 0.038,
+      "source_diversity": 3,
       "sources": [
+        "forum",
         "play_store",
         "social"
       ],
       "frequency": "low",
       "severity": "high",
-      "impact_rank": 3,
-      "impact_score": 0.57,
-      "segment_skew": [],
+      "impact_rank": 5,
+      "impact_score": 0.537,
+      "segment_skew": [
+        "first_time"
+      ],
       "paraphrased_examples": [
-        "Users describe sizing runs small after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+        "First time ordering western wear. Size runs small and they cannot tell the app they am still unsure after saving. / shortlist.",
+        "They start from a saved brand they trust and still stall because size M fits differently on tops versus dresses."
       ],
       "hypothesis": "Sizing runs small may delay 30-day wishlist conversion.",
       "interview_probes": [
         "When you saved something recently, did sizing runs small come up?"
       ],
       "chunk_ids": [
-        "cb58549e-bcd0-53b7-818f-0d4b24666cea",
-        "2b2d4ec5-556e-55de-b39b-2443b8ae445d",
-        "549268ae-d3cf-56e4-b441-df56da3d8659"
+        "0db0f371-f17d-50aa-9ed1-2b90cb21fc36",
+        "9951a9fb-178d-5ff3-8508-fcedcd051019",
+        "a1bd152d-7aff-58df-8271-76b33458261a",
+        "fd62e333-7f95-58bd-96f4-794aa40c0bd4",
+        "79736444-3b89-563b-ac50-4d4b9ec1bc40",
+        "15ac827a-e738-5965-a2ff-d5a4c3ac75cc",
+        "4bfe2ac3-cfec-5fc9-bd98-098c732fb513"
       ]
     },
     {
-      "sub_theme_id": "q5_compare_other",
+      "sub_theme_id": "q5_compare_waiting_for_payday",
       "question_id": "q5_compare",
-      "name": "Other",
-      "share_of_bucket": 0.105,
-      "source_diversity": 2,
+      "name": "Waiting for payday / right moment",
+      "share_of_bucket": 0.071,
+      "source_diversity": 4,
       "sources": [
+        "app_store",
+        "blog",
         "forum",
         "play_store"
       ],
-      "frequency": "low",
-      "severity": "low",
-      "impact_rank": 4,
-      "impact_score": 0.31,
+      "frequency": "medium",
+      "severity": "medium",
+      "impact_rank": 6,
+      "impact_score": 0.527,
       "segment_skew": [
         "price_sensitive"
       ],
       "paraphrased_examples": [
-        "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+        "They heart items on Nykaa Fashion when they like the vibe but need payday. Shortlist is real intent."
       ],
-      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "hypothesis": "Waiting for payday / right moment may delay 30-day wishlist conversion.",
       "interview_probes": [
-        "When you saved something recently, did other come up?"
+        "When you saved something recently, did waiting for payday / right moment come up?"
       ],
       "chunk_ids": [
-        "a909051a-5696-5d6f-b68a-cebb433f26e6",
-        "8bad693d-f1f9-5aef-bd68-78025939b39f"
+        "2d15a05f-655e-57c1-aadc-208fe25b221e",
+        "cfbf074f-0fb4-5d6d-b8b4-96065a3e1146",
+        "508c1de7-ee28-5284-aff5-4f113f106112",
+        "811a46af-852e-59c4-a832-9605bdf00e2c",
+        "63c7d5fd-7eb3-562a-8855-6d1ebe76f23a",
+        "265388d8-bb23-5f6c-bd78-5a1e4586ebab",
+        "99a34de1-caaf-55d2-9ada-452ea1b4b950",
+        "0822ebbc-b990-5f33-91d9-259579cdc725",
+        "4f523a55-9877-599c-a604-8e2dc9572364",
+        "a758198d-38b2-5e70-8dba-aa2592d0789c",
+        "a1c645ee-563f-50bd-b7da-ce4666b34ee5",
+        "83b864c3-c6f6-5696-b99e-8e69258ba087",
+        "8a633671-921a-5e22-993b-ed23bd467345"
+      ]
+    },
+    {
+      "sub_theme_id": "q5_compare_one_click_cart_gap",
+      "question_id": "q5_compare",
+      "name": "Wants size-prefilled move to cart",
+      "share_of_bucket": 0.027,
+      "source_diversity": 3,
+      "sources": [
+        "app_store",
+        "blog",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "high",
+      "impact_rank": 7,
+      "impact_score": 0.521,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Wishlist is their starting point but sessions drift. Reopen PDP, re-pick size, abandon. / shortlist.",
+        "Wishlist is their starting point but sessions drift. Reopen PDP, re-pick size, abandon. Noted on a saved saree. On iOS the wishlist / shortlist looks prettier but still silent."
+      ],
+      "hypothesis": "Wants size-prefilled move to cart may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did wants size-prefilled move to cart come up?"
+      ],
+      "chunk_ids": [
+        "df798976-47a0-5021-b1a3-dba4fa85af3c",
+        "278e4fe4-9abb-5c6d-8a8f-141bd051c812",
+        "6fdfdbbf-a951-5905-90a1-3daed2d4b349",
+        "7bb08a33-5a19-544f-a196-6c4b568b700b",
+        "0440698e-e9d3-5dc3-bf3d-0d80bc807f51"
+      ]
+    },
+    {
+      "sub_theme_id": "q5_compare_occasion_planning",
+      "question_id": "q5_compare",
+      "name": "Occasion planning",
+      "share_of_bucket": 0.06,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "medium",
+      "severity": "medium",
+      "impact_rank": 8,
+      "impact_score": 0.51,
+      "segment_skew": [
+        "occasion_shopper"
+      ],
+      "paraphrased_examples": [
+        "Added three western dresses to wishlist to compare later. Actively considering one for office parties."
+      ],
+      "hypothesis": "Occasion planning may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did occasion planning come up?"
+      ],
+      "chunk_ids": [
+        "d5d94f77-e5f6-5d0a-9748-b42f089734c1",
+        "265db118-620e-5c09-9e57-799d0b1457db",
+        "fc1a5e52-259c-5015-9c01-9b2fce8cc87c",
+        "680118a8-6fcf-5251-b49d-3daad5562741",
+        "fa1c1a27-c3bc-5573-9fe6-49916b5b2a59",
+        "75ab2735-a770-5c2a-9506-7221bee75d84",
+        "d9251675-d813-5021-aa17-d32cca41b7af",
+        "3baa5e13-f16d-5815-9ca3-7c9060603958",
+        "afcaeeb2-553d-5464-90ed-1c11c5d24150",
+        "261b3dd8-7824-5e18-a3f1-f036ba1c7bbb",
+        "84a15b7b-cd21-5853-96fa-9aa4f251409d"
+      ]
+    },
+    {
+      "sub_theme_id": "q5_compare_styling_later",
+      "question_id": "q5_compare",
+      "name": "Saving to style later",
+      "share_of_bucket": 0.033,
+      "source_diversity": 3,
+      "sources": [
+        "app_store",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "medium",
+      "impact_rank": 9,
+      "impact_score": 0.41,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Saved a Nykaa Fashion kurta to style later with jeans they already own. Open to buying when the look clicks. / shortlist."
+      ],
+      "hypothesis": "Saving to style later may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did saving to style later come up?"
+      ],
+      "chunk_ids": [
+        "5bc342bd-3fde-5f47-b47f-a008c5be3c5e",
+        "b44759d9-731a-53bf-8131-0cea6e713dcd",
+        "f55fe302-9388-59b6-9aa8-be3c967799f1",
+        "dfce0e58-79fe-5b79-a8a7-00a7e3015091",
+        "d40b85af-2748-5125-af8e-964a85123987",
+        "14dedab8-dd11-527e-9540-c47ff47f92b2"
+      ]
+    },
+    {
+      "sub_theme_id": "q5_compare_youtube_haul",
+      "question_id": "q5_compare",
+      "name": "YouTube / haul research before convert",
+      "share_of_bucket": 0.033,
+      "source_diversity": 3,
+      "sources": [
+        "app_store",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "medium",
+      "impact_rank": 10,
+      "impact_score": 0.41,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Left Nykaa Fashion to check Instagram Reels hauls for the same dress before buying what they saved. Noted on a saved saree. On iOS the wishlist / shortlist looks prettier but still silent."
+      ],
+      "hypothesis": "YouTube / haul research before convert may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did youtube / haul research before convert come up?"
+      ],
+      "chunk_ids": [
+        "00a8b8f1-ab86-5cd6-ad57-ea48b9812791",
+        "8cc0c70e-f33f-5b32-bafa-6c6da257cfbe",
+        "2d4a89b7-bde5-56e3-b3f0-69eacb57b1c1",
+        "204d470a-8088-5a16-9585-159338d06a5a",
+        "89275830-b426-5c9c-a080-e34169e12a9a",
+        "6efbd24e-6619-584e-ad0f-47042f0a6edb"
       ]
     }
   ],
   "implications": [
-    "Observed: shoppers hold two or more saved items. Hypothesis: a side-by-side of saved pieces would reduce stalled shortlists."
+    "Shoppers hold two or more saved items before deciding. A side-by-side of saved pieces would reduce stalled shortlists."
   ],
   "interview_probes": [
     "When you saved something recently, did fit / size doubt after save come up?",
+    "When you saved something recently, did wishlist feels like a dead list come up?",
+    "When you saved something recently, did fabric quality doubt come up?",
     "When you saved something recently, did comparing saved items come up?",
-    "When you saved something recently, did sizing runs small come up?",
-    "When you saved something recently, did other come up?"
+    "When you saved something recently, did sizing runs small come up?"
   ],
   "confidence": "medium",
   "data_gaps": "",
-  "evidence_count": 10,
-  "themes_count": 4
+  "evidence_count": 17,
+  "themes_count": 10
 }

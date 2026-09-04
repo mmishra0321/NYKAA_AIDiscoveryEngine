@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { MessageCircleQuestion, Send } from "lucide-react";
 import { askQuestion } from "../api.js";
+import SectionHeading from "./SectionHeading.jsx";
+import { cleanCopy } from "../copy.js";
 
 export default function AskQuestionBox({ onOpenInsight }) {
   const [question, setQuestion] = useState("");
@@ -16,7 +18,17 @@ export default function AskQuestionBox({ onOpenInsight }) {
     setError(null);
     setResult(null);
     try {
-      setResult(await askQuestion(trimmed));
+      const payload = await askQuestion(trimmed);
+      if (payload?.matched === false || payload?.mode === "unmatched" || payload?.error === "no_matching_research_question") {
+        setError(
+          cleanCopy(
+            payload.answer ||
+              "That does not match any of the ten wishlist research questions. Try asking about saving, fit doubt, conversion blockers, off-app checks, or unmet needs."
+          )
+        );
+        return;
+      }
+      setResult(payload);
     } catch (err) {
       setError(err.message || "Could not reach the API.");
     } finally {
@@ -26,12 +38,10 @@ export default function AskQuestionBox({ onOpenInsight }) {
 
   return (
     <section id="ask-question" aria-label="Ask a discovery question">
-      <div className="mb-4">
-        <h2 className="font-ui text-lg font-semibold tracking-tight text-ink">Ask a Question</h2>
-        <p className="mt-0.5 text-xs text-muted">
-          Matches your question to the ten wishlist research questions, then grounds the answer on the catalog
-        </p>
-      </div>
+      <SectionHeading
+        title="Ask a Question"
+        subtitle="Matches your question to the ten wishlist research questions, then grounds the answer on the catalog. Off-topic asks return a clear mismatch message."
+      />
 
       <div className="rounded-xl border border-hairline bg-surface p-5 sm:p-6">
         <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row sm:items-start">
@@ -64,14 +74,17 @@ export default function AskQuestionBox({ onOpenInsight }) {
         </form>
 
         {error && (
-          <p className="mt-4 rounded-xl border border-pink/30 bg-pink/5 px-4 py-3 text-sm text-pink">{error}</p>
+          <div className="mt-4 rounded-xl border border-pink/30 bg-pink/5 px-4 py-3" role="alert">
+            <p className="text-[11px] font-bold uppercase tracking-wide text-pink">No matching research question</p>
+            <p className="mt-2 text-[15px] font-medium leading-relaxed text-ink">{error}</p>
+          </div>
         )}
 
         {result && (
           <div className="mt-5 rounded-xl border border-pink/20 bg-pink/5 px-4 py-4">
             <p className="text-[11px] font-semibold uppercase tracking-wide text-pink">Matched research question</p>
-            <p className="mt-1 text-sm font-medium text-ink">{result.question}</p>
-            <p className="mt-3 text-sm leading-relaxed text-ink">{result.answer}</p>
+            <p className="mt-1 text-base font-bold text-ink">{result.question}</p>
+            <p className="mt-3 text-[15px] font-medium leading-relaxed text-ink">{cleanCopy(result.answer)}</p>
             {result.query_id && onOpenInsight && (
               <button
                 type="button"

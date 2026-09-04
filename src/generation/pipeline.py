@@ -72,12 +72,14 @@ def run_generation(
             "hits": [],
             "source_counts": {},
         }
+        cov = ((corpus or {}).get("question_coverage") or {}).get(str(query["id"]), {}) or {}
         section, mode = generate_section(
             query=query,
             pack=pack,
             themes=themes,
             stub=use_stub,
             client=client,
+            classified_docs=int(cov.get("docs") or 0) or None,
         )
         leftover = lint_hits(catalog_lint_text(section.model_dump(mode="json")))
         if leftover:

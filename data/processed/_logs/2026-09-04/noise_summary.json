@@ -1,23 +1,23 @@
 {
-  "logistics_noise": 0,
-  "other": 12,
-  "wishlist_signal": 162,
+  "logistics_noise": 116,
+  "other": 2,
+  "wishlist_signal": 732,
   "by_source": {
-    "app_store": {
-      "logistics_noise": 0,
+    "play_store": {
+      "logistics_noise": 70,
       "other": 2
+    },
+    "app_store": {
+      "logistics_noise": 30,
+      "other": 0
     },
     "forum": {
-      "logistics_noise": 0,
-      "other": 7
+      "logistics_noise": 10,
+      "other": 0
     },
     "blog": {
-      "logistics_noise": 0,
-      "other": 1
-    },
-    "social": {
-      "logistics_noise": 0,
-      "other": 2
+      "logistics_noise": 6,
+      "other": 0
     }
   },
   "note": "logistics_noise and other are excluded from Q1\u2013Q10."

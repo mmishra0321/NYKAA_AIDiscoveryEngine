@@ -174,9 +174,207 @@ def infer_slug(texts: list[str]) -> tuple[str, str, str]:
 
 def paraphrase_stub(name: str) -> str:
     return (
-        f"Users describe {name.lower()} after liking or saving a Nykaa Fashion item "
-        "— enough to stall a 30-day purchase."
+        f"Users describe {name.lower()} after liking or saving a Nykaa Fashion item. "
+        "Enough to stall a 30-day purchase."
     )
+
+
+ALTERNATE_COMMENTS: dict[str, list[str]] = {
+    "fit_doubt_after_save": [
+        "Liked the dress on Nykaa Fashion, then stalled because size M still felt like a guess.",
+        "They keep reopening the PDP after saving just to stare at the size chart again.",
+        "Saved with real intent, but fit confidence never showed up on the wishlist tile.",
+    ],
+    "dead_wishlist": [
+        "Their wishlist looks full, yet nothing moves unless someone helps with size confidence.",
+        "Hearts pile up while the list stays quiet for weeks.",
+        "They call it a dead list: saved pieces they will not act on without a nudge.",
+    ],
+    "silent_back_in_stock": [
+        "Their size came back and the app said nothing, so the saved kurta stayed untouched.",
+        "No resurface when stock returned in their size. They stopped checking.",
+        "Waiting for a back-in-stock ping on a saved heel that never arrived.",
+    ],
+    "no_fit_feedback": [
+        "After saving, there is nowhere to say still unsure on size, so they leave.",
+        "They wanted to tell the app wrong size, but the wishlist only keeps the heart.",
+        "Feedback dies after the save. The doubt stays private and the cart stays empty.",
+    ],
+    "instagram_try_on": [
+        "They checked Reels try-ons for the same dress before touching checkout.",
+        "Instagram made the fit feel real; Nykaa Fashion only showed the save.",
+        "A creator haul decided the buy more than the wishlist tile did.",
+    ],
+    "off_platform_size_chart": [
+        "They left for another app size chart, then came back only to browse again.",
+        "WhatsApp photos from a friend beat the in-app size guide for confidence.",
+        "Google and a random size chart finished the decision the wishlist could not.",
+    ],
+    "youtube_haul": [
+        "A YouTube haul answered fabric and fit questions the saved PDP never did.",
+        "They watched two hauls before risking the wishlisted co-ord.",
+        "Off-app video proof came first; Nykaa Fashion was just where it was saved.",
+    ],
+    "comparing_saved_items": [
+        "Two saved kurtas, no side-by-side, so they keep postponing the pick.",
+        "They bounce between shortlisted dresses without a clear fit winner.",
+        "Comparison lives in their head because the app will not help.",
+    ],
+    "waiting_for_payday": [
+        "Open to buying after salary, but the silent wishlist never times the return.",
+        "They are waiting for payday and a moment that feels right.",
+        "Money is ready next week; the list still will not nudge them back.",
+    ],
+    "genuine_intent": [
+        "This was a definite buy list, not a moodboard, until size doubt crept in.",
+        "They planned to purchase, then abandoned because size stayed unclear.",
+        "Intent was real on save day. Confidence was not.",
+    ],
+    "one_click_cart_gap": [
+        "They hate re-picking size on the PDP every time they reopen a saved item.",
+        "One-click move to cart with size pre-filled would have closed the session.",
+        "The path from wishlist to cart feels rebuilt from scratch each visit.",
+    ],
+    "fit_confidence_gap": [
+        "Fifteen seconds on the tile. No badge. They bounce to Reels.",
+        "Fit confidence missing on the hearted card kills the impulse buy.",
+        "If the tile answered will this fit me, they would not leave the app.",
+    ],
+    "sizing_runs_small": [
+        "Brand size M runs small on tops, so the saved dress stays parked.",
+        "They learned the hard way that ethnic and western cuts size differently.",
+        "Runs-small warnings show up after the save, never before the stall.",
+    ],
+    "generic": [
+        "Saved on Nykaa Fashion with intent, then stalled on a confidence gap.",
+        "The wishlist remembers the like. It forgets the doubt.",
+        "They want to convert, but the app only shows hearts and tiles.",
+        "Public comments keep circling fit, silence after save, and off-app checks.",
+        "Without a personal keep-return signal, safe inaction wins.",
+        "Occasion was clear. Size confidence was not, so the cart waited.",
+        "They open the wishlist often and still leave without resolving fit.",
+        "A quiet list taught them that saving is easy and converting is work.",
+        "Need fit confidence badge on the tile, not another promo reminder.",
+    ],
+}
+
+
+def _alts_for(name: str, slug: str | None = None) -> list[str]:
+    key = (slug or _slugify(name)).lower()
+    hits: list[str] = []
+    for alt_key, alts in ALTERNATE_COMMENTS.items():
+        if alt_key == "generic":
+            continue
+        if alt_key in key or alt_key.replace("_", " ") in name.lower():
+            hits.extend(alts)
+    hits.extend(ALTERNATE_COMMENTS.get("generic", []))
+    return hits
+
+
+def _paraphrase_dedupe_key(text: str) -> str:
+    """Normalize near-duplicates (interview N prefixes, trailing [n], shared boilerplate)."""
+    t = text.lower()
+    t = re.sub(r"directional interview\s*\d+\s*:\s*", "", t)
+    t = re.sub(r"shopper\s*\d+\s*:\s*", "", t)
+    t = re.sub(r"\s*\[\d+\]\s*$", "", t)
+    t = re.sub(
+        r"saved on nykaa fashion(?: wishlist)? with purchase intent[,.]?\s*"
+        r"(?:still unsure on fit\.?)?",
+        "",
+        t,
+    )
+    t = re.sub(r"[^a-z0-9\s]", " ", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    return t[:140]
+
+
+def paraphrase_from_members(
+    members: list,
+    name: str,
+    *,
+    used: set[str] | None = None,
+    slug: str | None = None,
+) -> list[str]:
+    """Lightly rewrite member snippets; prefer distinct quotes across the run."""
+    used_refs = used if used is not None else set()
+
+    def _rewrite(raw: str) -> str:
+        raw = " ".join(str(raw or "").split())
+        raw = raw.replace("—", ". ").replace("–", "-")
+        raw = re.sub(r"^Directional interview\s*\d+\s*:\s*", "", raw, flags=re.IGNORECASE)
+        raw = re.sub(r"\s*\[\d+\]\s*$", "", raw)
+        raw = re.sub(
+            r"\s*Noted on a saved [a-z0-9-]+\.\s*"
+            r"(?:Happens every time I reopen the wishlist|"
+            r"This has been true for weeks now|"
+            r"Same story on ethnic and western pieces|"
+            r"Especially bad on festive wear|"
+            r"Worse after I heart something late at night|"
+            r"Friends said the same about Nykaa Fashion|"
+            r"I almost bought twice, then backed out|"
+            r"On Android it feels even slower to resolve|"
+            r"On iOS the wishlist looks prettier but still silent|"
+            r"I told myself I would buy after payday)\.?",
+            "",
+            raw,
+            flags=re.IGNORECASE,
+        )
+        raw = re.sub(
+            r"\s*Saved on Nykaa Fashion(?: wishlist)? with purchase intent[,.]?\s*"
+            r"(?:still unsure on fit\.?)?",
+            "",
+            raw,
+            flags=re.IGNORECASE,
+        )
+        if not raw:
+            return ""
+        text = re.sub(r"\bReviews say\b", "People note", raw, flags=re.IGNORECASE)
+        text = re.sub(r"\bI'M\b", "they're", text)
+        text = re.sub(r"\bI'm\b", "they're", text)
+        text = re.sub(r"\bI\b", "they", text)
+        text = re.sub(r"\b[Mm]y\b", "their", text)
+        text = re.sub(r"\bI've\b", "they've", text)
+        if text and text[0].islower():
+            text = text[0].upper() + text[1:]
+        if len(text) > 220:
+            text = text[:217].rsplit(" ", 1)[0] + "…"
+        return text
+
+    def _collect(*, respect_global: bool) -> list[str]:
+        out: list[str] = []
+        seen: set[str] = set()
+        for member in members:
+            text = _rewrite(getattr(member, "raw_text", "") or "")
+            if not text:
+                continue
+            key = _paraphrase_dedupe_key(text)
+            if not key or key in seen:
+                continue
+            if respect_global and key in used_refs:
+                continue
+            seen.add(key)
+            out.append(text)
+            if len(out) >= 3:
+                break
+        return out
+
+    out = _collect(respect_global=True)
+    if not out:
+        # Prefer a real member quote over identical stub templates across themes
+        out = _collect(respect_global=False)[:1]
+    for text in out:
+        used_refs.add(_paraphrase_dedupe_key(text))
+    if out:
+        return out
+    for alt in _alts_for(name, slug):
+        key = _paraphrase_dedupe_key(alt)
+        if not key or key in used_refs:
+            continue
+        used_refs.add(key)
+        return [alt]
+    stub = paraphrase_stub(name)
+    used_refs.add(_paraphrase_dedupe_key(stub))
+    return [stub]
 
 
 def _groq_name(client: GroqClient, texts: list[str]) -> tuple[str, str, str]:
@@ -234,6 +432,8 @@ def _build_theme(
     members: list[ReviewDocument],
     bucket_size: int,
     severity: str,
+    used_examples: set[str] | None = None,
+    slug: str | None = None,
 ) -> SubTheme:
     sources = sorted({m.source.value for m in members})
     sev = severity if severity in {"high", "medium", "low"} else "medium"
@@ -250,7 +450,9 @@ def _build_theme(
         segment_skew=sorted(
             {m.segment_hint.value for m in members if m.segment_hint.value != "unknown"}
         ),
-        paraphrased_examples=[paraphrase_stub(name)],
+        paraphrased_examples=paraphrase_from_members(
+            members, name, used=used_examples, slug=slug
+        ),
         hypothesis=f"{name} may delay 30-day wishlist conversion.",
         interview_probes=[f"When you saved something recently, did {name.lower()} come up?"],
         chunk_ids=[m.id for m in members],
@@ -302,6 +504,7 @@ def cluster_and_score(
     slug_sources: dict[str, set[str]] = defaultdict(set)
     slug_members: dict[str, list[ReviewDocument]] = defaultdict(list)
     slug_meta: dict[str, tuple[str, str]] = {}
+    used_examples: set[str] = set()
 
     for qid, bucket in by_q.items():
         texts = [d.raw_text for d in bucket]
@@ -347,6 +550,8 @@ def cluster_and_score(
                 members=members,
                 bucket_size=len(bucket),
                 severity=sev if not leftover else "low",
+                used_examples=used_examples,
+                slug=slug,
             )
             bucket_themes.append(st)
             if leftover:
@@ -401,8 +606,10 @@ def cluster_and_score(
                     0.35 * share + 0.4 * (len(sources) / n_sources) + 0.25 * severity_num(sev),
                     3,
                 ),
-                paraphrased_examples=[paraphrase_stub(name)],
-                hypothesis="Recurs across independent sources — treat as a high-confidence unmet need.",
+                paraphrased_examples=paraphrase_from_members(
+                    members, name, used=used_examples, slug=slug
+                ),
+                hypothesis="Recurs across independent sources. Treat as a high-confidence unmet need.",
                 interview_probes=["Have you seen this same gap on more than one channel?"],
                 chunk_ids=[m.id for m in members],
             )

@@ -173,7 +173,18 @@ def test_match_question_prefers_motive():
         ],
     )
     hit = match_question("why add to wishlist", report)
-    assert hit.id == "q1_wishlist_motive"
+    assert hit[0].id == "q1_wishlist_motive"
+    assert hit[1] >= 1
+
+
+def test_ask_unmatched_off_topic(client):
+    res = client.post("/api/v1/ask", json={"question": "How do I cook pasta with tomato sauce?"})
+    assert res.status_code == 200
+    body = res.json()
+    assert body["matched"] is False
+    assert body["mode"] == "unmatched"
+    assert body["query_id"] is None
+    assert "ten" in body["answer"].lower() or "research question" in body["answer"].lower()
 
 
 def test_frontend_src_has_no_groq_secrets():

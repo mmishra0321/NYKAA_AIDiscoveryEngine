@@ -8,6 +8,8 @@ import {
   Tags,
 } from "lucide-react";
 
+import SectionHeading from "./SectionHeading.jsx";
+
 const ICONS = {
   ingest: CloudDownload,
   relevance: Filter,
@@ -22,14 +24,14 @@ function blurb(step) {
   if (typeof d === "string" && d) return d;
   if (!d || typeof d !== "object") return "Completed in this run";
   if (step.id === "ingest" && (d.records_saved != null || d.run_date)) {
-    const when = d.finished_at || d.run_date || "—";
+    const when = d.run_date || "latest";
     return `${d.records_saved ?? "—"} saved · ${when}`;
   }
   if (step.id === "relevance" && d.wishlist_signal != null) {
     return `${d.wishlist_signal} wishlist signal · ${d.logistics_noise || 0} logistics`;
   }
   if (step.id === "classify" && d.classified != null) {
-    return `${d.classified} classified · ${d.mode || "stub"}`;
+    return `${d.classified} classified into Q1–Q9`;
   }
   if (step.id === "index" && d.chunks != null) {
     return `${d.chunks} chunks indexed`;
@@ -56,30 +58,33 @@ export default function Pipeline({ summary }) {
   const steps = summary?.steps?.length ? summary.steps : FALLBACK;
   return (
     <section id="pipeline">
-      <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h2 className="font-ui text-lg font-semibold tracking-tight text-ink">Discovery pipeline</h2>
-          <p className="mt-0.5 text-xs text-muted">Ingest → relevance → classify → index → retrieve → catalog</p>
-        </div>
-        {summary?.run_date && (
-          <a href="#research" className="text-sm font-medium text-pink hover:underline">
-            Run {summary.run_date} · view research Qs
-          </a>
-        )}
-      </div>
+      <SectionHeading
+        title="Discovery pipeline"
+        subtitle="Ingest → relevance → classify → index → retrieve → catalog"
+        action={
+          summary?.run_date ? (
+            <a href="#research" className="text-sm font-bold text-pink hover:underline">
+              Run {summary.run_date} · view research Qs
+            </a>
+          ) : null
+        }
+      />
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         {steps.map((step) => {
           const Icon = ICONS[step.id] || Tags;
           return (
-            <article key={step.id} className="rounded-xl border border-hairline bg-surface p-4">
+            <article
+              key={step.id}
+              className="research-card-shine relative overflow-hidden rounded-xl border border-hairline bg-surface p-4"
+            >
               <div className="mb-3 flex items-start justify-between">
                 <div className="flex size-10 items-center justify-center rounded-xl bg-search text-pink">
                   <Icon className="size-5" strokeWidth={1.75} />
                 </div>
                 <CheckCircle2 className="size-4 text-pink" strokeWidth={2.25} />
               </div>
-              <h3 className="font-ui text-sm font-semibold text-ink">{step.label || step.title}</h3>
-              <p className="mt-1 text-xs text-muted">{blurb(step)}</p>
+              <h3 className="font-ui text-sm font-bold text-ink">{step.label || step.title}</h3>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-ink/70">{blurb(step)}</p>
             </article>
           );
         })}

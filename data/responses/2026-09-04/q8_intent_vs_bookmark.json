@@ -1,13 +1,13 @@
 {
   "id": "q8_intent_vs_bookmark",
   "question": "When is the wishlist genuine purchase intent vs. pure bookmarking?",
-  "summary": "Observed from 10 retrieved chunks across app_store, blog, forum, play_store, social: Fit / size doubt after save, Genuine purchase intent, Wishlist feels like a dead list, Wants size-prefilled move to cart. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "summary": "Actively considering purchase from wishlist / shortlist but fit, size, or still not sure stalls me often after saving.",
   "sub_themes": [
     {
       "sub_theme_id": "q8_intent_vs_bookmark_fit_doubt_after_save",
       "question_id": "q8_intent_vs_bookmark",
       "name": "Fit / size doubt after save",
-      "share_of_bucket": 0.452,
+      "share_of_bucket": 0.194,
       "source_diversity": 5,
       "sources": [
         "app_store",
@@ -20,41 +20,109 @@
       "severity": "high",
       "impact_rank": 1,
       "impact_score": 1.0,
-      "segment_skew": [],
+      "segment_skew": [
+        "occasion_shopper",
+        "price_sensitive"
+      ],
       "paraphrased_examples": [
-        "Users describe fit / size doubt after save after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+        "Dead list complaint again. Hearts and tiles only. No input for will this fit me today.",
+        "Actively considering purchase from wishlist but fit, size, or still not sure stalls me often after saving.",
+        "Actively considering purchase from wishlist / shortlist but fit, size, or still not sure stalls me often after saving."
       ],
       "hypothesis": "Fit / size doubt after save may delay 30-day wishlist conversion.",
       "interview_probes": [
         "When you saved something recently, did fit / size doubt after save come up?"
       ],
       "chunk_ids": [
-        "da8f42f8-41b4-51c8-ae4c-a649329f2257",
-        "39137288-c4cf-5861-a4e3-2bb8de0d609a",
-        "4c10ca1a-7217-5dde-bf05-99f1f68ab79c",
-        "16736384-2b11-557b-8a56-dd7ec1dc7e89",
-        "0f6b5927-af0a-5ed7-a7cc-70a5c29d0841",
-        "dca28dca-ee0d-5cad-b26a-5e7058e72fa1",
-        "49f21319-8644-54f4-8bbf-428377b6f693",
-        "3a1d6ce0-282e-59b0-a792-7335555d6a81",
-        "245cf6dc-762f-5404-a24e-301f47fdbf20",
-        "bb175173-7b48-52e0-a5bb-b5b815c1e239",
-        "ce2ded11-dd94-5f57-a270-00c6e5031bb6",
-        "1dd69dfd-4da2-5b0f-9ffd-62a13be51484",
-        "ba651bb6-e17a-56d6-83c2-b0dfb6f119cd",
-        "90a84d36-e18b-553d-959c-7222b80944c8",
-        "5f4cc444-409b-5553-8289-9292020367c2",
-        "bb87ae33-d3ff-5c9e-8503-0e4fa7857347",
-        "d59a583c-1c61-5b6c-9902-326a3e06b003",
-        "0f04a3c8-b7b6-52ed-a4d8-92ae20482028",
-        "78c79b2a-ad2b-563f-b018-989db893d6c4"
+        "4a815d78-3908-5463-952f-f4aaeed9b326",
+        "3f129884-83fd-5e2b-aa56-6846b0af06d2",
+        "83c7e091-de96-567c-9006-ed1e9da96818",
+        "48f2681f-8b98-5408-a88d-11fbc5a4c81a",
+        "93757f79-77eb-55a5-9191-374ad6637dd2",
+        "9f29d376-72ac-5993-b586-6eba843a0aec",
+        "0a66679e-ebc7-5c17-adfb-3673e4d96f56",
+        "1d0a0062-6e1e-5f1b-952b-9fe355dfb00d",
+        "16695925-d7db-5594-b359-0d97d000eed8",
+        "671d1a3f-554e-5f0c-9f69-87f0a3b2091d",
+        "d73ed657-23d7-5d6f-88a5-abe8356526af",
+        "44c1b556-5c3a-514e-a10a-80ca0edf1f3c",
+        "4e037b4c-7197-5327-8511-e4a1c5178b54",
+        "7b2f4477-d6f0-54c8-b057-b50b6cb7ff3b",
+        "f8606dfe-0f74-55bf-a68a-7ca570e2fdb8",
+        "215a39ae-8b23-54f0-8916-55accbc83a04",
+        "fd5cc4de-c655-5d8e-9308-e9e35873e554",
+        "ee97ed28-609c-574f-ba9b-cb7c66e755ff",
+        "708db34b-75f0-5491-8570-4b69fa119805",
+        "ac85f29a-0797-5bca-b280-09151ca12c40",
+        "158cdcde-bd93-5e07-b5ac-0da858f950d6",
+        "44b578b6-23ed-51fa-b6be-c70532352e9d",
+        "ddc9d5ea-c65b-5127-a0f0-09cde8950213",
+        "68254bcb-cb76-51bb-8a1b-10ea66aa8bef",
+        "46d2f998-7728-5b7e-aa1a-a814cffe31e3",
+        "6fa01b08-6387-5600-aa47-89a79758429b",
+        "bc58a507-6a0c-5483-88a2-b4f77f5a2f89"
       ]
     },
     {
-      "sub_theme_id": "q8_intent_vs_bookmark_genuine_intent",
+      "sub_theme_id": "q8_intent_vs_bookmark_dead_wishlist",
       "question_id": "q8_intent_vs_bookmark",
-      "name": "Genuine purchase intent",
-      "share_of_bucket": 0.167,
+      "name": "Wishlist feels like a dead list",
+      "share_of_bucket": 0.18,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 2,
+      "impact_score": 0.971,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Open to buying what they saved and actively considering purchase, but the wishlist / shortlist feels like a dead list.",
+        "Their Nykaa Fashion wishlist / shortlist feels like a dead list. Saved items sit unused without help on size. / shortlist.",
+        "Open to buying what they saved and actively considering purchase, but the wishlist / shortlist feels like a dead list. / shortlist."
+      ],
+      "hypothesis": "Wishlist feels like a dead list may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did wishlist feels like a dead list come up?"
+      ],
+      "chunk_ids": [
+        "586761ac-643f-51fa-843e-35887c5005e8",
+        "9478d54c-b176-56b4-af54-a003a6da7084",
+        "76e78ace-3469-519e-9390-e451fb3eae29",
+        "511c9067-2ed8-5a78-8ee5-6b913b1f74f9",
+        "4c4d5d2c-e287-52ff-894e-6569533ab6a6",
+        "29e9398e-7a99-5cea-acba-ae630f9d42db",
+        "3dbd3b6b-fe64-5365-9601-685f739e1cc9",
+        "57679948-ab50-5594-aa4e-537e8136694e",
+        "cf67fc6d-d499-5994-8528-2594a8d31b72",
+        "358a5cbc-d7d0-58a2-8c36-7c13f3338c7c",
+        "6a7e777a-1645-5c05-8731-6cff03fa1750",
+        "75c16563-20f0-5c72-90ca-ff13a320810c",
+        "c8f31f2b-b629-59ee-beb7-69e1cc987fa8",
+        "e4571036-4efe-5118-933e-b82c3c5b622f",
+        "a24d6034-7ef4-590a-b78a-2fd3981ae0f4",
+        "8e019089-d71b-5b58-8eaf-902c0d835894",
+        "7ad4b066-770f-50d8-b4c1-e6abdfd0b3d7",
+        "076faf0d-2993-5b87-9ef9-3537747f6f96",
+        "24b0c6bb-00ab-5a39-b784-20a86e69517b",
+        "460109c9-d701-524c-80d3-802c930131de",
+        "07adcf20-18cb-51b3-a5d0-755496c79b0c",
+        "2d8bbfd8-7edd-5e12-8396-8b3e272edf6d",
+        "21a85dd4-6bb7-5423-ad0f-288ee009a061",
+        "f0554d58-b5d7-5364-a0b8-59ce100ccaca",
+        "e86fc13d-1175-50a5-b407-ee6b8cd9819c"
+      ]
+    },
+    {
+      "sub_theme_id": "q8_intent_vs_bookmark_occasion_planning",
+      "question_id": "q8_intent_vs_bookmark",
+      "name": "Occasion planning",
+      "share_of_bucket": 0.158,
       "source_diversity": 5,
       "sources": [
         "app_store",
@@ -65,137 +133,290 @@
       ],
       "frequency": "high",
       "severity": "medium",
-      "impact_rank": 2,
-      "impact_score": 0.628,
-      "segment_skew": [
-        "price_sensitive"
-      ],
-      "paraphrased_examples": [
-        "Users describe genuine purchase intent after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
-      ],
-      "hypothesis": "Genuine purchase intent may delay 30-day wishlist conversion.",
-      "interview_probes": [
-        "When you saved something recently, did genuine purchase intent come up?"
-      ],
-      "chunk_ids": [
-        "90148f9f-8a7e-5f58-9e5c-3ccd6bd2c26a",
-        "d70ea330-aac6-5c54-8a6e-cd30642cc352",
-        "54d07410-6286-509f-93c5-8fe03864605b",
-        "86157978-d219-509d-b6a5-c77a26376eeb",
-        "3389a0c5-7de2-5635-a2f4-590eb375bc29",
-        "d66e72d2-4844-58e0-93b7-34c5fe6257b0",
-        "94ea495c-eb92-51c6-854e-32e30da9f133"
-      ]
-    },
-    {
-      "sub_theme_id": "q8_intent_vs_bookmark_dead_wishlist",
-      "question_id": "q8_intent_vs_bookmark",
-      "name": "Wishlist feels like a dead list",
-      "share_of_bucket": 0.143,
-      "source_diversity": 3,
-      "sources": [
-        "forum",
-        "play_store",
-        "social"
-      ],
-      "frequency": "low",
-      "severity": "high",
       "impact_rank": 3,
-      "impact_score": 0.607,
-      "segment_skew": [],
-      "paraphrased_examples": [
-        "Users describe wishlist feels like a dead list after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+      "impact_score": 0.806,
+      "segment_skew": [
+        "occasion_shopper"
       ],
-      "hypothesis": "Wishlist feels like a dead list may delay 30-day wishlist conversion.",
+      "paraphrased_examples": [
+        "They save festive wear with genuine intent, then wait for a moment that never gets nudged."
+      ],
+      "hypothesis": "Occasion planning may delay 30-day wishlist conversion.",
       "interview_probes": [
-        "When you saved something recently, did wishlist feels like a dead list come up?"
+        "When you saved something recently, did occasion planning come up?"
       ],
       "chunk_ids": [
-        "08a8a4de-f0ef-52e7-84db-3aa3ab3d7fea",
-        "88a59f19-9f6e-507c-a144-f6eb8e23cff1",
-        "8bad693d-f1f9-5aef-bd68-78025939b39f",
-        "b5858e71-f097-59ae-9d95-62d5ff9df4a1",
-        "615ffb50-d569-5485-95de-289dd2918fd4",
-        "16f8c5c7-4978-5fe3-9369-2120b9c38784"
+        "afbb3f25-270a-58eb-a2e4-88b69893a9d6",
+        "d203016f-2b0a-50e0-9051-e642fff8401b",
+        "d5d94f77-e5f6-5d0a-9748-b42f089734c1",
+        "93c97af0-3349-55e5-b0a1-fd90b12d674a",
+        "ada3574c-236d-5c28-a080-658d615ba423",
+        "79efd1bf-4da9-52e4-9cfb-988d437cf809",
+        "23735874-07b9-5b52-a80f-a52807505a49",
+        "642fa6c4-1bc5-5a91-baf0-af40b0a274e2",
+        "de7a1f5b-9f78-590f-8cea-351b7e4144f1",
+        "fa1c1a27-c3bc-5573-9fe6-49916b5b2a59",
+        "3b8c95b7-709f-5b73-973a-f5591d0f1233",
+        "af398a70-3953-512d-bdaa-a0dd6a9098e0",
+        "17e486d4-c460-5033-a08c-de08714f11d6",
+        "09330ae7-319d-5b53-9ecc-5241be542656",
+        "feee98b1-2970-5ba6-87f1-85ef24758ad8",
+        "ab66dc4b-c10b-5c4b-bcec-a840e4440a47",
+        "afcaeeb2-553d-5464-90ed-1c11c5d24150",
+        "e8c3186d-64a0-56da-8242-ec5eecdc6309",
+        "2925ca7f-4b50-5870-a860-2d591ed7258a",
+        "112ee642-52d3-58fb-88c6-3639c99489e1",
+        "7b949692-8dfb-5685-a3de-dee8abc6d9b2",
+        "1d5bfc99-70c6-5300-ba55-ffc7c9ee7274"
       ]
     },
     {
       "sub_theme_id": "q8_intent_vs_bookmark_one_click_cart_gap",
       "question_id": "q8_intent_vs_bookmark",
       "name": "Wants size-prefilled move to cart",
-      "share_of_bucket": 0.071,
-      "source_diversity": 2,
+      "share_of_bucket": 0.108,
+      "source_diversity": 4,
       "sources": [
         "app_store",
+        "blog",
+        "forum",
         "play_store"
       ],
-      "frequency": "low",
+      "frequency": "medium",
       "severity": "high",
       "impact_rank": 4,
-      "impact_score": 0.483,
-      "segment_skew": [],
+      "impact_score": 0.763,
+      "segment_skew": [
+        "occasion_shopper",
+        "price_sensitive"
+      ],
       "paraphrased_examples": [
-        "Users describe wants size-prefilled move to cart after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+        "Not just saving for inspiration. Genuine intent, yet without size pre-filled move to cart they abandon PDP."
       ],
       "hypothesis": "Wants size-prefilled move to cart may delay 30-day wishlist conversion.",
       "interview_probes": [
         "When you saved something recently, did wants size-prefilled move to cart come up?"
       ],
       "chunk_ids": [
-        "d550e6c0-fb87-515b-b707-b050c008f3d2",
-        "c7b32ef0-8dfa-5181-872f-a62ef6f53df5",
-        "91042672-a842-5d0a-a8cb-eab70c89508c"
+        "5e6e34ec-6b20-51d1-bdcb-9c29076348b9",
+        "3ddef8f5-537b-57d5-bcf2-7a83dff4ce00",
+        "06d50207-6b97-5ae8-ad16-5e58ed54af82",
+        "6c8b677c-2a84-5637-8c99-b9b812fd6455",
+        "5a8a9d38-d6a3-5dcc-b4cc-6e1f985f2401",
+        "c47f1fe4-1780-5d64-87da-e595e82ac0f5",
+        "fffa894b-5348-5562-abe0-0b9471d084a1",
+        "643c9efe-36a0-5a2e-ae49-f7ab1b80aa3f",
+        "fe63813a-8685-56eb-89e4-1c6e9a0ab882",
+        "eaadfc47-269f-589f-9b1c-83473dec7f2f",
+        "65b88b97-71cd-525e-9b29-ea5dc54358cd",
+        "177cd45e-d6bb-5d82-a8ce-fab914fd09ba",
+        "0b3e5021-7265-518c-a67c-7363a6a3baa1",
+        "bf2ca34f-eca1-5c3b-bfe8-34d80ce32be3",
+        "7f2bc71c-4774-5b92-af89-ffa9df4b9f5f"
+      ]
+    },
+    {
+      "sub_theme_id": "q8_intent_vs_bookmark_fabric_quality_doubt",
+      "question_id": "q8_intent_vs_bookmark",
+      "name": "Fabric quality doubt",
+      "share_of_bucket": 0.086,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "high",
+      "impact_rank": 5,
+      "impact_score": 0.717,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Their Nykaa Fashion wishlist / shortlist feels like a dead list. Saved items sit unused without help on size."
+      ],
+      "hypothesis": "Fabric quality doubt may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did fabric quality doubt come up?"
+      ],
+      "chunk_ids": [
+        "54fc5818-ff4d-5fdf-8ee2-148bff3c5c9b",
+        "129d72ed-35e0-5d03-a9ce-49716d6fb99b",
+        "6e1e71ab-66a3-5229-847a-04903d004892",
+        "a3648a84-eaec-5ae2-ac4d-974daf08a888",
+        "9e95f255-6ebe-5765-852e-d4e479fa4c8c",
+        "3537a58c-e6d6-52f7-ace3-824392906fe9",
+        "2aa040ef-aba1-519c-b37d-5b874aa7b600",
+        "a105030b-50b1-5f03-a2d0-bfa5565f4a75",
+        "a8bebb10-7246-55ed-af54-2e04d38db990",
+        "4f9e3497-265c-5864-aec7-7e4cd1cd7b8f",
+        "aad8f282-7970-5a0a-8ca1-a9ffe1ab54bc",
+        "5df45bee-e2d6-52e4-91a8-fc8b5615f6ee"
+      ]
+    },
+    {
+      "sub_theme_id": "q8_intent_vs_bookmark_genuine_intent",
+      "question_id": "q8_intent_vs_bookmark",
+      "name": "Genuine purchase intent",
+      "share_of_bucket": 0.094,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "medium",
+      "severity": "medium",
+      "impact_rank": 6,
+      "impact_score": 0.674,
+      "segment_skew": [
+        "price_sensitive"
+      ],
+      "paraphrased_examples": [
+        "Waiting for payday before they move wishlisted ethnic wear to cart. Open to buying, not sure yet on timing."
+      ],
+      "hypothesis": "Genuine purchase intent may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did genuine purchase intent come up?"
+      ],
+      "chunk_ids": [
+        "e6d52310-546b-566d-abd9-64ec65546643",
+        "88f10781-a1ce-5ff8-a2cd-df8f222875cf",
+        "2ca1adbe-b47f-54b6-9c3a-a813d96afaa3",
+        "5b33724f-9179-5268-a8e0-97488ba56371",
+        "424fc892-b436-547c-94f7-6fc8a8db39e0",
+        "49628a42-2cfb-55e8-81fb-1dc0a435794b",
+        "3c60c2c7-8b22-5c18-be67-0289f2b7855d",
+        "008fe16f-464e-5672-8177-815025973d45",
+        "6898f8ac-0066-57f3-ac1f-c3b1e5bd89dd",
+        "56d0a30b-a88c-5e9c-9b58-191934de1902",
+        "24314102-5544-5359-ac06-79ece9ae1762",
+        "f4232f52-e7e8-5f1f-aeef-9b909f96d95e",
+        "8aff3454-cebb-5efe-8ca4-67a9cacc417c"
+      ]
+    },
+    {
+      "sub_theme_id": "q8_intent_vs_bookmark_styling_later",
+      "question_id": "q8_intent_vs_bookmark",
+      "name": "Saving to style later",
+      "share_of_bucket": 0.086,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "medium",
+      "impact_rank": 7,
+      "impact_score": 0.597,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Saved a Nykaa Fashion kurta to style later with jeans they already own. Open to buying when the look clicks."
+      ],
+      "hypothesis": "Saving to style later may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did saving to style later come up?"
+      ],
+      "chunk_ids": [
+        "7b3d4dc8-54c7-5dcf-bd09-8ce93f81dbf4",
+        "5bc342bd-3fde-5f47-b47f-a008c5be3c5e",
+        "b44759d9-731a-53bf-8131-0cea6e713dcd",
+        "9ba1812e-2313-5d8d-8723-f21158663e6b",
+        "65d60cb8-f084-57b4-b0dd-271bcac4b6a1",
+        "f55fe302-9388-59b6-9aa8-be3c967799f1",
+        "dfce0e58-79fe-5b79-a8a7-00a7e3015091",
+        "47568b1f-8234-50b1-a516-2b714ae422ca",
+        "83e704dd-1dce-5d08-9ed0-ec3ddbbf8033",
+        "d40b85af-2748-5125-af8e-964a85123987",
+        "14dedab8-dd11-527e-9540-c47ff47f92b2",
+        "a90deca2-fb6c-5bb6-9d86-ecba40ec275f"
+      ]
+    },
+    {
+      "sub_theme_id": "q8_intent_vs_bookmark_comparing_saved_items",
+      "question_id": "q8_intent_vs_bookmark",
+      "name": "Comparing saved items",
+      "share_of_bucket": 0.086,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "medium",
+      "impact_rank": 8,
+      "impact_score": 0.597,
+      "segment_skew": [
+        "price_sensitive"
+      ],
+      "paraphrased_examples": [
+        "Added three western dresses to wishlist to compare later. Actively considering one for office parties."
+      ],
+      "hypothesis": "Comparing saved items may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did comparing saved items come up?"
+      ],
+      "chunk_ids": [
+        "c4811bd3-9f30-5d9f-876b-cf641bfc4f05",
+        "d7b9a77c-df57-560b-9bfa-40ac5803e8ca",
+        "6cfa6290-3a39-52b9-a77a-b9ebbaa35c95",
+        "2e980f32-0acc-502f-9bee-3354a03e1b13",
+        "399847eb-12f8-5fed-af37-1e893d1333dc",
+        "9f908672-5307-5320-b930-0794514f6246",
+        "aef8b3f2-533d-51b3-8322-9dd493f3ff5d",
+        "86e6cfae-3960-566f-8f78-475431e0c70b",
+        "20b11f75-aee7-5190-83d0-43281436820c",
+        "cb660dd5-465a-5658-9a7b-2e5d2b932f88",
+        "a794b420-2baf-5ad0-810c-97a88bae75e0",
+        "43148a94-db39-5efa-b629-2d687c9be958"
       ]
     },
     {
       "sub_theme_id": "q8_intent_vs_bookmark_other",
       "question_id": "q8_intent_vs_bookmark",
       "name": "Other",
-      "share_of_bucket": 0.167,
-      "source_diversity": 3,
+      "share_of_bucket": 0.007,
+      "source_diversity": 1,
       "sources": [
-        "blog",
-        "play_store",
         "social"
       ],
-      "frequency": "high",
+      "frequency": "low",
       "severity": "low",
-      "impact_rank": 5,
-      "impact_score": 0.418,
+      "impact_rank": 9,
+      "impact_score": 0.164,
       "segment_skew": [
-        "occasion_shopper",
         "price_sensitive"
       ],
       "paraphrased_examples": [
-        "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+        "They am open to buying what they saved after payday, but the list stays silent so they forget until the occasion passes."
       ],
       "hypothesis": "Other may delay 30-day wishlist conversion.",
       "interview_probes": [
         "When you saved something recently, did other come up?"
       ],
       "chunk_ids": [
-        "4aa3a3eb-92d5-5b58-9dbd-a19f5f0e7d88",
-        "7e9641f0-ef16-542c-b4d6-a186ca81f1c0",
-        "176ccfef-d347-5b25-af75-716e19f63b98",
-        "a909051a-5696-5d6f-b68a-cebb433f26e6",
-        "c33f0371-7c14-597e-846b-955ab72e30c8",
-        "6221f424-80f2-541d-be14-98e464063dc4",
-        "2b2d4ec5-556e-55de-b39b-2443b8ae445d"
+        "bcf65ae6-f5dd-59cb-bffb-12c96ccc413b"
       ]
     }
   ],
   "implications": [
-    "Observed: some lists are moodboards, some are buy-lists. Hypothesis: letting users mark intent would stop treating bookmarks as failed conversion."
+    "Some lists are moodboards and some are buy-lists. Letting users mark intent would stop treating bookmarks as failed conversion."
   ],
   "interview_probes": [
     "When you saved something recently, did fit / size doubt after save come up?",
-    "When you saved something recently, did genuine purchase intent come up?",
     "When you saved something recently, did wishlist feels like a dead list come up?",
+    "When you saved something recently, did occasion planning come up?",
     "When you saved something recently, did wants size-prefilled move to cart come up?",
-    "When you saved something recently, did other come up?"
+    "When you saved something recently, did fabric quality doubt come up?"
   ],
   "confidence": "medium",
   "data_gaps": "",
-  "evidence_count": 10,
-  "themes_count": 5
+  "evidence_count": 15,
+  "themes_count": 9
 }

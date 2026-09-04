@@ -1,69 +1,70 @@
 {
   "run_date": "2026-09-04",
-  "finished_at": "2026-09-04T14:14:09+00:00",
+  "finished_at": "2026-09-04T15:17:07+00:00",
   "mode": "stub",
   "cluster_backend": "ngram",
-  "input_count": 174,
-  "cleaned_count": 174,
+  "input_count": 850,
+  "cleaned_count": 850,
   "relevance": {
-    "wishlist_signal": 162,
-    "other": 12
+    "wishlist_signal": 732,
+    "other": 2,
+    "logistics_noise": 116
   },
-  "classified": 162,
-  "with_q1_q9": 162,
+  "classified": 732,
+  "with_q1_q9": 732,
   "majority_labeled": true,
-  "chunks": 162,
-  "sub_themes": 68,
-  "q10_themes": 10,
+  "chunks": 732,
+  "sub_themes": 127,
+  "q10_themes": 13,
   "question_coverage": {
     "q1_wishlist_motive": {
-      "docs": 124,
-      "sub_themes": 13,
+      "docs": 722,
+      "sub_themes": 19,
       "data_gap": null
     },
     "q2_conversion_blockers": {
-      "docs": 63,
-      "sub_themes": 6,
+      "docs": 242,
+      "sub_themes": 8,
       "data_gap": null
     },
     "q3_uncertainties": {
-      "docs": 125,
-      "sub_themes": 10,
+      "docs": 515,
+      "sub_themes": 14,
       "data_gap": null
     },
     "q4_postpone": {
-      "docs": 15,
-      "sub_themes": 2,
+      "docs": 149,
+      "sub_themes": 13,
       "data_gap": null
     },
     "q5_compare": {
-      "docs": 19,
-      "sub_themes": 4,
+      "docs": 184,
+      "sub_themes": 10,
       "data_gap": null
     },
     "q6_off_platform": {
-      "docs": 34,
-      "sub_themes": 4,
+      "docs": 229,
+      "sub_themes": 14,
       "data_gap": null
     },
     "q7_decision_factors": {
-      "docs": 125,
-      "sub_themes": 10,
+      "docs": 515,
+      "sub_themes": 14,
       "data_gap": null
     },
     "q8_intent_vs_bookmark": {
-      "docs": 42,
-      "sub_themes": 5,
+      "docs": 139,
+      "sub_themes": 9,
       "data_gap": null
     },
     "q9_segments": {
-      "docs": 29,
-      "sub_themes": 4,
+      "docs": 178,
+      "sub_themes": 13,
       "data_gap": null
     },
     "q10_unmet_needs": {
-      "docs": 136,
-      "sub_themes": 10,
+      "docs": 685,
+      "sub_themes": 13,
       "data_gap": null
     }
   },

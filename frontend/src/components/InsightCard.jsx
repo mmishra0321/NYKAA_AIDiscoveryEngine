@@ -1,5 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import { QUESTION_BADGES } from "../taxonomy.js";
+import { cleanCopy, firstComment } from "../copy.js";
 
 const TONES = {
   pink: "bg-pink/10 text-pink",
@@ -7,9 +8,19 @@ const TONES = {
   ink: "bg-search text-ink",
 };
 
-export default function InsightCard({ id, question, summary, evidence_count, themes_count, data_gaps, onSelect }) {
+export default function InsightCard({
+  id,
+  question,
+  summary,
+  evidence_count,
+  themes_count,
+  data_gaps,
+  sub_themes,
+  onSelect,
+}) {
   const meta = QUESTION_BADGES[id] || { badge: id, tone: "pink" };
-  const preview = (summary || "").slice(0, 160);
+  const preview = firstComment({ summary, sub_themes }) || cleanCopy(summary);
+  const clipped = preview.length > 180 ? `${preview.slice(0, 180)}…` : preview;
   return (
     <button
       type="button"
@@ -22,12 +33,9 @@ export default function InsightCard({ id, question, summary, evidence_count, the
         </span>
         <ChevronRight className="size-4 text-muted transition group-hover:text-pink" />
       </div>
-      <h3 className="font-ui text-[15px] font-semibold leading-snug text-ink">{question}</h3>
-      <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-        {preview}
-        {summary && summary.length > 160 ? "…" : ""}
-      </p>
-      <p className="mt-4 text-[11px] text-muted">
+      <h3 className="font-ui text-base font-bold leading-snug text-ink sm:text-[17px]">{question}</h3>
+      <p className="mt-3 flex-1 text-[15px] font-medium leading-relaxed text-ink/85">{clipped}</p>
+      <p className="mt-4 text-[12px] font-semibold text-muted">
         {evidence_count || 0} related reviews
         {themes_count ? ` · ${themes_count} sub-themes` : data_gaps ? " · data gap" : ""} · click for full answer
       </p>

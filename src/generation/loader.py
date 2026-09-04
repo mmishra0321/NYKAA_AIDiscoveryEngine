@@ -50,20 +50,27 @@ def load_processing_corpus(run_date: date | str | None = None) -> dict[str, Any]
     try:
         day = resolve_processed_date(run_date)
     except FileNotFoundError:
-        return {"relevant": 0, "noise": 0, "sources": {}}
+        return {"relevant": 0, "noise": 0, "sources": {}, "question_coverage": {}}
     path = proc_store.PROCESSED_DIR / day / "processing_summary.json"
     if not path.exists():
         path = proc_store.PROCESSED_DIR / "_logs" / day / "processing_summary.json"
     if not path.exists():
-        return {"relevant": 0, "noise": 0, "sources": {}}
+        return {"relevant": 0, "noise": 0, "sources": {}, "question_coverage": {}}
     try:
         payload = json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
-        return {"relevant": 0, "noise": 0, "sources": {}}
+        return {"relevant": 0, "noise": 0, "sources": {}, "question_coverage": {}}
     rel = payload.get("relevance") or {}
     relevant = int(rel.get("wishlist_signal") or payload.get("classified") or 0)
     noise = int(rel.get("logistics_noise") or 0) + int(rel.get("other") or 0)
-    return {"relevant": relevant, "noise": noise, "sources": {}}
+    return {
+        "relevant": relevant,
+        "noise": noise,
+        "sources": {},
+        "question_coverage": payload.get("question_coverage") or {},
+        "classified": payload.get("classified"),
+        "input_count": payload.get("input_count"),
+    }
 
 
 def load_generation_inputs(

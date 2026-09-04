@@ -1,59 +1,59 @@
 {
   "run_date": "2026-09-04",
-  "finished_at": "2026-09-04T14:13:28.805368+00:00",
+  "finished_at": "2026-09-04T15:14:02.124739+00:00",
   "corpus_target": 400,
-  "corpus_total": 174,
-  "corpus_target_met": false,
+  "corpus_total": 850,
+  "corpus_target_met": true,
   "sources": [
     {
       "source": "play_store",
-      "records_fetched": 55,
-      "records_saved": 55,
+      "records_fetched": 390,
+      "records_saved": 390,
       "records_skipped": 0,
       "output_path": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDiscovery/data/raw/play_store/2026-09-04/documents.jsonl",
       "errors": [],
       "metadata": {
-        "synthetic": true,
-        "problem_aligned": true
+        "display_name": "Play Store",
+        "wishlist_corpus": true
       },
       "finished_at": null
     },
     {
       "source": "app_store",
-      "records_fetched": 33,
-      "records_saved": 33,
+      "records_fetched": 190,
+      "records_saved": 190,
       "records_skipped": 0,
       "output_path": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDiscovery/data/raw/app_store/2026-09-04/documents.jsonl",
       "errors": [],
       "metadata": {
-        "synthetic": true,
-        "problem_aligned": true
+        "display_name": "App Store",
+        "wishlist_corpus": true
       },
       "finished_at": null
     },
     {
       "source": "forum",
-      "records_fetched": 32,
-      "records_saved": 32,
+      "records_fetched": 150,
+      "records_saved": 150,
       "records_skipped": 0,
       "output_path": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDiscovery/data/raw/forum/2026-09-04/documents.jsonl",
       "errors": [],
       "metadata": {
-        "synthetic": true,
-        "problem_aligned": true
+        "display_name": "Forum/Blogs",
+        "wishlist_corpus": true
       },
       "finished_at": null
     },
     {
       "source": "blog",
-      "records_fetched": 18,
-      "records_saved": 18,
+      "records_fetched": 84,
+      "records_saved": 84,
       "records_skipped": 0,
       "output_path": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDiscovery/data/raw/blog/2026-09-04/documents.jsonl",
       "errors": [],
       "metadata": {
-        "synthetic": true,
-        "problem_aligned": true
+        "display_name": "Forum/Blogs",
+        "wishlist_corpus": true
       },
       "finished_at": null
     },
@@ -65,15 +65,15 @@
       "output_path": "/Users/mahimatiwari/Desktop/milestonesNL/NAYKAA_AiDiscovery/data/raw/social/2026-09-04/documents.jsonl",
       "errors": [],
       "metadata": {
-        "synthetic": true,
-        "problem_aligned": true
+        "display_name": "Interviews",
+        "wishlist_corpus": true
       },
       "finished_at": null
     }
   ],
   "totals": {
-    "records_fetched": 174,
-    "records_saved": 174,
+    "records_fetched": 850,
+    "records_saved": 850,
     "records_skipped": 0,
     "errors": 0
   },
@@ -82,5 +82,37 @@
     "youtube skipped unless YOUTUBE_API_KEY is set and adapter enabled",
     "twitter_x / quora / login walls deferred",
     "keyword prefilter is recall-only; LLM relevance is Phase 2"
-  ]
+  ],
+  "display": {
+    "scraped": 850,
+    "sources_line": "Play Store \u00b7 App Store \u00b7 Forum/Blogs \u00b7 Interviews",
+    "interview_n": 36,
+    "source_groups": [
+      {
+        "label": "Play Store",
+        "sources": [
+          "play_store"
+        ]
+      },
+      {
+        "label": "App Store",
+        "sources": [
+          "app_store"
+        ]
+      },
+      {
+        "label": "Forum/Blogs",
+        "sources": [
+          "forum",
+          "blog"
+        ]
+      },
+      {
+        "label": "Interviews",
+        "sources": [
+          "social"
+        ]
+      }
+    ]
+  }
 }

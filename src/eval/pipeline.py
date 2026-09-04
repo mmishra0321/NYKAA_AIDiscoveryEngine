@@ -146,13 +146,13 @@ def _eval_paraphrases(report: CatalogReport) -> dict[str, Any]:
     gold = load_paraphrases()
     rows = []
     for item in gold:
-        hit = match_question(item["paraphrase"], report)
+        hit, _score = match_question(item["paraphrase"], report)
         rows.append(
             {
                 "query_id": item["query_id"],
                 "paraphrase": item["paraphrase"],
-                "routed": hit.id,
-                "ok": hit.id == item["query_id"],
+                "routed": hit.id if hit else None,
+                "ok": bool(hit) and hit.id == item["query_id"],
             }
         )
     acc = sum(1 for r in rows if r["ok"]) / len(rows)

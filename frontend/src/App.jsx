@@ -9,6 +9,7 @@ import InsightCard from "./components/InsightCard.jsx";
 import Themes from "./components/Themes.jsx";
 import AnswerDrawer from "./components/AnswerDrawer.jsx";
 import ScrapeStatus from "./components/ScrapeStatus.jsx";
+import SectionHeading from "./components/SectionHeading.jsx";
 import { TAXONOMY } from "./taxonomy.js";
 
 export default function App() {
@@ -55,9 +56,22 @@ export default function App() {
     exportCatalog("markdown").catch((err) => setError(err.message));
   }
 
-  const corpus = catalog?.corpus || {};
   const gaps = questions.filter((q) => q.data_gaps).length;
   const themeCount = questions.reduce((n, q) => n + (q.themes_count || 0), 0);
+  const scraped =
+    pipeline?.scrape?.last_scrape?.records_fetched ??
+    pipeline?.scrape?.last_scrape?.records_saved ??
+    catalog?.corpus?.relevant ??
+    "—";
+  const classified =
+    pipeline?.processing?.classified ??
+    pipeline?.processing?.relevance?.wishlist_signal ??
+    catalog?.corpus?.relevant ??
+    "—";
+  const interviewN = pipeline?.scrape?.last_scrape?.interview_n || 0;
+  const sourcesLine =
+    pipeline?.scrape?.last_scrape?.sources_line || "Play Store · App Store · Forum/Blogs · Interviews";
+  const sourceCount = pipeline?.scrape?.last_scrape?.source_groups?.length || 4;
 
   return (
     <div id="top" className="relative min-h-screen overflow-x-hidden bg-canvas text-ink">
@@ -74,57 +88,52 @@ export default function App() {
           <h1 className="mt-3 font-ui text-3xl font-extrabold tracking-tight sm:text-4xl">
             Fashion wishlist discovery
           </h1>
-          <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
+          <p className="mt-3 text-base font-medium leading-relaxed text-ink/80 sm:text-lg">
             Public Nykaa Fashion language, classified into ten research questions, then ranked by impact on 30-day
-            wishlist-to-purchase — not by making the item cheaper.
+            wishlist-to-purchase. Not by making the item cheaper.
           </p>
           {error ? <p className="mt-2 text-xs text-pink">{error}</p> : null}
         </header>
 
         <Pipeline summary={pipeline} />
 
-        <ScrapeStatus scrape={pipeline?.scrape} />
+        <ScrapeStatus scrape={pipeline?.scrape} processing={pipeline?.processing} />
 
         <section aria-label="Pipeline metrics">
-          <h2 className="mb-4 font-ui text-lg font-semibold tracking-tight">Pipeline metrics</h2>
+          <SectionHeading
+            title="Pipeline metrics"
+            subtitle="Latest scrape volume, classification coverage, and source mix"
+          />
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             <MetricCard
-              label="Wishlist signal"
-              value={corpus.relevant ?? "—"}
-              meta={`${corpus.noise ?? 0} logistics / other noise`}
+              label="Scraped"
+              value={scraped}
+              meta={`${classified} classified${interviewN ? ` · interviews n=${interviewN}` : ""}`}
             />
             <MetricCard label="Coverage" value="10/10" meta={`${gaps} explicit data gaps`} />
-            <MetricCard label="Sub-themes" value={themeCount} meta="Ranked by 30-day impact" />
-            <MetricCard
-              label="Sources"
-              value={Object.keys(corpus.sources || {}).length || "—"}
-              meta={Object.keys(corpus.sources || {}).join(" · ") || "Play + App in this run"}
-            />
+            <MetricCard label="Sub-themes" value={themeCount || "—"} meta="Ranked by 30-day impact" />
+            <MetricCard label="Sources" value={sourceCount} meta={sourcesLine} />
           </div>
         </section>
 
         <AskQuestionBox onOpenInsight={openInsight} />
 
         <section id="research">
-          <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
-            <div>
-              <h2 className="font-ui text-lg font-semibold tracking-tight text-ink">
-                Wishlist research questions
-              </h2>
-              <p className="mt-0.5 text-xs text-muted">
-                Canonical catalog · click a card for cited insight + paraphrased reviews
-              </p>
-            </div>
-            {themeFilter && (
-              <button
-                type="button"
-                onClick={() => setThemeFilter(null)}
-                className="text-xs font-semibold text-pink hover:underline"
-              >
-                Clear theme filter
-              </button>
-            )}
-          </div>
+          <SectionHeading
+            title="Wishlist research questions"
+            subtitle="Canonical catalog. Click a card for cited insight and paraphrased reviews"
+            action={
+              themeFilter ? (
+                <button
+                  type="button"
+                  onClick={() => setThemeFilter(null)}
+                  className="text-sm font-bold text-pink hover:underline"
+                >
+                  Clear theme filter
+                </button>
+              ) : null
+            }
+          />
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {visible.map((item) => (
               <InsightCard key={item.id} {...item} onSelect={openInsight} />

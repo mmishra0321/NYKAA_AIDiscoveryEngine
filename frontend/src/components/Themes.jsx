@@ -1,5 +1,6 @@
 import ThemeCard from "./ThemeCard.jsx";
 import { TAXONOMY } from "../taxonomy.js";
+import SectionHeading from "./SectionHeading.jsx";
 
 function reviewsLabel(item, questions) {
   const n = (questions || [])
@@ -11,12 +12,10 @@ function reviewsLabel(item, questions) {
 export default function Themes({ questions, selectedId, onSelect }) {
   return (
     <section id="themes">
-      <div className="mb-4">
-        <h2 className="font-ui text-lg font-semibold tracking-tight text-ink">Discovery theme taxonomy</h2>
-        <p className="mt-0.5 text-xs text-muted">
-          Click a theme to highlight related research questions — same interaction as the last discovery agent
-        </p>
-      </div>
+      <SectionHeading
+        title="Discovery theme taxonomy"
+        subtitle="Click a theme to highlight related research questions"
+      />
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
         {TAXONOMY.map((theme) => (
           <ThemeCard

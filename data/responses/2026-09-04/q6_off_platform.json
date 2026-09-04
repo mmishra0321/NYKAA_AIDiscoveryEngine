@@ -1,161 +1,638 @@
 {
   "id": "q6_off_platform",
   "question": "What information do users seek outside Nykaa Fashion before purchasing?",
-  "summary": "Observed from 10 retrieved chunks across app_store, blog, forum, play_store, social: Fit / size doubt after save, Off-Nykaa size charts and other apps, YouTube / haul research before convert, Other. Impact ranking uses share, source diversity, and severity \u2014 not star ratings. Implications below are hypotheses for Part 3 interviews, not conclusions.",
+  "summary": "Hearted a blazer that still sits unused. Without a personal keep-return signal they stall every time.",
   "sub_themes": [
     {
       "sub_theme_id": "q6_off_platform_fit_doubt_after_save",
       "question_id": "q6_off_platform",
       "name": "Fit / size doubt after save",
-      "share_of_bucket": 0.353,
-      "source_diversity": 4,
+      "share_of_bucket": 0.349,
+      "source_diversity": 5,
       "sources": [
         "app_store",
         "blog",
+        "forum",
         "play_store",
         "social"
       ],
       "frequency": "high",
       "severity": "high",
       "impact_rank": 1,
-      "impact_score": 0.94,
-      "segment_skew": [],
+      "impact_score": 1.0,
+      "segment_skew": [
+        "occasion_shopper",
+        "price_sensitive"
+      ],
       "paraphrased_examples": [
-        "Users describe fit / size doubt after save after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+        "Size chart on the PDP is generic. After saving they am still unsure and keep re-picking size."
       ],
       "hypothesis": "Fit / size doubt after save may delay 30-day wishlist conversion.",
       "interview_probes": [
         "When you saved something recently, did fit / size doubt after save come up?"
       ],
       "chunk_ids": [
-        "9d7799be-b8f4-5acc-9e76-400ac3582649",
-        "97e543c5-4b6b-5062-9692-fead1d8101cf",
-        "2008b269-4267-5525-b2d6-e740873fc3fc",
-        "ee5e85cc-0bb7-50d5-acc6-43663a31dc6d",
-        "8cd6f3e5-9323-528b-ac19-9f4ef7b737fe",
-        "ce2ded11-dd94-5f57-a270-00c6e5031bb6",
-        "74318c9a-415d-51ff-8f45-5223e2cdd3dc",
-        "5f4cc444-409b-5553-8289-9292020367c2",
-        "5c27745f-8128-5a74-9ac7-5505798ef029",
-        "1d3d1c47-b56f-50be-aabd-b0fabb97de9f",
-        "44b68d5b-bfa7-5868-952d-a125f9a9da8a",
-        "be4ff97e-6fc0-51a4-a84d-1b93c585ef8f"
+        "ec05149a-c5cf-5aa0-ac11-283ae0319d9e",
+        "78b57ecb-8aa8-5879-995a-6094cf3b42ed",
+        "28487221-e711-584e-b33f-ccce5396a5d3",
+        "aef56a77-80f3-5319-8af1-74450b3f40ab",
+        "77d6a209-36dc-5eaf-84d1-ec35da83e213",
+        "4820e86c-9d9c-5bed-8aaf-b0569675a272",
+        "8f957484-3999-548b-add5-65350b72af21",
+        "83c7e091-de96-567c-9006-ed1e9da96818",
+        "4c461429-b4e3-509a-8a16-9c82ce5e86ff",
+        "63be7c9e-770a-5d93-b960-bf322e37fe71",
+        "1ec42a79-db65-5075-a2d2-2e6a944e0b93",
+        "c80603c3-17ef-5d76-a991-b51be33c8a93",
+        "321acdf0-198b-5b16-9002-eb80352bc40c",
+        "6358b55f-1fc8-56eb-80d3-633748e68c8a",
+        "663dcdbb-cd91-5da6-8615-0acab88eb6b6",
+        "6adfa011-706a-5b90-b7d6-142994ceb9c4",
+        "27651781-7c36-5467-aeec-069190115ecb",
+        "bdcee703-5077-5628-b97a-14349c441118",
+        "b35d072c-aab8-5fa9-aa9e-17cbf95b803d",
+        "edc90bb4-b783-54da-af06-9c1a89be6989",
+        "c1b56fd5-3033-5fd2-9f4c-91e09fa6e391",
+        "df88e295-c474-5a70-af87-d7ad7d4d7d4c",
+        "44575b5b-7faf-56bc-ab03-f106590845c0",
+        "aebadf04-a956-5b7b-a023-cb0e6a9d5052",
+        "83a58462-c376-5a1f-9f53-61ae78df4970",
+        "2922bf10-8158-5bac-ab2d-de3dd7b3e0cf",
+        "aefbdb58-5a32-532b-ab4e-da1b426a2f0f",
+        "f2678a8e-6ce6-505f-bf1d-8fde02e13bf7",
+        "8c80787e-7484-55ef-a017-705ba73fd9dc",
+        "d5c06683-7110-5e8b-851f-eeb90e0e9fd9",
+        "26613cae-aa58-589f-a7f5-7f3bb020f7ed",
+        "302048cc-6089-5a76-994d-737d7678cbf2",
+        "19252f92-5e9e-5b12-9c6d-b9933c95e620",
+        "086ac17a-9924-5791-bcba-181cd67dccfd",
+        "44c1b556-5c3a-514e-a10a-80ca0edf1f3c",
+        "f2289e92-76cf-5b20-97a2-9d10cc045da5",
+        "58a99fef-ef9c-5404-b922-c0454b4fe53e",
+        "83aafff3-090a-5372-a25e-55d5babd0c0c",
+        "453fcac2-48cd-50cc-a749-00336de16fa7",
+        "0d934f7c-235b-5a91-9c14-94c126d5fdba",
+        "b87bd719-e336-5eaf-ab10-c8b7f9ea374e",
+        "722be256-15e8-5894-a076-2a9bd8041dce",
+        "467d5987-d8b1-5029-aae7-f9728bc07f13",
+        "1a5eb4f3-15b3-5006-8e47-96c4d60ba246",
+        "a9a8d918-0828-5e99-9cc4-6374c664bdce",
+        "64bbe653-fa33-56be-bca4-240d70c89f48",
+        "5c3ba89c-dfbf-5e3c-84de-18c1de3e6515",
+        "12e2a234-05db-50dc-b8ed-81b1e2b33a4b",
+        "4d2efd93-e8cb-55a4-8e2b-1d216af6ae83",
+        "04313375-b8da-5c76-a28d-ac33807b1168",
+        "49cc0f77-cdf6-52aa-a5e1-2d8dc0afcf15",
+        "5228fd47-72c6-5165-8821-65503c293e6c",
+        "069faef3-e083-5ced-8067-508651d313ad",
+        "f4a6c201-1d3c-52b0-b7ae-b4beb02f292c",
+        "9443b8c1-3572-54f3-a386-7362a33db666",
+        "3fe74059-f89f-5250-9f85-17d62edac9e3",
+        "03cffc4c-1612-5486-8462-178ef8050cf0",
+        "57e0da2d-5933-512e-8cc1-d9b1f71f86b7",
+        "56d874b0-ec34-562a-8ee5-ff13c4fceb8e",
+        "4b2e4258-9b12-50eb-9062-cb2f4309f5d9",
+        "86c1bcbd-7099-50f7-a806-f6fed3ff54de",
+        "158cdcde-bd93-5e07-b5ac-0da858f950d6",
+        "c38d8de1-5c1d-55a0-93f9-44be647d1871",
+        "d77a046f-a2e2-57aa-bf96-68488a5b2364",
+        "1ec9835a-9d1a-54b0-a67d-83466d41f614",
+        "46b148d1-ba33-590d-8180-299d97e8d1fc",
+        "58995a09-42dc-5e14-b754-2855d59af5e5",
+        "a35a3812-2a33-5149-9a14-ebcf062b37d8",
+        "de3bb0f7-0307-5f05-b455-350d85adbf64",
+        "453469ee-edd4-57c7-93df-7f8c4b82b6e3",
+        "8e5bf52d-d13d-5556-9a88-606b8b7c192d",
+        "6ad3112e-6fa5-5e45-adff-4217d97ee862",
+        "16a3e051-3b37-5297-a816-7d953464a2cc",
+        "e89bf460-238b-58a3-94a0-c5ffabd2bbcf",
+        "e44fb060-7c79-5e4d-8af4-5fa4dbb5ecfb",
+        "ba4dbb85-c51c-57a4-9666-454262871413",
+        "d831a98c-b688-5746-898a-3563286ab321",
+        "10d5c93d-aecb-5fae-bd83-ebd2218a20ef",
+        "b833cbe9-73be-5f3c-814d-bfcf3f7b7c60",
+        "3d9e8416-9946-5231-bce3-c2880c232d7d"
       ]
     },
     {
       "sub_theme_id": "q6_off_platform_off_platform_size_chart",
       "question_id": "q6_off_platform",
       "name": "Off-Nykaa size charts and other apps",
-      "share_of_bucket": 0.206,
-      "source_diversity": 4,
+      "share_of_bucket": 0.166,
+      "source_diversity": 5,
       "sources": [
         "app_store",
         "blog",
+        "forum",
         "play_store",
         "social"
       ],
-      "frequency": "low",
+      "frequency": "high",
       "severity": "high",
       "impact_rank": 2,
-      "impact_score": 0.773,
-      "segment_skew": [],
+      "impact_score": 0.79,
+      "segment_skew": [
+        "price_sensitive"
+      ],
       "paraphrased_examples": [
-        "Users describe off-nykaa size charts and other apps after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+        "They become the algorithm. IG, charts, other apps. Nykaa only sees hearts."
       ],
       "hypothesis": "Off-Nykaa size charts and other apps may delay 30-day wishlist conversion.",
       "interview_probes": [
         "When you saved something recently, did off-nykaa size charts and other apps come up?"
       ],
       "chunk_ids": [
-        "a64cff48-3da6-5543-afe1-21d093e7f9cf",
-        "fed1b0d2-9f7c-52ec-a4ce-5eeeb4c540fd",
-        "4dd8b0a9-5edf-5bf7-b120-b2a0b13dc542",
-        "196367a1-3d28-5c75-b63d-d5aa34e3856b",
-        "09abab24-6ad7-5c24-a678-fc1d229c5821",
-        "9c6ad7e3-5704-5e6d-bfbf-ca4bf06c821a",
-        "ac21e53a-d776-50d0-9af1-f23081389e3a"
+        "2f63c4ec-3cc8-5a63-8e2d-76946b3c48cb",
+        "8b39c8d7-f539-5f7b-b5c0-de150df0ad17",
+        "17be30b9-c256-5eb0-b161-78a493e545ec",
+        "2ebb3dd0-667a-5ef7-999b-5bab93d27785",
+        "7e19e471-2c40-5bc6-ae73-12b65c759b95",
+        "6620d943-47ef-5ba8-9e7f-acaac40d23a9",
+        "c0afef41-6123-5bda-bc37-042e337fd155",
+        "09ccec93-57f8-5898-9455-20549baaa7ba",
+        "26700c63-bb73-5353-af04-0b7e2cce9d84",
+        "44164638-617a-5b93-950f-499973db7a84",
+        "779b6e48-e499-55b4-ba72-9d24e5de56e4",
+        "27c5bf2f-30c4-5d28-bbca-1a7f21524057",
+        "43eb7f6b-5383-5ce8-ad52-6b8877584c7e",
+        "ace9ce38-905f-5e91-8ee1-e028acd19349",
+        "2120da30-1dc4-58e8-a083-8c1befb6fae6",
+        "2ff0a545-3add-5d26-8afd-3c583a69940f",
+        "db4c71fc-03f3-5520-aeeb-8c8dfc205d5a",
+        "ba99684a-df68-5b40-9aac-4b5e87a98db9",
+        "692339c8-52c8-5220-a42f-a1c67418e126",
+        "6f012b25-6421-5361-a116-58841cea7603",
+        "9cec8e09-732d-5519-a25f-fd0374ff5214",
+        "20a74614-fce9-57f2-a7b3-c6eb2d3ae3ed",
+        "2699b2a7-420e-5dd0-a918-85e833d34d19",
+        "916a417f-46e7-552a-944d-df482cbed8ed",
+        "c57ab639-d116-57a1-bd7c-1011bf045b97",
+        "13ebd8b2-d8eb-5dcd-b1ff-450cb4ea72db",
+        "e981ad10-f16b-5972-a090-42f6d0076153",
+        "e5b75058-a0d3-5686-b82d-c26acef3014d",
+        "0278ed16-54f9-58ec-8f18-4e7eebde49a7",
+        "acf33092-13a8-5873-b8e3-4fe2ebd6cec3",
+        "fe158b67-8cca-5590-ad89-7cb0e5af9a92",
+        "3dbe24fb-4313-5cc1-8a3c-a71b5eb1ea98",
+        "6d431fec-155f-586d-bca4-4acc4af7598f",
+        "28ac16b7-3966-5f69-898b-e13af7f86049",
+        "8cb699e5-dd2c-5c11-b4bb-92a75aaa0a10",
+        "f097f8cf-2a1b-587c-93cd-a92a2ff0bfe6",
+        "812b2d1e-940e-522d-ad65-91e683814a1d",
+        "f045069e-82c1-5309-8f2f-f3c4f787c5ed"
+      ]
+    },
+    {
+      "sub_theme_id": "q6_off_platform_fabric_quality_doubt",
+      "question_id": "q6_off_platform",
+      "name": "Fabric quality doubt",
+      "share_of_bucket": 0.066,
+      "source_diversity": 5,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store",
+        "social"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 3,
+      "impact_score": 0.676,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Size chart on the PDP is generic. After saving they am still unsure and keep re-picking size."
+      ],
+      "hypothesis": "Fabric quality doubt may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did fabric quality doubt come up?"
+      ],
+      "chunk_ids": [
+        "362872f9-0a92-5110-bc99-82f08c8f416d",
+        "382d9be7-e2ed-5765-a594-02f9c3f74bad",
+        "24431f39-71b0-5517-a8c9-f224f1639ac7",
+        "9ea34021-93ea-5e6b-b01c-89af0e83d806",
+        "14c3d71c-d83e-519a-9994-b6f89dbac639",
+        "8996a6f4-72e3-52a6-85c4-40add294b468",
+        "bc623f31-fd69-574a-b8d0-266e015f7394",
+        "37bb9abf-bf0f-5af9-9ce3-7379e5ad8cb7",
+        "4439281f-5925-5deb-80c1-8e68e38d54ca",
+        "d37c922b-3f63-555f-aa06-2c40d9f86e70",
+        "0cb814aa-4afe-52f0-b0ca-311c9998cf34",
+        "fb35057a-1888-555b-aa5b-80ba3c29bdd4",
+        "efce2764-4a81-5871-8c00-5306eed255d2",
+        "aa64ffc5-6ff4-524e-984d-238d984a3384",
+        "e6d04a56-9a3f-558e-9a4d-3e85b6230dd8"
       ]
     },
     {
       "sub_theme_id": "q6_off_platform_youtube_haul",
       "question_id": "q6_off_platform",
       "name": "YouTube / haul research before convert",
-      "share_of_bucket": 0.265,
-      "source_diversity": 4,
+      "share_of_bucket": 0.118,
+      "source_diversity": 5,
       "sources": [
         "app_store",
+        "blog",
         "forum",
         "play_store",
         "social"
       ],
       "frequency": "high",
       "severity": "medium",
-      "impact_rank": 3,
-      "impact_score": 0.72,
-      "segment_skew": [],
+      "impact_rank": 4,
+      "impact_score": 0.615,
+      "segment_skew": [
+        "price_sensitive"
+      ],
       "paraphrased_examples": [
-        "Users describe youtube / haul research before convert after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+        "They watched a YouTube haul outside Nykaa before converting a saved co-ord."
       ],
       "hypothesis": "YouTube / haul research before convert may delay 30-day wishlist conversion.",
       "interview_probes": [
         "When you saved something recently, did youtube / haul research before convert come up?"
       ],
       "chunk_ids": [
-        "5594f8bd-e37f-5fea-94d7-f215a5245b01",
-        "0e12bbdc-055d-5039-be41-0309d88f4d4a",
-        "acc6959c-da0e-5dfc-8732-c8cf2a463ee9",
-        "1c5ac2dc-d8e9-5d0c-a275-f42f80acee90",
-        "60407121-0359-556d-a4c1-4a0da2064cda",
-        "0697d6d7-2540-533a-bb2b-2a691479adb6",
-        "87dbb622-ae3c-5da2-8846-d6b99d3e89c6",
-        "3d839667-ebeb-5537-91bd-8fbc61955f7c",
-        "7af67876-df3d-57f3-a98c-f4ea6e970df8"
+        "ed45a27d-1815-5af4-b3f2-20e53f8057e6",
+        "38d0a213-a214-53ca-ae5c-70ecd882f2c7",
+        "00a8b8f1-ab86-5cd6-ad57-ea48b9812791",
+        "3d88ceb4-9fe3-5de5-b8fc-f910bfd4b5f5",
+        "8cc0c70e-f33f-5b32-bafa-6c6da257cfbe",
+        "f790a7e0-304d-55de-991e-d38f0338b38c",
+        "7601a55b-473b-50c5-b43d-5dbbaa9507ca",
+        "497bad10-0c14-5ae8-9694-b141de6133b7",
+        "ba006037-92c9-5daa-adda-1dcb22adc195",
+        "c8a17bc4-6b83-5703-957f-b84826476134",
+        "2d4a89b7-bde5-56e3-b3f0-69eacb57b1c1",
+        "3b2a5447-553a-5aba-b6e9-5423ce29f3d1",
+        "204d470a-8088-5a16-9585-159338d06a5a",
+        "e2d1534a-3f04-5a86-9755-bb92e4bb681f",
+        "5db88adf-7679-5d6d-a4c2-b47e180a0cf8",
+        "a4227ca8-e045-563e-8494-60b810d6a521",
+        "eb03acb3-cd50-5d45-8f50-ca8626082428",
+        "b5bea1be-ef3d-5246-be66-06ac4ac5fa50",
+        "89275830-b426-5c9c-a080-e34169e12a9a",
+        "7fab18b3-e583-5c8c-b149-866db2b24bd0",
+        "6efbd24e-6619-584e-ad0f-47042f0a6edb",
+        "e762b50f-a187-5c23-98cc-ff25d5c995ff",
+        "895d3499-6a04-522f-8992-bcd23c742b3b",
+        "ccdc9add-4fc1-5a68-843c-d136f7ccef45",
+        "72c99f48-93e9-5bce-a6e3-433755aa1769",
+        "2a2a0d69-78cd-581a-a45e-cd5558755780",
+        "8039693d-d07e-5249-8eb0-21674702c9a7"
+      ]
+    },
+    {
+      "sub_theme_id": "q6_off_platform_silent_back_in_stock",
+      "question_id": "q6_off_platform",
+      "name": "No resurface when size / stock improves",
+      "share_of_bucket": 0.039,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "medium",
+      "severity": "high",
+      "impact_rank": 5,
+      "impact_score": 0.585,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Saved pieces stall for weeks. The app never notified me when their size came back in stock so they did not buy."
+      ],
+      "hypothesis": "No resurface when size / stock improves may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did no resurface when size / stock improves come up?"
+      ],
+      "chunk_ids": [
+        "d3605f46-c7bb-5690-8fb3-2c45ca42d8b3",
+        "5d89d085-cf9c-524e-92e7-a05b34714055",
+        "9f147eaf-08ca-5382-a3c2-62ca4f9878fa",
+        "d7e0225b-627c-53fa-b9a2-a137c8426e46",
+        "5abb0378-aac5-5788-be21-066278213737",
+        "b4725790-4ae5-51d5-a53d-e58c7da49e57",
+        "644c898c-8401-50e8-ac87-403818bc83b0",
+        "a800544e-47a7-5f01-99db-b49b6d67bca6",
+        "c20b18e6-b0bd-56ee-becd-4d5b58b165fd"
+      ]
+    },
+    {
+      "sub_theme_id": "q6_off_platform_occasion_planning",
+      "question_id": "q6_off_platform",
+      "name": "Occasion planning",
+      "share_of_bucket": 0.074,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "medium",
+      "impact_rank": 6,
+      "impact_score": 0.505,
+      "segment_skew": [
+        "occasion_shopper"
+      ],
+      "paraphrased_examples": [
+        "Friends sent Google links. they saved on Nykaa Fashion then rebuilt confidence off-app every time."
+      ],
+      "hypothesis": "Occasion planning may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did occasion planning come up?"
+      ],
+      "chunk_ids": [
+        "9b27b201-7d47-53f3-9abd-df99d40070d1",
+        "a921c627-3781-5d62-b39c-f7182a251bd5",
+        "c6bafa28-f09b-52f0-97ea-02c492c49fff",
+        "b0144b95-4d4d-557d-a57d-71bfea28acce",
+        "23735874-07b9-5b52-a80f-a52807505a49",
+        "1e0679be-64d8-54fb-8886-31d435d5ed78",
+        "4dc34343-cd1a-5f25-8b7c-8f2e7cab14cd",
+        "cf3eda7e-c329-5c73-bd9e-45143b7594e5",
+        "a57b57e4-977b-5b8b-8104-4835d264cd66",
+        "72c5b3f2-4ace-52e3-b737-70bea50abf1e",
+        "09330ae7-319d-5b53-9ecc-5241be542656",
+        "619a9d2c-d3b2-5021-a530-01cd12633b75",
+        "7752e6bd-a64a-5887-91b2-a9f3d19390fb",
+        "864a26bc-09f4-57b5-82c0-0c6bbe7e42c1",
+        "8a639af6-0e7b-56a0-b982-d4fa278a26fe",
+        "50c42070-ddba-5130-9340-6a3b69edfe39",
+        "7b949692-8dfb-5685-a3de-dee8abc6d9b2"
+      ]
+    },
+    {
+      "sub_theme_id": "q6_off_platform_dead_wishlist",
+      "question_id": "q6_off_platform",
+      "name": "Wishlist feels like a dead list",
+      "share_of_bucket": 0.013,
+      "source_diversity": 3,
+      "sources": [
+        "app_store",
+        "blog",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "high",
+      "impact_rank": 7,
+      "impact_score": 0.495,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Hearted a blazer that still sits unused. Without a personal keep-return signal they stall every time."
+      ],
+      "hypothesis": "Wishlist feels like a dead list may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did wishlist feels like a dead list come up?"
+      ],
+      "chunk_ids": [
+        "2cae9ce9-5c2b-59e9-994c-1d634f62ddac",
+        "08782068-ebe3-5e8b-9cd8-c861bcaf0324",
+        "87d99777-1a31-5c89-baec-834423a0eddb"
+      ]
+    },
+    {
+      "sub_theme_id": "q6_off_platform_waiting_for_payday",
+      "question_id": "q6_off_platform",
+      "name": "Waiting for payday / right moment",
+      "share_of_bucket": 0.039,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "medium",
+      "severity": "medium",
+      "impact_rank": 8,
+      "impact_score": 0.465,
+      "segment_skew": [
+        "price_sensitive"
+      ],
+      "paraphrased_examples": [
+        "Will decide later on the saved heels. When the moment and salary line up they want a nudge, not a promo."
+      ],
+      "hypothesis": "Waiting for payday / right moment may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did waiting for payday / right moment come up?"
+      ],
+      "chunk_ids": [
+        "ac5c6446-f995-59e1-9a04-27672b5aad77",
+        "dbd6ff1e-8b33-53a5-a9e5-3fa77d91004a",
+        "76e52149-e3b7-5912-938a-dd9bf7a3c0df",
+        "50ad8c73-20ca-5103-9b48-5a055737643a",
+        "4f14a09e-0a72-5816-a024-4bffdb1524d7",
+        "21b9fdba-5cce-5e2a-9f22-3dc903cb692d",
+        "8fb41924-e3bf-5d03-bcd0-fad05c8fb8c8",
+        "af4b70d5-75fc-548e-9fa8-05e2e264ecac",
+        "838040bf-7d9a-53f6-8ca8-06a8474e1207"
+      ]
+    },
+    {
+      "sub_theme_id": "q6_off_platform_comparing_saved_items",
+      "question_id": "q6_off_platform",
+      "name": "Comparing saved items",
+      "share_of_bucket": 0.022,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "medium",
+      "impact_rank": 9,
+      "impact_score": 0.445,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Between two wishlisted kurtas they keep comparing reviews and size notes. Path to cart is unclear."
+      ],
+      "hypothesis": "Comparing saved items may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did comparing saved items come up?"
+      ],
+      "chunk_ids": [
+        "61d940e4-8ee0-52b6-9442-3d08bc9ba038",
+        "399847eb-12f8-5fed-af37-1e893d1333dc",
+        "21bc358f-618c-59f5-a2f6-b5527a94a499",
+        "20b11f75-aee7-5190-83d0-43281436820c",
+        "5e739180-533d-5300-95e9-22fd1e130c61"
+      ]
+    },
+    {
+      "sub_theme_id": "q6_off_platform_one_click_cart_gap",
+      "question_id": "q6_off_platform",
+      "name": "Wants size-prefilled move to cart",
+      "share_of_bucket": 0.013,
+      "source_diversity": 2,
+      "sources": [
+        "forum",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "high",
+      "impact_rank": 10,
+      "impact_score": 0.435,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Not just saving for inspiration. Genuine intent, yet without size pre-filled move to cart they abandon PDP."
+      ],
+      "hypothesis": "Wants size-prefilled move to cart may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did wants size-prefilled move to cart come up?"
+      ],
+      "chunk_ids": [
+        "3ddef8f5-537b-57d5-bcf2-7a83dff4ce00",
+        "fffa894b-5348-5562-abe0-0b9471d084a1",
+        "177cd45e-d6bb-5d82-a8ce-fab914fd09ba"
       ]
     },
     {
       "sub_theme_id": "q6_off_platform_other",
       "question_id": "q6_off_platform",
-      "name": "Other",
-      "share_of_bucket": 0.176,
+      "name": "Other wishlist language",
+      "share_of_bucket": 0.039,
+      "source_diversity": 4,
+      "sources": [
+        "app_store",
+        "blog",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "medium",
+      "severity": "low",
+      "impact_rank": 11,
+      "impact_score": 0.375,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Friends sent Google links. they saved on Nykaa Fashion then rebuilt confidence off-app every time."
+      ],
+      "hypothesis": "Other wishlist language may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other wishlist language come up?"
+      ],
+      "chunk_ids": [
+        "2aa3aa2d-2dc0-51f6-bf19-79d55a09c244",
+        "45bf9ec7-acde-5df3-91e2-abb502ebb1da",
+        "b2a90fa3-b9f5-5772-927c-b1a6212bee07",
+        "920d95ed-8b4d-50ac-b46b-5275bc727b9c",
+        "10383675-5573-5fdc-aaaa-163762b5d9bd",
+        "57728bc1-1e48-575c-b66b-f1ad0c85d029",
+        "9feccc16-5afd-5d76-81a1-87deea5a50d7",
+        "028ba1f3-44ab-5cd8-9130-500e77a37c61",
+        "d7644ca0-3b43-5b89-8228-a8db60d36d57"
+      ]
+    },
+    {
+      "sub_theme_id": "q6_off_platform_genuine_intent",
+      "question_id": "q6_off_platform",
+      "name": "Genuine purchase intent",
+      "share_of_bucket": 0.013,
+      "source_diversity": 2,
+      "sources": [
+        "forum",
+        "play_store"
+      ],
+      "frequency": "low",
+      "severity": "medium",
+      "impact_rank": 12,
+      "impact_score": 0.315,
+      "segment_skew": [
+        "price_sensitive"
+      ],
+      "paraphrased_examples": [
+        "Waiting for payday before they move wishlisted ethnic wear to cart. Open to buying, not sure yet on timing."
+      ],
+      "hypothesis": "Genuine purchase intent may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did genuine purchase intent come up?"
+      ],
+      "chunk_ids": [
+        "88f10781-a1ce-5ff8-a2cd-df8f222875cf",
+        "49628a42-2cfb-55e8-81fb-1dc0a435794b",
+        "56d0a30b-a88c-5e9c-9b58-191934de1902"
+      ]
+    },
+    {
+      "sub_theme_id": "q6_off_platform_other_2",
+      "question_id": "q6_off_platform",
+      "name": "Other wishlist language",
+      "share_of_bucket": 0.031,
       "source_diversity": 3,
       "sources": [
-        "blog",
+        "app_store",
+        "forum",
+        "play_store"
+      ],
+      "frequency": "medium",
+      "severity": "low",
+      "impact_rank": 13,
+      "impact_score": 0.306,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Hear about pieces from friends, save on Nykaa, start from popular reviews, then risk the buy."
+      ],
+      "hypothesis": "Other wishlist language may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other wishlist language come up?"
+      ],
+      "chunk_ids": [
+        "186cdea8-3dda-5e1d-9497-6d14f851e488",
+        "fa121f4d-ecde-5532-aed7-ed2960e15571",
+        "daf7ce73-38e5-514c-b51c-9cbee00f27ee",
+        "dd1dd82b-0312-52ef-8f58-c41f27463046",
+        "30f1e20f-b835-5315-a68c-35ecdcc151fb",
+        "72092866-4079-52ad-87f6-314201b85da6",
+        "af77bdcb-f469-5b0b-b611-2f0d6b5f0907"
+      ]
+    },
+    {
+      "sub_theme_id": "q6_off_platform_other_3",
+      "question_id": "q6_off_platform",
+      "name": "Other",
+      "share_of_bucket": 0.017,
+      "source_diversity": 3,
+      "sources": [
+        "app_store",
         "play_store",
         "social"
       ],
       "frequency": "low",
       "severity": "low",
-      "impact_rank": 4,
-      "impact_score": 0.469,
+      "impact_rank": 14,
+      "impact_score": 0.289,
       "segment_skew": [],
       "paraphrased_examples": [
-        "Users describe other after liking or saving a Nykaa Fashion item \u2014 enough to stall a 30-day purchase."
+        "WhatsApp try-on photos from friends beat the wishlist for confidence."
       ],
       "hypothesis": "Other may delay 30-day wishlist conversion.",
       "interview_probes": [
         "When you saved something recently, did other come up?"
       ],
       "chunk_ids": [
-        "5c3926f3-34db-5a64-8cb8-2d6e529b0705",
-        "4c099880-f467-57c2-8ebc-69c8ef23673e",
-        "d29ef08b-a9eb-5bbf-8fdf-7e7a6b4f32bc",
-        "d70ea330-aac6-5c54-8a6e-cd30642cc352",
-        "06750c39-1e31-598e-927a-bc9a34493a59",
-        "6c6f3e38-efb7-5281-896f-47b2a32681cb"
+        "9c4d02ad-2023-58b2-a53b-f46fad289ca4",
+        "0f79ae55-27ba-5f0a-9a29-8f69570b8522",
+        "5e8d467f-0aca-537d-93c7-3eed88761ec3",
+        "411db3fe-f2df-5b7e-9f7d-e94b04afd8ee"
       ]
     }
   ],
   "implications": [
-    "Observed: YouTube/Instagram/friends are checked before converting a save. Hypothesis: in-app proof (hauls, try-ons) should be reachable from the wishlist."
+    "YouTube, Instagram, and friends are checked before converting a save. In-app proof such as hauls and try-ons should be reachable from the wishlist."
   ],
   "interview_probes": [
     "When you saved something recently, did fit / size doubt after save come up?",
     "When you saved something recently, did off-nykaa size charts and other apps come up?",
+    "When you saved something recently, did fabric quality doubt come up?",
     "When you saved something recently, did youtube / haul research before convert come up?",
-    "When you saved something recently, did other come up?"
+    "When you saved something recently, did no resurface when size / stock improves come up?"
   ],
   "confidence": "medium",
   "data_gaps": "",
-  "evidence_count": 10,
-  "themes_count": 4
+  "evidence_count": 14,
+  "themes_count": 14
 }

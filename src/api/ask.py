@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import logging
 import re
-from typing import Any
+from typing import Any, Optional
 
 from src.config_loader import canonical_queries, load_prompts
 from src.generation.lint import lint_hits
@@ -15,10 +15,105 @@ from src.processing.jsonutil import parse_json_object
 logger = logging.getLogger(__name__)
 
 _WORD = re.compile(r"[a-z0-9]+")
+_STOP = {
+    "a",
+    "an",
+    "the",
+    "to",
+    "do",
+    "of",
+    "and",
+    "or",
+    "is",
+    "in",
+    "on",
+    "for",
+    "what",
+    "why",
+    "how",
+    "when",
+    "who",
+    "are",
+    "be",
+    "this",
+    "that",
+    "with",
+    "from",
+    "it",
+    "as",
+    "at",
+    "by",
+    "into",
+    "about",
+    "can",
+    "does",
+    "did",
+    "me",
+    "my",
+    "we",
+    "you",
+    "their",
+    "they",
+}
+_DOMAIN = {
+    "wishlist",
+    "wish",
+    "saved",
+    "save",
+    "saving",
+    "shortlist",
+    "bookmark",
+    "fit",
+    "size",
+    "sizing",
+    "nykaa",
+    "fashion",
+    "purchase",
+    "buy",
+    "buying",
+    "cart",
+    "convert",
+    "conversion",
+    "hesitat",
+    "doubt",
+    "stall",
+    "postpone",
+    "later",
+    "compare",
+    "comparison",
+    "instagram",
+    "youtube",
+    "haul",
+    "friend",
+    "reels",
+    "intent",
+    "occasion",
+    "segment",
+    "kurta",
+    "dress",
+    "heel",
+    "review",
+    "unmet",
+    "nudge",
+    "stock",
+}
+_MIN_SCORE = 2
+
+_UNMATCHED_ANSWER = (
+    "That question does not match any of the ten Nykaa Fashion wishlist research questions. "
+    "Ask about why people save items, what blocks a wishlisted buy, fit or size doubt after saving, "
+    "why purchases get postponed, how shoppers compare shortlists, what they check off-app "
+    "(Instagram, friends, other apps), decision factors like fit and occasion, "
+    "intent vs bookmarking, differences across segments, or unmet needs that show up across sources."
+)
 
 
 def _tokens(text: str) -> set[str]:
     return set(_WORD.findall((text or "").lower()))
+
+
+def _content_tokens(text: str) -> set[str]:
+    return {t for t in _tokens(text) if t not in _STOP and len(t) > 1}
 
 
 def _paraphrase_blob(query_id: str) -> str:
@@ -28,10 +123,20 @@ def _paraphrase_blob(query_id: str) -> str:
     return ""
 
 
-def match_question(question: str, report: CatalogReport) -> CatalogQuestion:
-    q_tokens = _tokens(question)
-    best = report.questions[0]
+def match_question(
+    question: str, report: CatalogReport
+) -> tuple[Optional[CatalogQuestion], int]:
+    """Return (best catalog question, score). Score 0 + None-like when out of scope.
+
+    Always returns a CatalogQuestion candidate for debugging, but callers should
+    treat low scores as unmatched via `is_match`.
+    """
+    q_tokens = _content_tokens(question)
+    best = report.questions[0] if report.questions else None
     best_score = -1
+    if best is None:
+        return None, 0
+
     for item in report.questions:
         blob = " ".join(
             [
@@ -42,13 +147,45 @@ def match_question(question: str, report: CatalogReport) -> CatalogQuestion:
                 *[t.name for t in item.sub_themes],
             ]
         )
-        score = len(q_tokens & _tokens(blob))
+        overlap = q_tokens & _content_tokens(blob)
+        score = len(overlap)
         if item.id.replace("_", " ") in (question or "").lower():
             score += 5
+        # Soft boost when the ask clearly sits in wishlist/fashion domain
+        if q_tokens & _DOMAIN and overlap:
+            score += 1
         if score > best_score:
             best_score = score
             best = item
-    return best
+    return best, max(best_score, 0)
+
+
+def is_in_scope(question: str, score: int) -> bool:
+    q_tokens = _content_tokens(question)
+    if not q_tokens:
+        return False
+    if score >= _MIN_SCORE:
+        return True
+    # Single strong domain overlap still allowed (e.g. "wishlist motive?")
+    if score >= 1 and q_tokens & _DOMAIN:
+        return True
+    return False
+
+
+def _unmatched_payload() -> dict[str, Any]:
+    return {
+        "matched": False,
+        "query_id": None,
+        "question": None,
+        "answer": _UNMATCHED_ANSWER,
+        "implications": [],
+        "sub_themes": [],
+        "paraphrased_examples": [],
+        "confidence": "low",
+        "data_gaps": "",
+        "mode": "unmatched",
+        "error": "no_matching_research_question",
+    }
 
 
 def _stub_answer(item: CatalogQuestion) -> dict[str, Any]:
@@ -59,6 +196,7 @@ def _stub_answer(item: CatalogQuestion) -> dict[str, Any]:
     if item.data_gaps:
         answer = f"{answer} Gap: {item.data_gaps}"
     return {
+        "matched": True,
         "query_id": item.id,
         "question": item.question,
         "answer": answer,
@@ -114,6 +252,7 @@ def _groq_answer(item: CatalogQuestion, user_q: str, client: GroqClient) -> dict
         if not answer or lint_hits(blob):
             return None
         return {
+            "matched": True,
             "query_id": item.id,
             "question": item.question,
             "answer": answer,
@@ -132,7 +271,9 @@ def _groq_answer(item: CatalogQuestion, user_q: str, client: GroqClient) -> dict
 
 
 def answer_ask(user_q: str, report: CatalogReport) -> dict[str, Any]:
-    item = match_question(user_q, report)
+    item, score = match_question(user_q, report)
+    if item is None or not is_in_scope(user_q, score):
+        return _unmatched_payload()
     client = GroqClient()
     if client.available:
         groq = _groq_answer(item, user_q, client)

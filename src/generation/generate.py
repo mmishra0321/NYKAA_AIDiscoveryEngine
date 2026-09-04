@@ -100,10 +100,16 @@ def generate_section(
     themes: list[SubTheme],
     stub: bool,
     client: Optional[GroqClient] = None,
+    classified_docs: int | None = None,
 ) -> tuple[CatalogQuestion, str]:
     """Returns (section, mode) where mode is stub | groq | groq_fallback_stub."""
     q_themes = themes_for_question(str(query["id"]), pack, themes)
-    fallback = stub_section(query=query, pack=pack, themes=q_themes)
+    fallback = stub_section(
+        query=query,
+        pack=pack,
+        themes=q_themes,
+        classified_docs=classified_docs,
+    )
     if stub or client is None or not client.available:
         return fallback, "stub"
 

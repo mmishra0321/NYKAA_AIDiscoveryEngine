@@ -36,7 +36,6 @@ WISHLIST_HINTS = (
     "back in stock",
     "feedback loop",
     "move to cart",
-    "nykaa fashion",
 )
 FIT_HINTS = (
     "size",

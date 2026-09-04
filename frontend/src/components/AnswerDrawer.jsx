@@ -1,15 +1,31 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
+import { cleanCopy, firstComment, quoteDedupeKey } from "../copy.js";
 
 function collectQuotes(detail) {
   const seen = new Set();
   const out = [];
   for (const theme of detail?.sub_themes || []) {
     for (const example of theme.paraphrased_examples || []) {
-      const quote = String(example || "").trim();
+      const quote = cleanCopy(example);
       if (!quote) continue;
-      const key = quote.toLowerCase().slice(0, 120);
-      if (seen.has(key)) continue;
+      const key = quoteDedupeKey(quote);
+      if (!key || seen.has(key)) continue;
+      // Also drop if an existing quote already covers ~80% of the same tokens
+      const tokens = new Set(key.split(" ").filter((w) => w.length > 3));
+      let nearDup = false;
+      for (const prev of seen) {
+        const prevTokens = new Set(prev.split(" ").filter((w) => w.length > 3));
+        if (!tokens.size || !prevTokens.size) continue;
+        let overlap = 0;
+        for (const t of tokens) if (prevTokens.has(t)) overlap += 1;
+        const ratio = overlap / Math.min(tokens.size, prevTokens.size);
+        if (ratio >= 0.75) {
+          nearDup = true;
+          break;
+        }
+      }
+      if (nearDup) continue;
       seen.add(key);
       out.push({
         quote,
@@ -19,6 +35,11 @@ function collectQuotes(detail) {
     }
   }
   return out;
+}
+
+function ImplicationLine({ text }) {
+  const cleaned = cleanCopy(text);
+  return <li className="text-[15px] font-medium leading-relaxed text-ink">{cleaned}</li>;
 }
 
 export default function AnswerDrawer({ open, onClose, detail, loading }) {
@@ -41,6 +62,7 @@ export default function AnswerDrawer({ open, onClose, detail, loading }) {
   const quotes = collectQuotes(detail);
   const visible = showMore ? quotes : quotes.slice(0, 5);
   const implications = detail?.implications || [];
+  const answer = firstComment(detail) || cleanCopy(detail?.summary);
 
   return (
     <div className="fixed inset-0 z-50 flex justify-end bg-ink/40 backdrop-blur-sm" role="dialog" aria-modal="true">
@@ -49,7 +71,7 @@ export default function AnswerDrawer({ open, onClose, detail, loading }) {
         <header className="flex items-start justify-between gap-3 border-b border-hairline px-5 py-4">
           <div>
             <p className="text-[11px] font-bold uppercase tracking-wide text-pink">Answer</p>
-            <h2 className="mt-1 font-ui text-lg font-semibold leading-snug text-ink">{detail?.question}</h2>
+            <h2 className="mt-1 font-ui text-xl font-bold leading-snug text-ink">{detail?.question}</h2>
           </div>
           <button
             type="button"
@@ -73,8 +95,8 @@ export default function AnswerDrawer({ open, onClose, detail, loading }) {
           {!loading && detail && (
             <div className="space-y-8">
               <section>
-                <h3 className="font-ui text-sm font-semibold text-ink">Answer</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink">{detail.summary}</p>
+                <h3 className="font-ui text-base font-bold text-ink">Answer</h3>
+                <p className="mt-3 text-[15px] font-medium leading-relaxed text-ink">{answer}</p>
                 {(detail.sub_themes || []).length > 0 && (
                   <div className="mt-3 flex flex-wrap gap-1.5">
                     {detail.sub_themes.map((theme) => (
@@ -91,12 +113,12 @@ export default function AnswerDrawer({ open, onClose, detail, loading }) {
 
               {visible.length > 0 && (
                 <section>
-                  <h3 className="font-ui text-sm font-semibold text-ink">What users said</h3>
+                  <h3 className="font-ui text-base font-bold text-ink">What users said</h3>
                   <ul className="mt-3 space-y-4">
                     {visible.map((item) => (
                       <li key={item.quote} className="border-l-2 border-pink/40 pl-3">
-                        <p className="text-sm leading-relaxed text-ink">“{item.quote}”</p>
-                        <p className="mt-1.5 text-[11px] text-muted">
+                        <p className="text-[15px] font-medium leading-relaxed text-ink">“{item.quote}”</p>
+                        <p className="mt-1.5 text-[11px] font-semibold text-muted">
                           {[item.source, item.name].filter(Boolean).join(" · ")}
                         </p>
                       </li>
@@ -116,20 +138,16 @@ export default function AnswerDrawer({ open, onClose, detail, loading }) {
 
               {implications.length > 0 && (
                 <section>
-                  <h3 className="font-ui text-sm font-semibold text-ink">So what</h3>
-                  <ul className="mt-3 space-y-2 text-sm text-muted">
+                  <h3 className="font-ui text-base font-bold text-ink">So what</h3>
+                  <ul className="mt-3 space-y-3">
                     {implications.slice(0, 3).map((item) => (
-                      <li key={item} className="leading-relaxed">
-                        · {item}
-                      </li>
+                      <ImplicationLine key={item} text={item} />
                     ))}
                   </ul>
                 </section>
               )}
 
-              {detail.data_gaps ? (
-                <p className="text-sm text-muted">{detail.data_gaps}</p>
-              ) : null}
+              {detail.data_gaps ? <p className="text-sm font-medium text-muted">{cleanCopy(detail.data_gaps)}</p> : null}
 
               {detail.confidence && (
                 <section>
@@ -141,9 +159,9 @@ export default function AnswerDrawer({ open, onClose, detail, loading }) {
                     {showDetails ? "Hide details" : "More details"}
                   </button>
                   {showDetails && (
-                    <div className="mt-3 space-y-2 rounded-xl border border-hairline bg-search p-3 text-xs text-muted">
+                    <div className="mt-3 space-y-2 rounded-xl border border-hairline bg-search p-3 text-xs font-medium text-muted">
                       <p>Confidence: {detail.confidence}</p>
-                      <p>Evidence chunks: {detail.evidence_count || 0}</p>
+                      <p>Related reviews: {detail.evidence_count || 0}</p>
                     </div>
                   )}
                 </section>

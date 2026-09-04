@@ -137,17 +137,30 @@ def _fetch_github_workflow_run(repo: str) -> dict[str, Any] | None:
     }
 
 
+SOURCE_LABELS = {
+    "play_store": "Play Store",
+    "app_store": "App Store",
+    "forum": "Forum/Blogs",
+    "blog": "Forum/Blogs",
+    "social": "Interviews",
+    "reddit": "Reddit",
+    "youtube": "YouTube",
+}
+
+
 def scrape_status() -> dict[str, Any]:
-    """Last local scrape log + latest GitHub Actions run for the ingest workflow."""
+    """Last scrape log + latest GitHub Actions run for the ingest workflow."""
     folder, ingestion = _latest_ingestion_log()
     totals = ingestion.get("totals") or {}
     sources = []
     for row in ingestion.get("sources") or []:
         if not isinstance(row, dict):
             continue
+        src = str(row.get("source") or "")
         sources.append(
             {
-                "source": row.get("source"),
+                "source": src,
+                "label": SOURCE_LABELS.get(src, src.replace("_", " ").title()),
                 "records_fetched": row.get("records_fetched"),
                 "records_saved": row.get("records_saved"),
                 "errors": len(row.get("errors") or []),
@@ -158,6 +171,21 @@ def scrape_status() -> dict[str, Any]:
     live = _fetch_github_workflow_run(repo) if repo else None
     workflow = live or committed or None
     actions_url = f"https://github.com/{repo}/actions/workflows/{WORKFLOW_FILE}"
+    display = ingestion.get("display") if isinstance(ingestion.get("display"), dict) else {}
+    grouped = display.get("source_groups") or [
+        {"label": "Play Store", "sources": ["play_store"]},
+        {"label": "App Store", "sources": ["app_store"]},
+        {"label": "Forum/Blogs", "sources": ["forum", "blog"]},
+        {"label": "Interviews", "sources": ["social"]},
+    ]
+    # Roll up saved counts for grouped display labels
+    saved_by_src = {s["source"]: int(s.get("records_saved") or 0) for s in sources}
+    source_groups = []
+    for g in grouped:
+        labels = g.get("sources") or []
+        saved = sum(saved_by_src.get(x, 0) for x in labels)
+        if saved or not sources:
+            source_groups.append({"label": g.get("label"), "records_saved": saved})
     return {
         "schedule": "Every ~10 days (1st, 11th, 21st, 31st · 06:00 UTC)",
         "workflow_name": "Ingest Classify Index Nykaa Fashion",
@@ -166,7 +194,7 @@ def scrape_status() -> dict[str, Any]:
         "last_scrape": {
             "run_date": ingestion.get("run_date"),
             "finished_at": ingestion.get("finished_at"),
-            "corpus_total": ingestion.get("corpus_total"),
+            "corpus_total": ingestion.get("corpus_total") or totals.get("records_saved"),
             "corpus_target": ingestion.get("corpus_target"),
             "corpus_target_met": ingestion.get("corpus_target_met"),
             "records_fetched": totals.get("records_fetched"),
@@ -174,6 +202,10 @@ def scrape_status() -> dict[str, Any]:
             "records_skipped": totals.get("records_skipped"),
             "errors": totals.get("errors"),
             "sources": sources,
+            "source_groups": source_groups,
+            "sources_line": display.get("sources_line")
+            or "Play Store · App Store · Forum/Blogs · Interviews",
+            "interview_n": display.get("interview_n") or saved_by_src.get("social") or 0,
             "log_path": str(folder / "ingestion_summary.json") if folder else None,
         }
         if ingestion
@@ -251,6 +283,8 @@ def pipeline_summary() -> dict[str, Any]:
             "relevance": processing.get("relevance"),
             "classified": processing.get("classified"),
             "mode": processing.get("mode"),
+            "question_coverage": processing.get("question_coverage") or {},
+            "input_count": processing.get("input_count"),
         },
         "retrieval": {"hit_counts": retrieval.get("hit_counts"), "data_gaps": retrieval.get("data_gaps")},
         "scrape": scrape_status(),

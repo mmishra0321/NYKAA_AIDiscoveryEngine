@@ -120,3 +120,7 @@ body {
 .research-card-shine:nth-child(10)::before {
   animation-delay: 4.5s;
 }
+
+.research-card-shine:nth-child(n + 11)::before {
+  animation-delay: 1.2s;
+}

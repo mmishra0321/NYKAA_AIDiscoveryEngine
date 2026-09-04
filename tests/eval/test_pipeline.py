@@ -9,7 +9,7 @@ from src.generation.pipeline import _coverage_ok
 def test_paraphrases_route_to_canonical_questions():
     report = get_catalog()
     paras = load_paraphrases()
-    hits = [match_question(p["paraphrase"], report).id == p["query_id"] for p in paras]
+    hits = [match_question(p["paraphrase"], report)[0].id == p["query_id"] for p in paras]
     assert sum(hits) / len(hits) >= 0.8
 
 
