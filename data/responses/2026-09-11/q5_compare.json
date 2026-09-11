@@ -1,0 +1,48 @@
+{
+  "id": "q5_compare",
+  "question": "How do users compare multiple shortlisted products?",
+  "summary": "Third rate customer service. they was around 15mins on call waiting for customer service support, yet not received. on chat support executive not replying for more than 10mins. product quality is worst yet not able\u2026",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q5_compare_other",
+      "question_id": "q5_compare",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 1,
+      "sources": [
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.79,
+      "segment_skew": [
+        "price_sensitive"
+      ],
+      "paraphrased_examples": [
+        "They think compare with other app nykaa app is best.",
+        "The products are quite expensive, and the return process is very slow. There are no proper updates regarding return requests, which makes the experience frustrating. Compared to Nykaa, Myntra offers much faster\u2026",
+        "Third rate customer service. they was around 15mins on call waiting for customer service support, yet not received. on chat support executive not replying for more than 10mins. product quality is worst yet not able\u2026"
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "e1e7d8b9-4dc7-5732-83a8-3391eee05d3b",
+        "d08be67f-f375-59d9-815d-f74389fcbee1",
+        "2ce0f436-28cb-5489-b155-f539bddc5097"
+      ]
+    }
+  ],
+  "implications": [
+    "Shoppers hold two or more saved items before deciding. A side-by-side of saved pieces would reduce stalled shortlists."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 3,
+  "themes_count": 1
+}

@@ -1,0 +1,49 @@
+{
+  "id": "q7_decision_factors",
+  "question": "What role do fit, size, styling, price, reviews, occasion, and social validation play?",
+  "summary": "Really they had a worst experience... they ordered a pair of shoes, it is a low quality item. wrong size, not worth for the money. they tried to return + replace.... Whenever i go to that options it shows try later....",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q7_decision_factors_other",
+      "question_id": "q7_decision_factors",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 1,
+      "sources": [
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.79,
+      "segment_skew": [
+        "first_time"
+      ],
+      "paraphrased_examples": [
+        "Really they had a worst experience... they ordered a pair of shoes, it is a low quality item. wrong size, not worth for the money. they tried to return + replace.... Whenever i go to that options it shows try later....",
+        "Ordered for the first time from Nykaa fashion and they misplaced their order during transit, their initial delivery date was 5th June which later on shifted to 9th June, it's 11th June and there's no trace of their\u2026"
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "85450465-dc40-56b3-b728-ecac234e75a7",
+        "dac7282c-2229-57f5-b02e-8f1faf1d7076",
+        "fcd358e7-bade-5ce3-918c-4dc37c39210d",
+        "49fed4ca-7479-5d92-842f-f66fe27f49d1",
+        "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92"
+      ]
+    }
+  ],
+  "implications": [
+    "Fit, size, reviews, occasion, and price-as-signal show up together. Surface those factors on the saved item rather than pushing markdowns."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 5,
+  "themes_count": 1
+}

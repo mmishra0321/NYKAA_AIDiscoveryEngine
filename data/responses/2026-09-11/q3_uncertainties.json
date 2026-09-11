@@ -1,0 +1,50 @@
+{
+  "id": "q3_uncertainties",
+  "question": "What uncertainties remain after users have identified a product they like?",
+  "summary": "They am extremely disappointed with the way their replacement request has been handled. they requested a replacement for their black jeans (Size 32 to Size 34) on 9 June, and despite waiting for more than a month,\u2026",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q3_uncertainties_other",
+      "question_id": "q3_uncertainties",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 1,
+      "sources": [
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.79,
+      "segment_skew": [
+        "first_time"
+      ],
+      "paraphrased_examples": [
+        "They am extremely disappointed with the way their replacement request has been handled. they requested a replacement for their black jeans (Size 32 to Size 34) on 9 June, and despite waiting for more than a month,\u2026",
+        "They have purchased a kurta pant dress in size S and later they was not given the option to replace it with size M through the app. It used to show out of stock in the app and in the same app it used to show size M\u2026",
+        "This is a rubbish app. they had a very bad experience with it. they ordered a jeans pant on May 26th. Since the size was too big, they requested an exchange. The delivery person communicated with me, promising to\u2026"
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "85450465-dc40-56b3-b728-ecac234e75a7",
+        "dac7282c-2229-57f5-b02e-8f1faf1d7076",
+        "fcd358e7-bade-5ce3-918c-4dc37c39210d",
+        "49fed4ca-7479-5d92-842f-f66fe27f49d1",
+        "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92"
+      ]
+    }
+  ],
+  "implications": [
+    "Size, fit, and fabric doubt show up after liking. A clearer size story on saved items would cut hesitation."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 5,
+  "themes_count": 1
+}

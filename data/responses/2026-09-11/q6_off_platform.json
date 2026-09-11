@@ -1,0 +1,42 @@
+{
+  "id": "q6_off_platform",
+  "question": "What information do users seek outside Nykaa Fashion before purchasing?",
+  "summary": "They think compare with other app nykaa app is best.",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q6_off_platform_other",
+      "question_id": "q6_off_platform",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 1,
+      "sources": [
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.79,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "They think compare with other app nykaa app is best."
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "e1e7d8b9-4dc7-5732-83a8-3391eee05d3b"
+      ]
+    }
+  ],
+  "implications": [
+    "YouTube, Instagram, and friends are checked before converting a save. In-app proof such as hauls and try-ons should be reachable from the wishlist."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "low",
+  "data_gaps": "",
+  "evidence_count": 1,
+  "themes_count": 1
+}
