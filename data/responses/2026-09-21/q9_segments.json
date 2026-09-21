@@ -1,0 +1,44 @@
+{
+  "id": "q9_segments",
+  "question": "How do these behaviours differ across user segments?",
+  "summary": "Ordered for the first time from Nykaa fashion and they misplaced their order during transit, their initial delivery date was 5th June which later on shifted to 9th June, it's 11th June and there's no trace of their\u2026",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q9_segments_other",
+      "question_id": "q9_segments",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 1,
+      "sources": [
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.79,
+      "segment_skew": [
+        "first_time"
+      ],
+      "paraphrased_examples": [
+        "Ordered for the first time from Nykaa fashion and they misplaced their order during transit, their initial delivery date was 5th June which later on shifted to 9th June, it's 11th June and there's no trace of their\u2026"
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92"
+      ]
+    }
+  ],
+  "implications": [
+    "First-time vs repeat buyers and category (ethnic, western, footwear) change the doubt. Segment-aware fit help on saved items would lift 30-day purchase unevenly."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "low",
+  "data_gaps": "",
+  "evidence_count": 1,
+  "themes_count": 1
+}
