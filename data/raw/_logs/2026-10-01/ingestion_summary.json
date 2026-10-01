@@ -1,0 +1,111 @@
+{
+  "run_date": "2026-10-01",
+  "finished_at": "2026-10-01T11:54:58.330511+00:00",
+  "corpus_target": 400,
+  "corpus_total": 122,
+  "corpus_target_met": false,
+  "sources": [
+    {
+      "source": "play_store",
+      "records_fetched": 800,
+      "records_saved": 89,
+      "records_skipped": 591,
+      "output_path": "/home/runner/work/NYKAA_AIDiscoveryEngine/NYKAA_AIDiscoveryEngine/data/raw/play_store/2026-10-01/documents.jsonl",
+      "errors": [],
+      "metadata": {
+        "filter_stats": {
+          "input_count": 680,
+          "output_count": 89,
+          "rejected_time": 2,
+          "rejected_length": 117,
+          "rejected_language": 2,
+          "rejected_keyword": 464,
+          "rejected_spam": 0,
+          "rejected_competitor": 6,
+          "rejected_exact_duplicate": 0,
+          "rejected_near_duplicate": 0,
+          "rejected_cap": 0,
+          "pii_stripped": 0,
+          "time_window_months": 12,
+          "total_rejected": 591
+        }
+      },
+      "finished_at": "2026-10-01T11:54:56.885610+00:00"
+    },
+    {
+      "source": "app_store",
+      "records_fetched": 500,
+      "records_saved": 33,
+      "records_skipped": 430,
+      "output_path": "/home/runner/work/NYKAA_AIDiscoveryEngine/NYKAA_AIDiscoveryEngine/data/raw/app_store/2026-10-01/documents.jsonl",
+      "errors": [],
+      "metadata": {
+        "filter_stats": {
+          "input_count": 248,
+          "output_count": 33,
+          "rejected_time": 0,
+          "rejected_length": 29,
+          "rejected_language": 0,
+          "rejected_keyword": 185,
+          "rejected_spam": 0,
+          "rejected_competitor": 1,
+          "rejected_exact_duplicate": 0,
+          "rejected_near_duplicate": 0,
+          "rejected_cap": 0,
+          "pii_stripped": 0,
+          "time_window_months": 24,
+          "total_rejected": 215
+        }
+      },
+      "finished_at": "2026-10-01T11:54:57.811884+00:00"
+    },
+    {
+      "source": "reddit",
+      "records_fetched": 0,
+      "records_saved": 0,
+      "records_skipped": 0,
+      "output_path": "",
+      "errors": [
+        "reddit query '\"Nykaa Fashion\" wishlist' status=403",
+        "reddit query '\"Nykaa Fashion\" size' status=403",
+        "reddit query '\"Nykaa Fashion\" review' status=403",
+        "reddit query '\"Nykaa Fashion\" haven't bought' status=403",
+        "reddit query '\"Nykaa Fashion\" wishlist' status=403",
+        "reddit query '\"Nykaa Fashion\" size' status=403",
+        "reddit query '\"Nykaa Fashion\" review' status=403",
+        "reddit query '\"Nykaa Fashion\" haven't bought' status=403"
+      ],
+      "metadata": {
+        "filter_stats": {
+          "input_count": 0,
+          "output_count": 0,
+          "rejected_time": 0,
+          "rejected_length": 0,
+          "rejected_language": 0,
+          "rejected_keyword": 0,
+          "rejected_spam": 0,
+          "rejected_competitor": 0,
+          "rejected_exact_duplicate": 0,
+          "rejected_near_duplicate": 0,
+          "rejected_cap": 0,
+          "pii_stripped": 0,
+          "time_window_months": 24,
+          "total_rejected": 0
+        }
+      },
+      "finished_at": "2026-10-01T11:54:58.330324+00:00"
+    }
+  ],
+  "totals": {
+    "records_fetched": 1300,
+    "records_saved": 122,
+    "records_skipped": 1021,
+    "errors": 8
+  },
+  "limitations": [
+    "forum HTML scrape deferred (ToS / robots.txt)",
+    "youtube skipped unless YOUTUBE_API_KEY is set and adapter enabled",
+    "twitter_x / quora / login walls deferred",
+    "keyword prefilter is recall-only; LLM relevance is Phase 2"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "logistics_noise": 64,
+  "other": 44,
+  "wishlist_signal": 14,
+  "by_source": {
+    "play_store": {
+      "logistics_noise": 45,
+      "other": 32
+    },
+    "app_store": {
+      "logistics_noise": 19,
+      "other": 12
+    }
+  },
+  "note": "logistics_noise and other are excluded from Q1\u2013Q10."
+}
