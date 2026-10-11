@@ -1,0 +1,50 @@
+{
+  "id": "q5_compare",
+  "question": "How do users compare multiple shortlisted products?",
+  "summary": "Nykaa Fashion - Very Poor & Unreliable Service their experience with the Nykaa Fashion app has been extremely disappointing. they received wrong products and missing items compared to what was shown and ordered\u2026",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q5_compare_comparing_saved_items",
+      "question_id": "q5_compare",
+      "name": "Comparing saved items",
+      "share_of_bucket": 1.0,
+      "source_diversity": 2,
+      "sources": [
+        "app_store",
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "medium",
+      "impact_rank": 1,
+      "impact_score": 0.88,
+      "segment_skew": [
+        "price_sensitive"
+      ],
+      "paraphrased_examples": [
+        "Buying return refund all is soo easy fast and safe they like this app..it responses so fast..quality is superb as compare to other shopping apps thank you",
+        "The products are quite expensive, and the return process is very slow. There are no proper updates regarding return requests, which makes the experience frustrating. Compared to Nykaa, Myntra offers much faster\u2026",
+        "Nykaa Fashion - Very Poor & Unreliable Service their experience with the Nykaa Fashion app has been extremely disappointing. they received wrong products and missing items compared to what was shown and ordered\u2026"
+      ],
+      "hypothesis": "Comparing saved items may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did comparing saved items come up?"
+      ],
+      "chunk_ids": [
+        "2ce0f436-28cb-5489-b155-f539bddc5097",
+        "9ac8d6ed-e552-59b7-915e-f2fd80db2614",
+        "d08be67f-f375-59d9-815d-f74389fcbee1",
+        "145f49e6-872c-59b6-acea-341aeb73a01f"
+      ]
+    }
+  ],
+  "implications": [
+    "Shoppers hold two or more saved items before deciding. A side-by-side of saved pieces would reduce stalled shortlists."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did comparing saved items come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 4,
+  "themes_count": 1
+}
