@@ -1,0 +1,79 @@
+{
+  "id": "q5_compare",
+  "question": "How do users compare multiple shortlisted products?",
+  "summary": "Prices are high compared to other apps",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q5_compare_comparing_saved_items",
+      "question_id": "q5_compare",
+      "name": "Comparing saved items",
+      "share_of_bucket": 0.875,
+      "source_diversity": 2,
+      "sources": [
+        "app_store",
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "medium",
+      "impact_rank": 1,
+      "impact_score": 0.88,
+      "segment_skew": [
+        "price_sensitive"
+      ],
+      "paraphrased_examples": [
+        "Prices are high compared to other apps",
+        "Nowadays nyka is too costly... when compared to othes fashion apps",
+        "Very bad application very high price compare to flipkart and amazon"
+      ],
+      "hypothesis": "Comparing saved items may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did comparing saved items come up?"
+      ],
+      "chunk_ids": [
+        "411d0f1d-93dd-528b-aa82-68297fc13519",
+        "829aa378-99f6-545a-9045-9d3e71b7e77f",
+        "188270de-13a5-51ee-add0-44ae01233254",
+        "2ce0f436-28cb-5489-b155-f539bddc5097",
+        "9ac8d6ed-e552-59b7-915e-f2fd80db2614",
+        "d08be67f-f375-59d9-815d-f74389fcbee1",
+        "145f49e6-872c-59b6-acea-341aeb73a01f"
+      ]
+    },
+    {
+      "sub_theme_id": "q5_compare_other",
+      "question_id": "q5_compare",
+      "name": "Other",
+      "share_of_bucket": 0.125,
+      "source_diversity": 1,
+      "sources": [
+        "app_store"
+      ],
+      "frequency": "medium",
+      "severity": "low",
+      "impact_rank": 2,
+      "impact_score": 0.297,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "They have ordered jockey shorts and the product looks completely different, not even matching the min expectations, i have asked them for replacement with other color or refund , they have been following up with them\u2026"
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "2012b34f-8eb4-53fc-a899-8032144af014"
+      ]
+    }
+  ],
+  "implications": [
+    "Shoppers hold two or more saved items before deciding. A side-by-side of saved pieces would reduce stalled shortlists."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did comparing saved items come up?",
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 8,
+  "themes_count": 2
+}

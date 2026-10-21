@@ -1,0 +1,86 @@
+{
+  "id": "q3_uncertainties",
+  "question": "What uncertainties remain after users have identified a product they like?",
+  "summary": "Seeing lots of negative reviews here. Not sure about the others, but for me they got their product luckily delivered before time without any issues. they had to order here as their favourite product wasn't listed on\u2026",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q3_uncertainties_fabric_quality_doubt",
+      "question_id": "q3_uncertainties",
+      "name": "Fabric quality doubt",
+      "share_of_bucket": 0.364,
+      "source_diversity": 2,
+      "sources": [
+        "app_store",
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "high",
+      "impact_rank": 1,
+      "impact_score": 0.829,
+      "segment_skew": [
+        "first_time",
+        "repeat"
+      ],
+      "paraphrased_examples": [
+        "Ordered for the first time from Nykaa fashion and they misplaced their order during transit, their initial delivery date was 5th June which later on shifted to 9th June, it's 11th June and there's no trace of their\u2026",
+        "They placed an order for a saree which they had to wear to an event on 12th Oct. Placed the order on 27th Sept\u201926 and their order is still not here as they type this on 15th Oct\u201926. Still waited thinking it was\u2026",
+        "A terrible experience with Nykaa. they ordered UK size 9.5 but received UK size 7. they raised a complaint, and even the replacement arrived in the same wrong size! After 15 days of emails, follow-ups, and\u2026"
+      ],
+      "hypothesis": "Fabric quality doubt may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did fabric quality doubt come up?"
+      ],
+      "chunk_ids": [
+        "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92",
+        "dbf1ca35-84c4-5b82-8c66-7e9a3dd0dbe1",
+        "9e6e7daf-52b2-5917-ba61-53f08d0d2686",
+        "36586a1e-8b42-5d6e-9d3a-787d9c1d04d6"
+      ]
+    },
+    {
+      "sub_theme_id": "q3_uncertainties_other",
+      "question_id": "q3_uncertainties",
+      "name": "Other",
+      "share_of_bucket": 0.636,
+      "source_diversity": 2,
+      "sources": [
+        "app_store",
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 2,
+      "impact_score": 0.79,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Seeing lots of negative reviews here. Not sure about the others, but for me they got their product luckily delivered before time without any issues. they had to order here as their favourite product wasn't listed on\u2026",
+        "They am extremely disappointed with the way their replacement request has been handled. they requested a replacement for their black jeans (Size 32 to Size 34) on 9 June, and despite waiting for more than a month,\u2026",
+        "They have purchased a kurta pant dress in size S and later they was not given the option to replace it with size M through the app. It used to show out of stock in the app and in the same app it used to show size M\u2026"
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "77ed6977-8cf5-5a5a-b46e-da14387b136a",
+        "85450465-dc40-56b3-b728-ecac234e75a7",
+        "dac7282c-2229-57f5-b02e-8f1faf1d7076",
+        "fcd358e7-bade-5ce3-918c-4dc37c39210d",
+        "49fed4ca-7479-5d92-842f-f66fe27f49d1",
+        "e5e2327e-321d-51f6-80b4-357513e03bef",
+        "2012b34f-8eb4-53fc-a899-8032144af014"
+      ]
+    }
+  ],
+  "implications": [
+    "Size, fit, and fabric doubt show up after liking. A clearer size story on saved items would cut hesitation."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did fabric quality doubt come up?",
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 10,
+  "themes_count": 2
+}
