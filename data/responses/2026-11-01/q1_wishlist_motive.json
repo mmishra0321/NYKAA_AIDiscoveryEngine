@@ -1,0 +1,43 @@
+{
+  "id": "q1_wishlist_motive",
+  "question": "Why do users add fashion products to their wishlist?",
+  "summary": "Hi Nykaa, You literally spill the beans about their cart and wishlist with other customers out there, while they check out the products, which you need to really change this attitude. It's their honest opinion and\u2026",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q1_wishlist_motive_other",
+      "question_id": "q1_wishlist_motive",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 1,
+      "sources": [
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.79,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Hi Nykaa, You literally spill the beans about their cart and wishlist with other customers out there, while they check out the products, which you need to really change this attitude. It's their honest opinion and\u2026"
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "0ace7dd5-17d0-5927-b767-27ce62df59ad",
+        "eae66a4c-3336-5d44-9e2d-16b9b1b0d008"
+      ]
+    }
+  ],
+  "implications": [
+    "People save to style later, compare, or wait for the right moment. Surfacing the original save reason on return-to-wishlist would likely lift 30-day conversion without making items cheaper."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "low",
+  "data_gaps": "",
+  "evidence_count": 2,
+  "themes_count": 1
+}

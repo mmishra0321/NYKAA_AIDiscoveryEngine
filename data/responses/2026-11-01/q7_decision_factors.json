@@ -1,0 +1,52 @@
+{
+  "id": "q7_decision_factors",
+  "question": "What role do fit, size, styling, price, reviews, occasion, and social validation play?",
+  "summary": "Extremely disappointed with [handle]! Ordered an H&M jeans, but received a completely wrong shade and a defective size. even though it says Size 16, the fitting is completely off and abnormally small. \u200bPlaced a\u2026",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q7_decision_factors_other",
+      "question_id": "q7_decision_factors",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 1,
+      "sources": [
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.79,
+      "segment_skew": [
+        "first_time"
+      ],
+      "paraphrased_examples": [
+        "This is a rubbish app. they had a very bad experience with it. they ordered a jeans pant on May 26th. Since the size was too big, they requested an exchange. The delivery person communicated with me, promising to\u2026",
+        "Really they had a worst experience... they ordered a pair of shoes, it is a low quality item. wrong size, not worth for the money. they tried to return + replace.... Whenever i go to that options it shows try later....",
+        "Extremely disappointed with [handle]! Ordered an H&M jeans, but received a completely wrong shade and a defective size. even though it says Size 16, the fitting is completely off and abnormally small. \u200bPlaced a\u2026"
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "85450465-dc40-56b3-b728-ecac234e75a7",
+        "dac7282c-2229-57f5-b02e-8f1faf1d7076",
+        "77ed6977-8cf5-5a5a-b46e-da14387b136a",
+        "fcd358e7-bade-5ce3-918c-4dc37c39210d",
+        "49fed4ca-7479-5d92-842f-f66fe27f49d1",
+        "e5e2327e-321d-51f6-80b4-357513e03bef",
+        "ba5bbd77-ab7b-56ab-9fe4-cc9eee698b92"
+      ]
+    }
+  ],
+  "implications": [
+    "Fit, size, reviews, occasion, and price-as-signal show up together. Surface those factors on the saved item rather than pushing markdowns."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 7,
+  "themes_count": 1
+}
