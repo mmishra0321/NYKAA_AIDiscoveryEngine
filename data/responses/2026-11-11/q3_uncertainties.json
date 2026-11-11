@@ -1,0 +1,47 @@
+{
+  "id": "q3_uncertainties",
+  "question": "What uncertainties remain after users have identified a product they like?",
+  "summary": "Seeing lots of negative reviews here. Not sure about the others, but for me they got their product luckily delivered before time without any issues. they had to order here as their favourite product wasn't listed on\u2026",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q3_uncertainties_other",
+      "question_id": "q3_uncertainties",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 1,
+      "sources": [
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.79,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Seeing lots of negative reviews here. Not sure about the others, but for me they got their product luckily delivered before time without any issues. they had to order here as their favourite product wasn't listed on\u2026",
+        "They am extremely disappointed with the way their replacement request has been handled. they requested a replacement for their black jeans (Size 32 to Size 34) on 9 June, and despite waiting for more than a month,\u2026",
+        "Extremely disappointed with [handle]! Ordered an H&M jeans, but received a completely wrong shade and a defective size. even though it says Size 16, the fitting is completely off and abnormally small. \u200bPlaced a\u2026"
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "77ed6977-8cf5-5a5a-b46e-da14387b136a",
+        "85450465-dc40-56b3-b728-ecac234e75a7",
+        "e5e2327e-321d-51f6-80b4-357513e03bef",
+        "49fed4ca-7479-5d92-842f-f66fe27f49d1"
+      ]
+    }
+  ],
+  "implications": [
+    "Size, fit, and fabric doubt show up after liking. A clearer size story on saved items would cut hesitation."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "medium",
+  "data_gaps": "",
+  "evidence_count": 4,
+  "themes_count": 1
+}

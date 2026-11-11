@@ -1,0 +1,390 @@
+{
+  "generated_at": "2026-11-11T13:04:28+00:00",
+  "kpi": "wishlist_to_purchase_30d",
+  "corpus": {
+    "relevant": 8,
+    "noise": 54,
+    "sources": {
+      "play_store": 16
+    },
+    "question_coverage": {
+      "q1_wishlist_motive": {
+        "docs": 2,
+        "sub_themes": 1,
+        "data_gap": null
+      },
+      "q2_conversion_blockers": {
+        "docs": 1,
+        "sub_themes": 1,
+        "data_gap": null
+      },
+      "q3_uncertainties": {
+        "docs": 4,
+        "sub_themes": 1,
+        "data_gap": null
+      },
+      "q4_postpone": {
+        "docs": 3,
+        "sub_themes": 1,
+        "data_gap": null
+      },
+      "q5_compare": {
+        "docs": 2,
+        "sub_themes": 1,
+        "data_gap": null
+      },
+      "q6_off_platform": {
+        "docs": 0,
+        "sub_themes": 0,
+        "data_gap": "No named sub-theme for q6_off_platform (What information do users seek outside Nykaa Fashion before purchasing?) in this run."
+      },
+      "q7_decision_factors": {
+        "docs": 4,
+        "sub_themes": 1,
+        "data_gap": null
+      },
+      "q8_intent_vs_bookmark": {
+        "docs": 0,
+        "sub_themes": 0,
+        "data_gap": "No named sub-theme for q8_intent_vs_bookmark (When is the wishlist genuine purchase intent vs. pure bookmarking?) in this run."
+      },
+      "q9_segments": {
+        "docs": 0,
+        "sub_themes": 0,
+        "data_gap": "No named sub-theme for q9_segments (How do these behaviours differ across user segments?) in this run."
+      },
+      "q10_unmet_needs": {
+        "docs": 0,
+        "sub_themes": 0,
+        "data_gap": "No named sub-theme for q10_unmet_needs (What unmet needs emerge consistently across many independent sources?) in this run."
+      }
+    },
+    "classified": 8,
+    "input_count": 62
+  },
+  "questions": [
+    {
+      "id": "q1_wishlist_motive",
+      "question": "Why do users add fashion products to their wishlist?",
+      "summary": "Prices and cloth ranges are good but if i wishlist something for later it ends up either getting stocked out and never returns back in stock for months",
+      "sub_themes": [
+        {
+          "sub_theme_id": "q1_wishlist_motive_other",
+          "question_id": "q1_wishlist_motive",
+          "name": "Other",
+          "share_of_bucket": 1.0,
+          "source_diversity": 1,
+          "sources": [
+            "play_store"
+          ],
+          "frequency": "high",
+          "severity": "low",
+          "impact_rank": 1,
+          "impact_score": 0.79,
+          "segment_skew": [],
+          "paraphrased_examples": [
+            "This is the glitchiest app made so far; it is frustrating to use. they wish-listed some items, and it took me two hours to find those products, which had offers on them. When they tried opening the wishlist icon, it\u2026",
+            "Prices and cloth ranges are good but if i wishlist something for later it ends up either getting stocked out and never returns back in stock for months"
+          ],
+          "hypothesis": "Other may delay 30-day wishlist conversion.",
+          "interview_probes": [
+            "When you saved something recently, did other come up?"
+          ],
+          "chunk_ids": [
+            "0cf78cd3-a4e4-51bb-a19c-baabe2d2ca34",
+            "eae66a4c-3336-5d44-9e2d-16b9b1b0d008"
+          ]
+        }
+      ],
+      "implications": [
+        "People save to style later, compare, or wait for the right moment. Surfacing the original save reason on return-to-wishlist would likely lift 30-day conversion without making items cheaper."
+      ],
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "confidence": "low",
+      "data_gaps": "",
+      "evidence_count": 2,
+      "themes_count": 1
+    },
+    {
+      "id": "q2_conversion_blockers",
+      "question": "What prevents wishlisted products from eventually being purchased?",
+      "summary": "Misleading photos, inflated prices, and pathetic quality! \"Compared to other shopping platforms, the product quality on this app is pathetic, and the prices are artificially inflated. The items delivered look nothing\u2026",
+      "sub_themes": [
+        {
+          "sub_theme_id": "q2_conversion_blockers_other",
+          "question_id": "q2_conversion_blockers",
+          "name": "Other",
+          "share_of_bucket": 1.0,
+          "source_diversity": 1,
+          "sources": [
+            "play_store"
+          ],
+          "frequency": "high",
+          "severity": "low",
+          "impact_rank": 1,
+          "impact_score": 0.79,
+          "segment_skew": [],
+          "paraphrased_examples": [
+            "Misleading photos, inflated prices, and pathetic quality! \"Compared to other shopping platforms, the product quality on this app is pathetic, and the prices are artificially inflated. The items delivered look nothing\u2026"
+          ],
+          "hypothesis": "Other may delay 30-day wishlist conversion.",
+          "interview_probes": [
+            "When you saved something recently, did other come up?"
+          ],
+          "chunk_ids": [
+            "265a07e8-3ac2-5968-89f6-f9661cfdda02"
+          ]
+        }
+      ],
+      "implications": [
+        "Liked items sit after fit and quality doubt. Clearing post-save uncertainty on size, fabric, and colour unblocks purchase more than another promo."
+      ],
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "confidence": "low",
+      "data_gaps": "",
+      "evidence_count": 1,
+      "themes_count": 1
+    },
+    {
+      "id": "q3_uncertainties",
+      "question": "What uncertainties remain after users have identified a product they like?",
+      "summary": "Seeing lots of negative reviews here. Not sure about the others, but for me they got their product luckily delivered before time without any issues. they had to order here as their favourite product wasn't listed on\u2026",
+      "sub_themes": [
+        {
+          "sub_theme_id": "q3_uncertainties_other",
+          "question_id": "q3_uncertainties",
+          "name": "Other",
+          "share_of_bucket": 1.0,
+          "source_diversity": 1,
+          "sources": [
+            "play_store"
+          ],
+          "frequency": "high",
+          "severity": "low",
+          "impact_rank": 1,
+          "impact_score": 0.79,
+          "segment_skew": [],
+          "paraphrased_examples": [
+            "Seeing lots of negative reviews here. Not sure about the others, but for me they got their product luckily delivered before time without any issues. they had to order here as their favourite product wasn't listed on\u2026",
+            "They am extremely disappointed with the way their replacement request has been handled. they requested a replacement for their black jeans (Size 32 to Size 34) on 9 June, and despite waiting for more than a month,\u2026",
+            "Extremely disappointed with [handle]! Ordered an H&M jeans, but received a completely wrong shade and a defective size. even though it says Size 16, the fitting is completely off and abnormally small. \u200bPlaced a\u2026"
+          ],
+          "hypothesis": "Other may delay 30-day wishlist conversion.",
+          "interview_probes": [
+            "When you saved something recently, did other come up?"
+          ],
+          "chunk_ids": [
+            "77ed6977-8cf5-5a5a-b46e-da14387b136a",
+            "85450465-dc40-56b3-b728-ecac234e75a7",
+            "e5e2327e-321d-51f6-80b4-357513e03bef",
+            "49fed4ca-7479-5d92-842f-f66fe27f49d1"
+          ]
+        }
+      ],
+      "implications": [
+        "Size, fit, and fabric doubt show up after liking. A clearer size story on saved items would cut hesitation."
+      ],
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "confidence": "medium",
+      "data_gaps": "",
+      "evidence_count": 4,
+      "themes_count": 1
+    },
+    {
+      "id": "q4_postpone",
+      "question": "What causes users to postpone a purchase?",
+      "summary": "They am extremely disappointed with the way their replacement request has been handled. they requested a replacement for their black jeans (Size 32 to Size 34) on 9 June, and despite waiting for more than a month,\u2026",
+      "sub_themes": [
+        {
+          "sub_theme_id": "q4_postpone_other",
+          "question_id": "q4_postpone",
+          "name": "Other",
+          "share_of_bucket": 1.0,
+          "source_diversity": 1,
+          "sources": [
+            "play_store"
+          ],
+          "frequency": "high",
+          "severity": "low",
+          "impact_rank": 1,
+          "impact_score": 0.79,
+          "segment_skew": [],
+          "paraphrased_examples": [
+            "They am extremely disappointed with the way their replacement request has been handled. they requested a replacement for their black jeans (Size 32 to Size 34) on 9 June, and despite waiting for more than a month,\u2026"
+          ],
+          "hypothesis": "Other may delay 30-day wishlist conversion.",
+          "interview_probes": [
+            "When you saved something recently, did other come up?"
+          ],
+          "chunk_ids": [
+            "85450465-dc40-56b3-b728-ecac234e75a7",
+            "49fed4ca-7479-5d92-842f-f66fe27f49d1",
+            "eae66a4c-3336-5d44-9e2d-16b9b1b0d008"
+          ]
+        }
+      ],
+      "implications": [
+        "Shoppers defer with later, payday, and not-sure-yet language. A non-promo reminder tied to occasion or timing beats forgetting."
+      ],
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "confidence": "medium",
+      "data_gaps": "",
+      "evidence_count": 3,
+      "themes_count": 1
+    },
+    {
+      "id": "q5_compare",
+      "question": "How do users compare multiple shortlisted products?",
+      "summary": "The products are quite expensive, and the return process is very slow. There are no proper updates regarding return requests, which makes the experience frustrating. Compared to Nykaa, Myntra offers much faster\u2026",
+      "sub_themes": [
+        {
+          "sub_theme_id": "q5_compare_other",
+          "question_id": "q5_compare",
+          "name": "Other",
+          "share_of_bucket": 1.0,
+          "source_diversity": 1,
+          "sources": [
+            "play_store"
+          ],
+          "frequency": "high",
+          "severity": "low",
+          "impact_rank": 1,
+          "impact_score": 0.79,
+          "segment_skew": [
+            "price_sensitive"
+          ],
+          "paraphrased_examples": [
+            "The products are quite expensive, and the return process is very slow. There are no proper updates regarding return requests, which makes the experience frustrating. Compared to Nykaa, Myntra offers much faster\u2026"
+          ],
+          "hypothesis": "Other may delay 30-day wishlist conversion.",
+          "interview_probes": [
+            "When you saved something recently, did other come up?"
+          ],
+          "chunk_ids": [
+            "265a07e8-3ac2-5968-89f6-f9661cfdda02",
+            "d08be67f-f375-59d9-815d-f74389fcbee1"
+          ]
+        }
+      ],
+      "implications": [
+        "Shoppers hold two or more saved items before deciding. A side-by-side of saved pieces would reduce stalled shortlists."
+      ],
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "confidence": "low",
+      "data_gaps": "",
+      "evidence_count": 2,
+      "themes_count": 1
+    },
+    {
+      "id": "q6_off_platform",
+      "question": "What information do users seek outside Nykaa Fashion before purchasing?",
+      "summary": "No quantified, evidence-backed sub-theme in this run. Treat as an explicit data_gap until more wishlist language is classified.",
+      "sub_themes": [],
+      "implications": [],
+      "interview_probes": [
+        "Walk me through the last Nykaa Fashion item you saved but did not buy in 30 days. Did this come up: What information do users seek outside Nykaa Fashion before purchasing?"
+      ],
+      "confidence": "low",
+      "data_gaps": "No indexed evidence for q6_off_platform.",
+      "evidence_count": 0,
+      "themes_count": 0
+    },
+    {
+      "id": "q7_decision_factors",
+      "question": "What role do fit, size, styling, price, reviews, occasion, and social validation play?",
+      "summary": "Really they had a worst experience... they ordered a pair of shoes, it is a low quality item. wrong size, not worth for the money. they tried to return + replace.... Whenever i go to that options it shows try later....",
+      "sub_themes": [
+        {
+          "sub_theme_id": "q7_decision_factors_other",
+          "question_id": "q7_decision_factors",
+          "name": "Other",
+          "share_of_bucket": 1.0,
+          "source_diversity": 1,
+          "sources": [
+            "play_store"
+          ],
+          "frequency": "high",
+          "severity": "low",
+          "impact_rank": 1,
+          "impact_score": 0.79,
+          "segment_skew": [],
+          "paraphrased_examples": [
+            "Really they had a worst experience... they ordered a pair of shoes, it is a low quality item. wrong size, not worth for the money. they tried to return + replace.... Whenever i go to that options it shows try later...."
+          ],
+          "hypothesis": "Other may delay 30-day wishlist conversion.",
+          "interview_probes": [
+            "When you saved something recently, did other come up?"
+          ],
+          "chunk_ids": [
+            "77ed6977-8cf5-5a5a-b46e-da14387b136a",
+            "85450465-dc40-56b3-b728-ecac234e75a7",
+            "e5e2327e-321d-51f6-80b4-357513e03bef",
+            "49fed4ca-7479-5d92-842f-f66fe27f49d1"
+          ]
+        }
+      ],
+      "implications": [
+        "Fit, size, reviews, occasion, and price-as-signal show up together. Surface those factors on the saved item rather than pushing markdowns."
+      ],
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "confidence": "medium",
+      "data_gaps": "",
+      "evidence_count": 4,
+      "themes_count": 1
+    },
+    {
+      "id": "q8_intent_vs_bookmark",
+      "question": "When is the wishlist genuine purchase intent vs. pure bookmarking?",
+      "summary": "No quantified, evidence-backed sub-theme in this run. Treat as an explicit data_gap until more wishlist language is classified.",
+      "sub_themes": [],
+      "implications": [],
+      "interview_probes": [
+        "Walk me through the last Nykaa Fashion item you saved but did not buy in 30 days. Did this come up: When is the wishlist genuine purchase intent vs. pure bookmarking?"
+      ],
+      "confidence": "low",
+      "data_gaps": "No indexed evidence for q8_intent_vs_bookmark.",
+      "evidence_count": 0,
+      "themes_count": 0
+    },
+    {
+      "id": "q9_segments",
+      "question": "How do these behaviours differ across user segments?",
+      "summary": "No quantified, evidence-backed sub-theme in this run. Treat as an explicit data_gap until more wishlist language is classified.",
+      "sub_themes": [],
+      "implications": [],
+      "interview_probes": [
+        "Walk me through the last Nykaa Fashion item you saved but did not buy in 30 days. Did this come up: How do these behaviours differ across user segments?"
+      ],
+      "confidence": "low",
+      "data_gaps": "No indexed evidence for q9_segments.",
+      "evidence_count": 0,
+      "themes_count": 0
+    },
+    {
+      "id": "q10_unmet_needs",
+      "question": "What unmet needs emerge consistently across many independent sources?",
+      "summary": "No quantified, evidence-backed sub-theme in this run. Treat as an explicit data_gap until more wishlist language is classified.",
+      "sub_themes": [],
+      "implications": [],
+      "interview_probes": [
+        "Walk me through the last Nykaa Fashion item you saved but did not buy in 30 days. Did this come up: What unmet needs emerge consistently across many independent sources?"
+      ],
+      "confidence": "low",
+      "data_gaps": "No indexed evidence for q10_unmet_needs.",
+      "evidence_count": 0,
+      "themes_count": 0
+    }
+  ]
+}

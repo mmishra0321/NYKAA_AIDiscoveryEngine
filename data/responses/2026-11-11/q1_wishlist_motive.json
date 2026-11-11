@@ -1,0 +1,44 @@
+{
+  "id": "q1_wishlist_motive",
+  "question": "Why do users add fashion products to their wishlist?",
+  "summary": "Prices and cloth ranges are good but if i wishlist something for later it ends up either getting stocked out and never returns back in stock for months",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q1_wishlist_motive_other",
+      "question_id": "q1_wishlist_motive",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 1,
+      "sources": [
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.79,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "This is the glitchiest app made so far; it is frustrating to use. they wish-listed some items, and it took me two hours to find those products, which had offers on them. When they tried opening the wishlist icon, it\u2026",
+        "Prices and cloth ranges are good but if i wishlist something for later it ends up either getting stocked out and never returns back in stock for months"
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "0cf78cd3-a4e4-51bb-a19c-baabe2d2ca34",
+        "eae66a4c-3336-5d44-9e2d-16b9b1b0d008"
+      ]
+    }
+  ],
+  "implications": [
+    "People save to style later, compare, or wait for the right moment. Surfacing the original save reason on return-to-wishlist would likely lift 30-day conversion without making items cheaper."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "low",
+  "data_gaps": "",
+  "evidence_count": 2,
+  "themes_count": 1
+}

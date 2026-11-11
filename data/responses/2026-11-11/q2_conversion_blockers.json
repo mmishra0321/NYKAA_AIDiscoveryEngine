@@ -1,0 +1,42 @@
+{
+  "id": "q2_conversion_blockers",
+  "question": "What prevents wishlisted products from eventually being purchased?",
+  "summary": "Misleading photos, inflated prices, and pathetic quality! \"Compared to other shopping platforms, the product quality on this app is pathetic, and the prices are artificially inflated. The items delivered look nothing\u2026",
+  "sub_themes": [
+    {
+      "sub_theme_id": "q2_conversion_blockers_other",
+      "question_id": "q2_conversion_blockers",
+      "name": "Other",
+      "share_of_bucket": 1.0,
+      "source_diversity": 1,
+      "sources": [
+        "play_store"
+      ],
+      "frequency": "high",
+      "severity": "low",
+      "impact_rank": 1,
+      "impact_score": 0.79,
+      "segment_skew": [],
+      "paraphrased_examples": [
+        "Misleading photos, inflated prices, and pathetic quality! \"Compared to other shopping platforms, the product quality on this app is pathetic, and the prices are artificially inflated. The items delivered look nothing\u2026"
+      ],
+      "hypothesis": "Other may delay 30-day wishlist conversion.",
+      "interview_probes": [
+        "When you saved something recently, did other come up?"
+      ],
+      "chunk_ids": [
+        "265a07e8-3ac2-5968-89f6-f9661cfdda02"
+      ]
+    }
+  ],
+  "implications": [
+    "Liked items sit after fit and quality doubt. Clearing post-save uncertainty on size, fabric, and colour unblocks purchase more than another promo."
+  ],
+  "interview_probes": [
+    "When you saved something recently, did other come up?"
+  ],
+  "confidence": "low",
+  "data_gaps": "",
+  "evidence_count": 1,
+  "themes_count": 1
+}
